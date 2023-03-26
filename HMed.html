@@ -64,82 +64,6 @@
 	  border-radius:10px;
     }
 </style>
-</head>
-<body>
-  <header>Pediatric Medications Details</header>
-  <button class="back-btn" onclick="location.href='HtmlPedCalc.html'">Back to Main</button>
-  <div class="container">
-    <select id="select"></select>
-    <textarea id="textarea" placeholder="Enter medication details here"></textarea>
-  </div>
-
-  <script>
-    // load the CSV file
-    const csvUrl = 'ref/pdc.csv';
-    fetch(csvUrl)
-      .then(response => response.text())
-      .then(data => {
-        // parse the CSV data
-        const lines = data.split('\n');
-        const headers = lines[0].split(',');
-        const dataArray = [];
-        for (let i = 1; i < lines.length; i++) {
-          const values = lines[i].split(',');
-          const dataObj = {};
-          for (let j = 0; j < headers.length; j++) {
-            dataObj[headers[j]] = values[j];
-          }
-          dataArray.push(dataObj);
-        }
-
-        // populate the select element
-        const select = document.getElementById('select');
-        dataArray.forEach(dataObj => {
-          const option = document.createElement('option');
-          option.value = dataObj['A'];
-          option.text = dataObj['A'];
-          select.add(option);
-        });
-
-        // update the text area when the selection changes
-        const textarea = document.getElementById('textarea');
-        select.addEventListener('change', () => {
-          const selectedValue = select.value;
-          const selectedDataObj = dataArray.find(dataObj => dataObj['A'] === selectedValue);
-          textarea.value = selectedDataObj ? selectedDataObj['B'] : '';
-        });
-      });
-  </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-
-
-
-
 <script src="ref/xlsx.full.min.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
@@ -147,7 +71,7 @@
     const textarea = document.querySelector('textarea');
 
     // load the Excel file
-    const url = 'ref/data.xlsx';
+    const url = 'https://github.com/essasmj/PedCalc/raw/main/ref/data.xlsx';
     const oReq = new XMLHttpRequest();
     oReq.open('GET', url, true);
     oReq.responseType = 'arraybuffer';
@@ -155,7 +79,6 @@
       const arraybuffer = oReq.response;
       const data = new Uint8Array(arraybuffer);
       const workbook = XLSX.read(data, {type: 'array'});
-	  console.log(workbook);
 
       // get the data from the "PDC" sheet
       const sheetName = 'PDC';
@@ -171,7 +94,7 @@
           });
         }
       }
-	  console.log(dataArr); // log the dataArr variable to the console
+
       // populate the select element
       dataArr.forEach((dataObj) => {
         const option = document.createElement('option');
@@ -193,36 +116,12 @@
 </head>
 <body>
   <header>Pediatric Medications Details</header>
-  <button class="back-btn" onclick="location.href='HtmlPedCalc.html'">Main Menu</button>
-  <div class="container">
-    <select>
-       options will be populated dynamically by JavaScript -->
-    <!-- </select>
-    <textarea placeholder="Enter medication details here"></textarea>
-  </div>
-</body>
-</html> -->
-
-
-
-
-
-<!-- 
-</head>
-<body>
-  <header>Pediatric Medications Details</header>
   <button class="back-btn" onclick="location.href='HtmlPedCalc.html'">Back to Main</button>
   <div class="container">
-	
-
     <select>
-      <option value="med1">Medication 1</option>
-      <option value="med2">Medication 2</option>
-      <option value="med3">Medication 3</option>
+      <!-- options will be populated dynamically by JavaScript -->
     </select>
     <textarea placeholder="Enter medication details here"></textarea>
   </div>
-  
-
 </body>
-</html> -->
+</html>
