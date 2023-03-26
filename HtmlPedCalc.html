@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Pediatric References and Calculators</title>
+    <!-- CSS styling Code for the web page -->
+    <style>
+        body {
+            background: linear-gradient(to bottom, #cde6d0, #fff);
+            
+        }
+        /* the "Pediatric References and Calculators" Header design*/
+        /* vw:fluid font size width*/ 
+        header {
+            font-size: 5vw;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: rgba(3, 16, 85, 0.978);
+        }
+         /* the whole page container*/         
+        /* default styles for desktop devices */
+        /* vh:fluid height */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        /* styles for tablets and smaller screens */
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .frame-container {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+
+            .frame {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* styles for mobile devices */
+        @media only screen and (max-width: 480px) {
+            .container {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .frame input {
+                width: 80%;
+            }
+
+            .grid-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .grid a {
+                width: 100%;
+            }
+        }
+
+        /* the whole page parameters completed*/
+        /* the styles below are for frames*/  
+
+        /* CSS selector for the containers "Age & Gender" and "Growth"*/    
+        .frame-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;            
+        }
+
+        /* set width to 100% to make it fluid */
+        /* set maximum width for large screens */
+        /* set height to auto to maintain aspect ratio */
+        .frame {
+            width: 100%; 
+            max-width: 450px; 
+            height: auto; 
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;            
+        }
+
+        @media screen and (max-width: 768px) {
+            .frame {
+                max-width: 100%; /* set maximum width for smaller screens */
+            }
+        }
+
+        /* Styles for screens smaller than 600px */
+        @media screen and (max-width: 600px) {
+            .frame {
+                margin-right: 0; /* remove right margin for all frames */
+                margin-left: 0; /* remove left margin for all frames */
+                margin-bottom: 20px; /* add margin-bottom to separate frames */
+            }             
+            
+            .frame:first-child {
+                margin-right: 0; /* remove right margin for all frames */
+                
+                margin-bottom: 20px; /* add margin-bottom to separate frames */
+            }
+
+            .frame:last-child {
+                margin-right: 0; /* remove right margin for first frame */
+                margin-bottom: 20px; /* add margin-bottom to separate frames */
+
+            }
+        }
+        /* give each frame different color */
+        .frame:first-of-type {
+             background-color: rgba(236, 210, 117, 0.61);
+        }
+
+        .frame:last-of-type {
+             background-color: rgb(173, 247, 173);
+        }
+
+         /* Designing Frame lables "Age & Gender" and "Growth"*/
+         /* clamp will give fluid font size*/  
+        .frame label {
+            font-size: clamp(16px, 2vw, 20px);
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            text-align: center;
+            background-color: rgb(148, 211, 232);
+            border-radius: 10px;
+        }
+        /* Formating values entered inside textboxes*/ 
+        .frame input {
+            margin-bottom: 10px;
+            font-size: clamp(14px, 1.6vw, 20px);
+            padding: 5px;
+            width: 97%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* size of text entered in textboxes*/
+        .frame input[type="text"] {
+            min-width: 50px; 
+        }
+
+        /* Designing Frame Male/Female"*/
+        /* Add negative margin to move to the left */ 
+        .frame input[type="radio"] {
+            display: inline-block;
+            width: auto;
+            margin-right: 10px;
+            margin-top: 0px;
+            margin-left: 0px; 
+        }
+
+        .frame .radio-group { 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+        .frame .radio-group label {
+            margin-left: -10px;
+        }
+        .frame .radio-group label:first-of-type {
+            margin-right: 20px;
+            background-color: rgb(109, 227, 227);
+        }
+        .frame .radio-group label:nth-of-type(2) {
+            background-color: rgb(240, 187, 244);
+        }
+        /* Formating the grid which calls the windows for medications and calculations */
+        /* 4, 1fr: 4 columns*/
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            margin-top: 20px;
+        }
+
+        .grid-container a {
+            display: block;
+            background-color: #eee;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px #ccc;
+        }
+
+        .grid-container a:hover {
+            background-color: #ccc;
+            color: white;
+            box-shadow: none;
+        }
+
+        .grid {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        .grid a {
+            display: block;
+            width: 200px;
+            height: 100px;
+            background-color: #eee;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px #ccc;
+        }
+
+        .grid a:hover {
+            background-color: #ccc;
+            color: white;
+            box-shadow: none;
+        }
+        /*design color for age click area*/
+        .grid-container .pediatric-medications {
+            background-color: #FEE8D3;
+            color: #E46E36;
+            font-style: italic;
+            font-size: clamp(14px, 2vw, 48px);
+            line-height: 2;
+        }
+
+        @media screen and (max-width: 600px) {
+            .grid-container .pediatric-medications {
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+
+        .grid-container .common-medications {
+            background-color: #EBF5FB;
+            color: #3498DB;
+            font-style: italic;
+            font-size: clamp(14px, 2vw, 48px);
+            line-height: 2;
+
+        }
+
+        @media screen and (max-width: 600px) {
+            .grid-container .common-medications {
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+
+        .grid-container .fluid-calculators {
+            background-color: #FDE9E7;
+            color: #FF5A5F;
+            font-style: italic;
+            font-size: clamp(14px, 2vw, 48px);
+            line-height: 2;
+        }
+
+        @media screen and (max-width: 600px) {
+            .grid-container .fluid-calculators {
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+
+        .grid-container .growth-vital-signs {
+            background-color: #E8F5E9;
+            color: #43A047;
+            font-style: italic;
+            font-size: clamp(14px, 2vw, 48px);
+            line-height: 2;
+        }
+
+        @media screen and (max-width: 600px) {
+            .grid-container .growth-vital-signs {
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+
+        .grid-container .convertors {
+            background-color: #FFF9C4;
+            color: #B7950B;
+            font-style: italic;
+            font-size: clamp(14px, 2vw, 48px);
+            line-height: 2;
+        }
+
+        @media screen and (max-width: 600px) {
+            .grid-container .convertors {
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+
+        .grid-container .rbc-indices {
+            background-color: #FDE9E7;
+            color: #FF5A5F;
+            font-style: italic;
+            font-size: clamp(14px, 2vw, 48px);
+            line-height: 2;
+        }
+
+        @media screen and (max-width: 600px) {
+            .grid-container .rbc-indices {
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+
+        .grid-container .poisoning {
+            background-color: #D2B4DE;
+            color: #884EA0;
+            font-style: italic;
+            font-size: clamp(14px, 2vw, 48px);
+            line-height: 2;
+        }
+
+        @media screen and (max-width: 600px) {
+            .grid-container .poisoning {
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+
+        .grid-container .help {
+            background-color: #FAFAFA;
+            color: #212121;
+            font-style: italic;
+            font-size: clamp(14px, 2vw, 48px);
+            line-height: 2;
+        }
+
+        @media screen and (max-width: 600px) {
+            .grid-container .help {
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+
+    </style>
+
+
+  <!-- HTML Code for the web page -->
+</head>
+
+<body>
+    <header>Pediatric References and Calculators</header>
+    <div class="container">
+        <div class="frame-container">
+            <div class="frame">
+                <label>Age & Gender</label>
+                <input type="text" placeholder="Select Date" id="datepicker" style="text-align:center;" title="DOB will be in DD/MM/YYYY format">
+                <input type="text" placeholder="Age" id="age" style="text-align:center;" readonly>
+                <div class="radio-group">
+                  <input type="radio" name="gender" value="male"> 
+                  <label for="male">Male</label>
+                  <input type="radio" name="gender" value="female"> 
+                  <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="frame">
+                <label>Growth</label>
+                <input type="number" placeholder="Weight (Kg)">
+                <input type="number" placeholder="Height (cm)">
+                <input type="number" placeholder="Head Circumference">
+            </div>
+        </div>
+        <div class="grid-container">
+            <a href="HMed.html" class="pediatric-medications">Pediatric Medications</a>
+            <a href="#" class="common-medications">Common Medications</a>
+            <a href="#" class="fluid-calculators">Fluid<br>Calculators</a>
+            <a href="#" class="growth-vital-signs">Growth &<br> Vital Signs</a>
+            <a href="#" class="convertors">Convertors<br><br></a>
+            <a href="#" class="rbc-indices">RBC Indices</a>
+            <a href="#" class="poisoning">Poisoning</a>
+            <a href="#" class="help">Help</a>
+        </div>
+        <!-- Load the css and js files needed for Pickday calender -->
+        <link rel="stylesheet" type="text/css" href="ref/pikaday.css">
+        <script src="ref/pikaday.js"></script>
+        <script src="ref/moment.min.js"></script>
+        <!-- link JavaScript jsPedCalc file to HtmlPedCalc -->
+        <script src="jsPedCalc.js"></script> 
+       
+    </body>
+    </html>
+

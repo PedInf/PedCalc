@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>Pediatric Medications</title>
+  <style>
+	body {
+		background: linear-gradient(to bottom, #bcebeb, #fff);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100vh;
+		margin: 0;
+	}
+
+	header {
+		font-size: 5vw;
+		font-weight: bold;
+		text-align: center;
+		margin: 20px 0;
+		color: rgba(3, 16, 85, 0.978);
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		max-width: 1200px;
+	}
+
+	select {
+		font-family: Georgia;
+		font-size: clamp(14px, 2vw, 48px);
+		background-color: lightgreen;
+		width: 50%;
+		max-width: 80%;
+		box-sizing: border-box;
+		padding: 10px;
+		margin-bottom: 10px;
+	}
+
+	textarea {
+		font-family: Georgia;
+		font-size: 14px;
+		background-color: lightgrey;
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+		height: auto;
+		margin: 10px 0;
+		padding: 10px;
+	}
+	.back-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 16px;
+      padding: 10px;
+      background-color: #8fa8de;
+      border: none;
+      cursor: pointer;
+	  border-radius:10px;
+    }
+</style>
+</head>
+<body>
+  <header>Pediatric Medications Details</header>
+  <button class="back-btn" onclick="location.href='HtmlPedCalc.html'">Back to Main</button>
+  <div class="container">
+    <select id="select"></select>
+    <textarea id="textarea" placeholder="Enter medication details here"></textarea>
+  </div>
+
+  <script>
+    // load the CSV file
+    const csvUrl = 'ref/pdc.csv';
+    fetch(csvUrl)
+      .then(response => response.text())
+      .then(data => {
+        // parse the CSV data
+        const lines = data.split('\n');
+        const headers = lines[0].split(',');
+        const dataArray = [];
+        for (let i = 1; i < lines.length; i++) {
+          const values = lines[i].split(',');
+          const dataObj = {};
+          for (let j = 0; j < headers.length; j++) {
+            dataObj[headers[j]] = values[j];
+          }
+          dataArray.push(dataObj);
+        }
+
+        // populate the select element
+        const select = document.getElementById('select');
+        dataArray.forEach(dataObj => {
+          const option = document.createElement('option');
+          option.value = dataObj['A'];
+          option.text = dataObj['A'];
+          select.add(option);
+        });
+
+        // update the text area when the selection changes
+        const textarea = document.getElementById('textarea');
+        select.addEventListener('change', () => {
+          const selectedValue = select.value;
+          const selectedDataObj = dataArray.find(dataObj => dataObj['A'] === selectedValue);
+          textarea.value = selectedDataObj ? selectedDataObj['B'] : '';
+        });
+      });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+<script src="ref/xlsx.full.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const select = document.querySelector('select');
+    const textarea = document.querySelector('textarea');
+
+    // load the Excel file
+    const url = 'ref/data.xlsx';
+    const oReq = new XMLHttpRequest();
+    oReq.open('GET', url, true);
+    oReq.responseType = 'arraybuffer';
+    oReq.onload = function(e) {
+      const arraybuffer = oReq.response;
+      const data = new Uint8Array(arraybuffer);
+      const workbook = XLSX.read(data, {type: 'array'});
+	  console.log(workbook);
+
+      // get the data from the "PDC" sheet
+      const sheetName = 'PDC';
+      const worksheet = workbook.Sheets[sheetName];
+      const range = XLSX.utils.decode_range(worksheet['!ref']);
+      const dataArr = [];
+      for (let row = range.s.r + 1; row <= range.e.r; row++) {
+        const cell = worksheet[XLSX.utils.encode_cell({r: row, c: 0})];
+        if (cell && cell.v) {
+          dataArr.push({
+            key: cell.v,
+            value: worksheet[XLSX.utils.encode_cell({r: row, c: 1})]?.v || ''
+          });
+        }
+      }
+	  console.log(dataArr); // log the dataArr variable to the console
+      // populate the select element
+      dataArr.forEach((dataObj) => {
+        const option = document.createElement('option');
+        option.value = dataObj.key;
+        option.text = dataObj.key;
+        select.add(option);
+      });
+
+      // update the text area when the selection changes
+      select.addEventListener('change', () => {
+        const selectedValue = select.value;
+        const selectedDataObj = dataArr.find((dataObj) => dataObj.key === selectedValue);
+        textarea.value = selectedDataObj ? selectedDataObj.value : '';
+      });
+    };
+    oReq.send();
+  });
+</script>
+</head>
+<body>
+  <header>Pediatric Medications Details</header>
+  <button class="back-btn" onclick="location.href='HtmlPedCalc.html'">Main Menu</button>
+  <div class="container">
+    <select>
+       options will be populated dynamically by JavaScript -->
+    <!-- </select>
+    <textarea placeholder="Enter medication details here"></textarea>
+  </div>
+</body>
+</html> -->
+
+
+
+
+
+<!-- 
+</head>
+<body>
+  <header>Pediatric Medications Details</header>
+  <button class="back-btn" onclick="location.href='HtmlPedCalc.html'">Back to Main</button>
+  <div class="container">
+	
+
+    <select>
+      <option value="med1">Medication 1</option>
+      <option value="med2">Medication 2</option>
+      <option value="med3">Medication 3</option>
+    </select>
+    <textarea placeholder="Enter medication details here"></textarea>
+  </div>
+  
+
+</body>
+</html> -->
