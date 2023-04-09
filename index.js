@@ -1,5 +1,21 @@
 // JS code to work with the HTML & CSS Code of Pediatric Calculators Project
-const dataFilePath = '/ref/data.xlsx';
+const dataFile = "/ref/data.xlsx";
+
+fetch(dataFile)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Failed to fetch ${dataFile}. Status: ${response.status}`);
+    }
+    return response.arrayBuffer();
+  })
+  .then(data => {
+    const workbook = XLSX.read(data, { type: "buffer" });
+    // Process the workbook data here
+  })
+  .catch(error => {
+    console.error("Error fetching the data file:", error);
+  });
+
 
 /////////////////DOB & Age Calculation//////////////////////
 ////////////////////////////////////////////////////////////
