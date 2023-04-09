@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Poisoning</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstat@1.9.4/dist/jstat.min.js"></script>
+     <style>
+         /* the whole page background color*/
+        body {
+            background: linear-gradient(to bottom, #e6ffff, #fff);            
+        }
+        /* the Header style*/
+        header {
+            font-size: 4vw;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: rgba(3, 16, 85, 0.978);
+        }
+        /* Design the whole page container to design inside it*/        
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr;
+        }
+
+        /* container of S&S and poison list */
+        .SSandPosisonList {
+            display: flex;
+            flex-direction: row;           
+            justify-content: center;
+            align-items: center;
+            gap:20px;  
+            margin-left: 20px;         
+        }
+
+        /* Media query for small screens */
+        @media (max-width: 768px) {
+            .SSandPosisonList {
+                flex-direction: column;
+            }
+        }
+
+        /* container for S&S and reset button */
+        .SSandbutton {
+            flex: 2; 
+            background-color: #ccffff;
+            border-radius: 10px;
+                      
+        }
+        /* container for the 3 rows of S&S */
+        .SS {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;            
+        }
+        
+        .SS1, .SS2, .SS3 {
+            display: flex;
+            font-size: clamp(20px, 40%, 32px);
+            flex-direction: row;
+            gap: 1rem;
+            flex-wrap: wrap;
+        } 
+        
+        @media screen and (max-width: 768px) {
+            .SS1, .SS2, .SS3 {
+                font-size: clamp(16px, 30%, 24px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .SS1, .SS2, .SS3 {
+                font-size: clamp(12px, 20%, 18px);
+            }
+        }
+
+        
+        /* clear the S&S selctions  */
+        .clear-btn-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .clear-btn {
+            font-size: 18px;
+            width: 50%;
+            padding: 10px;
+            margin: 5px;
+            background-color: #80ed99;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        .clear-btn:hover {
+            background: #eee;
+        }
+      
+
+        .guidemsg {
+            display: flex;
+            justify-content: center;
+        }
+        .guidemsg label {
+            text-align: center;            
+            width:75%;
+            font-style: italic;
+            background-color: #ffe1a8;
+            color: #99582a;
+            font-size: 18px;
+            padding: 5px;       
+            margin:5px;
+            border-radius: 15px;
+        }
+
+
+        .PoisonListTitle {
+            display: flex;
+            justify-content: center;
+        }
+        .PoisonListTitle label {
+            text-align: center;            
+            width:75%;
+            font-weight: bold;
+            background-color: #bee9e8;
+            color: #1b4965;
+            font-size: 18px;
+            padding: 5px;       
+            margin:5px;
+            border-radius: 15px;
+        }
+
+        
+        .PoisonList{
+            flex: 1;
+            width:80%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        textarea {
+        font-family: Georgia;
+        align-self: center;
+        font-size: clamp(16px, 1vw, 24px);
+        background-color: #FFEFD5;
+        width: 100%;
+        box-sizing: border-box;
+        height: 65vh;
+        margin-top: 10px;
+        padding: 10px;
+        } 
+        
+        textarea.PoisonList {
+        white-space: pre-wrap;
+        }
+        /* Side Navigation Style */
+        .side-nav {
+            height: 100%;
+            width: 20px;
+            position: fixed;
+            z-index: 1;
+            top: 0;          
+            left: 0;
+            background: linear-gradient(to bottom, #340f3f, #380552);
+            overflow-x: hidden;
+            transition: 0.2s;
+            padding-top: 20px;
+            border-radius: 0 20px 20px 0;
+        }
+
+        .side-nav a {
+            padding: 20px 8px 8px 16px;
+            /* margin-bottom: 10px; */
+            text-decoration: none;
+            text-align: center;                   
+            font-size: clamp(16px, 8vw, 24px);
+            color: #884EA0;
+            display: block;
+            transition: 0.2s;
+        }
+
+        .side-nav a:hover {
+            color: #ffffff;
+            background-color: #884EA0;
+            border-radius: 20px;
+            
+        }
+
+        #trigger-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 100%;
+            z-index: 2;
+        }   
+
+
+
+  
+    </style>
+</head>
+
+<body>
+    <header>Poisoning</header>
+    <div class="container">
+        <div id="trigger-area"></div>
+        <div id="side-nav" class="side-nav">
+            <a href="index.html" class="pediatric-calculator">Home</a>
+            <a href="HMed.html" class="pediatric-medications">Pediatric Medications</a>
+            <a href="ComMed.html" class="common-medications">Common Medications</a>
+            <a href="FlCal.html" class="fluid-calculators">Fluid Calculators</a>
+            <a href="GrVs.html" class="growth-vital-signs">Growth & Vital Signs</a>
+            <a href="Conv.html" class="convertors">Convertors</a>
+            <a href="IdaThal.html" class="rbc-indices">RBC Indices</a>
+            <a href="Poison.html" class="poisoning">Poisoning</a>
+            <a href="#" class="help">Help</a>
+        </div>       
+        <div class="SSandPosisonList">
+            <div class="SSandbutton">
+                <div class="SS">
+                    <div class="SS1">
+                        <fieldset>
+                            <legend>Pupil</legend>
+                            <input type="radio" id="pMyd" name="Pupil" value="Mydriasis">
+                                <label for="pMyd">Mydriasis</label><br>
+                            <input type="radio" id="pMio" name="Pupil" value="Miosis">
+                                <label for="pMio">Miosis</label><br>
+                            <input type="radio" id="nsPupil" name="Pupil" value="Not Sure">
+                                <label for="nsPupil">Not Sure</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Pulse</legend>
+                            <input type="radio" id="tcardia" name="Pulse" value="Tachycardia">
+                                <label for="tcardia">Tachycardia</label><br>
+                            <input type="radio" id="bcardia" name="Pulse" value="Bradycardia">
+                                <label for="bcardia">Bradycardia</label><br>
+                            <input type="radio" id="nsPulse" name="Pulse" value="Not Sure">
+                                <label for="nsPulse">Not Sure</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Blood Pressure</legend>
+                                <input type="radio" id="hypert" name="Bp" value="Hypertension">
+                                    <label for="hypert">Hypertension</label><br>
+                                <input type="radio" id="hypot" name="Bp" value="Hypotension">
+                                    <label for="hypot">Hypotension</label><br>
+                                <input type="radio" id="nsBp" name="Bp" value="Not Sure">
+                                    <label for="nsBp">Not Sure</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Respiratory Rate</legend>
+                                <input type="radio" id="tapnea" name="RR" value="Tachypnea">
+                                    <label for="tapnea">Tachypnea</label><br>
+                                <input type="radio" id="brpnea" name="RR" value="Bradypnea">
+                                    <label for="brpnea">Bradypnea</label><br>
+                                <input type="radio" id="nsRR" name="RR" value="Not Sure">
+                                    <label for="nsRR">Not Sure</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Tempreture</legend>
+                                <input type="radio" id="perthermia" name="temp" value="Hyperthermia">
+                                    <label for="perthermia">Hyperthermia</label><br>
+                                <input type="radio" id="pothermia" name="temp" value="Hypothermia">
+                                    <label for="pothermia">Hypothermia</label><br>
+                                <input type="radio" id="nsTemp" name="temp" value="Not Sure">
+                                    <label for="nsTemp">Not Sure</label>
+                        </fieldset>
+                    </div>
+                    <div class="SS2">
+                        <fieldset>
+                            <legend>CNS</legend>
+                                <input type="radio" id="Depression" name="CNS" value="Depression">
+                                    <label for="Depression">Depression</label><br>
+                                <input type="radio" id="Agitation" name="CNS" value="Agitation">
+                                    <label for="Agitation">Agitation</label><br>
+                                <input type="radio" id="nsCNS" name="CNS" value="Not Sure">
+                                    <label for="nsCNS">Not Sure</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Blood Sugar</legend>
+                                <input type="radio" id="Hyperglycemia" name="blsugar" value="Hyperglycemia">
+                                    <label for="Hyperglycemia">Hyperglycemia</label><br>
+                                <input type="radio" id="Hypoglycemia" name="blsugar" value="Hypoglycemia">
+                                    <label for="Hypoglycemia">Hypoglycemia</label><br>
+                                <input type="radio" id="nsBS" name="blsugar" value="Not Sure">
+                                    <label for="nsBS">Not Sure</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Potassium</legend>
+                                <input type="radio" id="pok" name="Potassium" value="Hypokalemia">
+                                    <label for="pok">Hypokalemia</label><br>
+                                <input type="radio" id="erk" name="Potassium" value="Hyperkalemia">
+                                    <label for="erk">Hyperkalemia</label><br>
+                                <input type="radio" id="nsk" name="Potassium" value="Not Sure">
+                                    <label for="nsk">Not Sure</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Anaion Gap</legend>
+                                <input type="radio" id="aainc" name="aa" value="Increased >13">
+                                    <label for="aainc">Increased &gt;13</label><br>
+                                <input type="radio" id="aadec" name="aa" value="Decreased <6">
+                                    <label for="aadec">Decreased &lt;6 </label><br>
+                                <input type="radio" id="nsAA" name="aa" value="Not Sure">
+                                    <label for="nsAA">Not Sure</label>
+                        </fieldset>
+                    </div>
+                    <div class="SS3">
+                        <fieldset>
+                            <legend>Skin</legend>
+                                <input type="radio" id="Red" name="skin" value="Red">
+                                    <label for="Red">Red</label><br>
+                                <input type="radio" id="Pale" name="skin" value="Pale">
+                                    <label for="Pale">Pale</label><br>
+                                <input type="radio" id="Cyanotic" name="skin" value="Cyanotic">
+                                    <label for="Cyanotic">Cyanotic</label><br>
+                                <input type="radio" id="nsSkin" name="skin" value="Not Sure">
+                                    <label for="nsSkin">Not Sure</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Movement</legend>
+                                <input type="radio" id="Seizure" name="Movement" value="Seizure">
+                                    <label for="Seizure">Seizure</label><br>
+                                <input type="radio" id="Tremor" name="Movement" value="Tremor">
+                                    <label for="Tremor">Tremor</label><br>
+                                <input type="radio" id="Rigidity" name="Movement" value="Rigidity">
+                                    <label for="Rigidity">Rigidity</label><br>
+                                <input type="radio" id="choath" name="Movement" value="Choreoathetosis">
+                                    <label for="choath">Choreoathetosis</label><br>
+                                <input type="radio" id="Weakness" name="Movement" value="Weakness">
+                                    <label for="Weakness">Weakness</label><br>
+                                <input type="radio" id="nsMove" name="Movement" value="Not Sure">
+                                    <label for="nsMove">Not Sure</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Blood pH</legend>
+                                <input type="radio" id="macid" name="pH" value="Metabolic Acidosis">
+                                    <label for="macid">Metabolic Acidosis</label><br>
+                                <input type="radio" id="malk" name="pH" value="Metabolic Alkalosis">
+                                    <label for="malk">Metabolic Alkalosis</label><br>
+                                <input type="radio" id="recid" name="pH" value="Respiratory Acidosis">
+                                    <label for="recid">Respiratory Acidosis</label><br>
+                                <input type="radio" id="realk" name="pH" value="Respiratory Alkalosis">
+                                    <label for="realk">Respiratory Alkalosis</label><br>
+                                <input type="radio" id="nspH" name="pH" value="Not Sure">
+                                    <label for="nspH">Not Sure</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Others</legend>
+                                <input type="radio" id="liver" name="Others" value="Hepatotoxicity">
+                                    <label for="liver">Hepatotoxicity</label><br>
+                                <input type="radio" id="meth" name="Others" value="Methemoglobinemia">
+                                    <label for="meth">Methemoglobinemia</label><br>
+                                <input type="radio" id="rhabd" name="Others" value="Rhabdomyolysis">
+                                    <label for="rhabd">Rhabdomyolysis</label><br>
+                                <input type="radio" id="Nystagmus" name="Others" value="Nystagmus">
+                                    <label for="Nystagmus">Nystagmus</label><br>
+                                <input type="radio" id="nsOthers" name="Others" value="Not Sure">
+                                    <label for="nsOthers">Not Sure</label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="clear-btn-container">
+                    <button class="clear-btn" onclick="resetForm()">Reset Selections</button>
+                </div>                
+                <div class="guidemsg">
+                    <label>For any unclear or unavailable finding select "Not  Sure"</label>
+                </div>
+            </div>
+            <div class="PoisonList">
+                <div class="PoisonListTitle">
+                    <label>List of Suspected Poisons</label>
+                </div>
+                <textarea id="poisonResult" class="PoisonList" id="result"></textarea>
+            </div>
+        </div> 
+    </div>
+    <!-- link JavaScript index file to index -->
+    
+    <script>
+    function resetForm() {
+        document.querySelectorAll('input[type="radio"]').forEach(input => {
+            input.checked = false;
+        });
+    }
+    </script>
+    <script>
+        document.getElementById('trigger-area').addEventListener('mouseover', function () {
+            document.getElementById('side-nav').style.width = '250px';
+        });            
+        document.getElementById('side-nav').addEventListener('mouseleave', function () {
+            document.getElementById('side-nav').style.width = '20px';
+        });
+    </script>
+    <script src="index.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        initializePoisonScript();
+    });
+    </script>  
+</body>
+</html>

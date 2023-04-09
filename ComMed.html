@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	
-  <title>Pediatric Medications</title>
+  <title>Common Medications</title>
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
   <style>
 	body {
-		background: linear-gradient(to bottom, #FEE8D3, #fadfdf);
+		background: linear-gradient(to bottom, #bcebeb, #fff);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -35,7 +35,7 @@
 	select {
 		font-family: Georgia;
 		font-size: clamp(14px, 2vw, 48px);
-		background-color: rgb(255, 255, 255);
+		background-color: lightgreen;
 		width: 50%;
 		max-width: 80%;
 		box-sizing: border-box;
@@ -45,8 +45,8 @@
 
   textarea {
   font-family: Georgia;
-  font-size: 18px;
-  background-color: rgb(238, 236, 236);
+  font-size: 32px;
+  background-color: lightgrey;
   width: 100%;
   box-sizing: border-box;
   height: 65vh;
@@ -60,7 +60,6 @@
       height: calc(100vh - 40px);
     }
   }
-
 
   /* Side Navigation Style */
   .side-nav {
@@ -122,7 +121,7 @@
       const workbook = XLSX.read(data, {type: 'array'});
 
       // get the data from the "PDC" sheet
-      const sheetName = 'PDC';
+      const sheetName = 'CM';
       const worksheet = workbook.Sheets[sheetName];
       const range = XLSX.utils.decode_range(worksheet['!ref']);
       const dataArr = [];
@@ -161,7 +160,8 @@
 
 </head>
 <body>
-  <header>Detailed Pediatric Medications</header>  
+  <header>Common Pediatric Medications</header>
+ 
   <div class="container">
     <div id="trigger-area"></div>
     <div id="side-nav" class="side-nav">
