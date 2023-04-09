@@ -139,7 +139,7 @@
         
         .PoisonList{
             flex: 1;
-            width:80%;
+            width:60%;
             height:100%;
             display: flex;
             flex-direction: column;
@@ -149,7 +149,7 @@
         font-family: Georgia;
         align-self: center;
         font-size: clamp(16px, 1vw, 24px);
-        background-color: #FFEFD5;
+        background-color: rgb(203, 255, 255);
         width: 100%;
         box-sizing: border-box;
         height: 65vh;
@@ -382,7 +382,7 @@
         </div> 
     </div>
     <!-- link JavaScript index file to index -->
-    
+    <script src="index.js"></script>
     <script>
     function resetForm() {
         document.querySelectorAll('input[type="radio"]').forEach(input => {
@@ -398,11 +398,117 @@
             document.getElementById('side-nav').style.width = '20px';
         });
     </script>
-    <script src="index.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        initializePoisonScript();
-    });
-    </script>  
+    <script> document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOMContentLoaded fired');
+        function getColumnIndexFromRadioButtonValue(value) {
+          const mapping = {
+            "Mydriasis": "B",
+            "Miosis": "C",
+            "Tachycardia": "D",
+            "Bradycardia": "E",
+            "Hypertension": "F",
+            "Hypotension": "G",
+            "Tachypnea": "H",
+            "Bradypnea": "I",
+            "Hyperthermia": "J",
+            "Hypothermia": "K",
+            "Metabolic Acidosis": "L",
+            "Metabolic Alkalosis": "M",
+            "Respiratory Acidosis": "N",
+            "Respiratory Alkalosis": "O",
+            "Depression": "P",
+            "Agitation": "Q",
+            "Hyperglycemia": "R",
+            "Hypoglycemia": "S",
+            "Red": "T",
+            "Pale": "U",
+            "Cyanotic": "V",
+            "Seizure": "W",
+            "Tremor": "X",
+            "Rigidity": "Y",
+            "Choreoathetosis": "Z",
+            "Weakness": "AA",
+            "Hypokalemia": "AB",
+            "Hyperkalemia": "AC",
+            "Increased >13": "AD",
+            "Decreased <6": "AE",
+            "Hepatotoxicity": "AF",
+            "Methemoglobinemia": "AG",
+            "Rhabdomyolysis": "AH",
+            "Nystagmus": "AI",
+          };
+          return mapping[value];
+        }
+      
+        function processSelections() {
+            const resultTextarea = document.getElementById("poisonResult");
+
+          console.log("Result textarea:", resultTextarea);
+          resultTextarea.value = "Processing...";
+      
+          const selectedColumns = [];
+          const radioGroups = document.querySelectorAll('input[type="radio"]:checked');
+          radioGroups.forEach(radio => {
+            if (radio.value !== "Not Sure") {
+                const column = getColumnIndexFromRadioButtonValue(radio.value);
+                console.log("Radio value:", radio.value, "Column index:", column);
+                selectedColumns.push(column);
+            }
+            });
+
+          console.log("Selected Columns:", selectedColumns);
+          fetch("/ref/data.xlsx")
+            .then(response => {
+              if (!response.ok) {
+                throw new Error("Error: Unable to load the data.");
+              }
+              return response.arrayBuffer();
+            })
+            .then(data => {
+              const workbook = XLSX.read(new Uint8Array(data), { type: "array" });
+              const sheet = workbook.Sheets["poison"];
+      
+              const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+              const poisonSet = new Set();
+              console.log("Rows:", rows);
+
+              for (let i = 1; i < rows.length; i++) {
+                let row = rows[i];
+                for (let column of selectedColumns) {
+                  const columnIndex = XLSX.utils.decode_col(column);
+                  const poison = row[columnIndex];
+                  if (poison && !poisonSet.has(poison)) {
+                    console.log("Found poison:", poison, "in row:", row);
+                    poisonSet.add(poison);
+                  }
+                }
+              }
+      
+              const filteredPoisons = Array.from(poisonSet).filter(poison =>
+                selectedColumns.every(column => {
+                  const columnIndex = XLSX.utils.decode_col(column);
+                  return rows.some(row => row[columnIndex] === poison);
+                })
+              );
+              console.log("Filtered Poisons:", filteredPoisons);
+            if (filteredPoisons.length === 0) {
+            console.log("No poisons matched the selected criteria.");
+            }
+            resultTextarea.value = filteredPoisons.join('\r\n');
+
+              
+            },100)
+            .catch(error => {
+              resultTextarea.value = error.message;
+            });
+        }
+      
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+          radio.addEventListener("change", processSelections);
+        });
+      
+        // Initialize the results
+        processSelections();
+      });</script>   
 </body>
 </html>
