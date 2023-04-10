@@ -1456,7 +1456,7 @@ function initializePoisonScript() {
       });
 
     console.log("Selected Columns:", selectedColumns);
-    fetch("/ref/data.xlsx")
+    fetch("ref/data.xlsx")
       .then(response => {
         if (!response.ok) {
           throw new Error("Error: Unable to load the data.");
