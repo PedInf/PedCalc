@@ -159,8 +159,8 @@ header {
 }
 
 .grid-container .rbc-indices {
-    background-color: #FDE9E7;
-    color: #FF5A5F;
+    background-color: #ede0d4;
+    color: #7f5539;
     /* font-style: italic; */
     font-size: clamp(24px, 8vw, 48px);
     line-height: 2;
@@ -186,7 +186,7 @@ header {
     }
 }
 
-.grid-container .help {
+.grid-container .pediatric-guidelines {
     background-color: #FAFAFA;
     color: #212121;
     /* font-style: italic; */
@@ -195,7 +195,7 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-    .grid-container .help {
+    .grid-container .pediatric-guidelines {
         line-height: 1;
     }
 }

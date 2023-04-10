@@ -11,13 +11,11 @@ document.getElementById('side-nav').addEventListener('mouseleave', function () {
 /// provide the link to the JS libraray that can read excel file
 ////////////////////////////////////////////////////////////////
 
-
 // Home Medications
 window.addEventListener('DOMContentLoaded', () => {
   const selectHM = document.querySelector('#selectHM');
   const textareaHM = document.querySelector('#textareaHM');
  
-
   // load the Excel file
   const url = 'ref/data.xlsx';
   const oReq = new XMLHttpRequest();
@@ -66,6 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 //Common Medications
+////////////////////////
 window.addEventListener('DOMContentLoaded', () => {
   const selectCM = document.querySelector('#selectCM');
   const textareaCM = document.querySelector('#textareaCM');
@@ -116,6 +115,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Convertor
+///////////////////
 window.addEventListener('DOMContentLoaded', () => {
   const selectConv = document.querySelector('#selectConv');
   const textareaConv = document.querySelector('#textareaConv');
@@ -164,7 +164,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   oReq.send();
 });
-
 
 /////////////////DOB & Age Calculation//////////////////////
 ////////////////////////////////////////////////////////////
@@ -262,7 +261,7 @@ function updateKCorrection() {
   const potassiumSelect = document.getElementById("initK");
   const selectedValue = potassiumSelect.value;
   const kCorrectionInput = document.getElementById("KCorrec");
-
+  
   switch (selectedValue) {
       case "mt 6 mEq/L":
           kCorrectionInput.value = "No K needed initially";
@@ -334,38 +333,6 @@ function calculateTotals() {
 /////////////////Growth Percentiles calculation/////////////////////////////////////////////////
 // this code listens for changes in the patient et, ht, hc, age geneder and call the functions//
 ////////////////////////////////////////////////////////////////////////////////////////////////
-// document.getElementById("age").addEventListener("input", getVitalSignsForAge);
-// document.getElementById("age").addEventListener("input", wtPercentCalc);
-// document.getElementById("age").addEventListener("input", htPercentCalc);
-// document.getElementById("age").addEventListener("input", bmiPercentCalc);
-// document.getElementById("age").addEventListener("input", hcPercentCalc);
-// document.getElementById("age").addEventListener("input", wtstatPercentCalc);
-
-
-
-// document.getElementById("ptWt").addEventListener("input", wtPercentCalc);
-// document.getElementById("ptWt").addEventListener("input", calculateBMI);
-// document.getElementById("ptWt").addEventListener("input", bmiPercentCalc);
-// document.getElementById("ptWt").addEventListener("input", calculateSA);
-// document.getElementById("ptWt").addEventListener("input", wtstatPercentCalc);
-
-// document.getElementById("ptHt").addEventListener("input", htPercentCalc);
-// document.getElementById("ptHt").addEventListener("input", calculateBMI);
-// document.getElementById("ptHt").addEventListener("input", bmiPercentCalc);
-// document.getElementById("ptHt").addEventListener("input", calculateSA);
-// document.getElementById("ptHt").addEventListener("input", wtstatPercentCalc);
-
-// document.getElementById("ptHc").addEventListener("input", hcPercentCalc);
-
-// const genderRadios = document.querySelectorAll('input[name="gender"]');
-// for (const radio of genderRadios) {
-//   radio.addEventListener("change", wtPercentCalc);
-//   radio.addEventListener("change", htPercentCalc);
-//   radio.addEventListener("change", bmiPercentCalc);
-//   radio.addEventListener("change", hcPercentCalc);
-//   radio.addEventListener("change", wtstatPercentCalc);
-// }
-
 
 function onInputChange() {
   wtPercentCalc();
@@ -385,6 +352,7 @@ document.getElementById("age").addEventListener("input", onInputChange);
 document.getElementById("ptWt").addEventListener("input", onInputChange);
 document.getElementById("ptHt").addEventListener("input", onInputChange);
 document.getElementById("ptHc").addEventListener("input", onInputChange);
+
 
 const genderRadios = document.querySelectorAll('input[name="gender"]');
 for (const radio of genderRadios) {
@@ -417,6 +385,7 @@ async function wtPercentCalc() {
   // Third: Check if gender is selected
   const gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : null;
   if (!gender) {
+   
       return;
   }
 
@@ -468,7 +437,6 @@ async function readWorkbook(file) {
   const workbook = XLSX.read(data, {type: "array"});
   return workbook;
 }
-
 
 ////////////////////////////////////////////
 // Height percentiles calculation function//
@@ -609,7 +577,6 @@ async function bmiPercentCalc() {
   document.getElementById("ptbmi97percent").value = (m * ((1 + l * s * 1.88079) ** (1 / l))).toFixed(0);
 }
 
-
 /////////////////////////////////////////////////////////
 // calculate Head Circumference percentiles / /
 ////////////////////////////////////////////////////////////
@@ -690,8 +657,6 @@ function calculateSA() {
   document.getElementById("bsa").value = sa.toFixed(2);
 }
 
-
-
 //////////////////////////////////////////////////////
 // calculate weight stature percentiles //////////////
 //////////////////////////////////////////////////////
@@ -711,7 +676,6 @@ async function wtstatPercentCalc() {
     document.getElementById("ptwtstat3percent").value = "";
     document.getElementById("ptwtstat50percent").value = "";
     document.getElementById("ptwtstat97percent").value = "";
-
 
       return;
   }
@@ -827,112 +791,24 @@ function BpMAPCalculate() {
   document.getElementById("MAP50Percent").value = Math.floor(55 + ageInYears * 1.5);
 }
 
-
 ///Reading the BP percentiles
 let workbookCache = null;
-
 async function readWorkbookOnce(filePath) {
-  if (!workbookCache) {
-    workbookCache = await readWorkbook(filePath);
-  }
+  if (!workbookCache) {    
+    workbookCache = await readWorkbook(filePath);    
+  } 
   return workbookCache;
 }
 
 
 //////////get the 50%,90%,95%,99% Percentiles //////////////
 ///////////////////////////////////////////////////////////
-// async function getBloodPressurePercentiles() {
-//   // Get the age, gender, and height percentile
-//   const ageInYears = parseFloat(document.getElementById("age").value);
-//   let heightpercent = parseFloat(document.getElementById("pthtpercent").value);
-
-//   if (isNaN(ageInYears) || ageInYears <= 0 || isNaN(heightpercent)) {
-//     return;
-//   }
-
-//   const gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : null;
-//   if (!gender) {
-//     return;
-//   }
-
-//   if (heightpercent <= 7.5) {
-//     heightpercent = "5%";
-//   } else if (heightpercent > 7.5 && heightpercent < 17.5) {
-//     heightpercent = "10%";
-//   } else if (heightpercent >= 17.5 && heightpercent < 37.5) {
-//     heightpercent = "25%";
-//   } else if (heightpercent >= 37.5 && heightpercent < 62.5) {
-//     heightpercent = "50%";
-//   } else if (heightpercent >= 62.5 && heightpercent < 82.5) {
-//     heightpercent = "75%";
-//   } else if (heightpercent >= 82.5 && heightpercent < 92.5) {
-//     heightpercent = "90%";
-//   } else {
-//     heightpercent = "95%";
-//   }
-
-//   const age = Math.floor(ageInYears);
-//   if (age >= 17.5 || age < 1) {
-//     document.getElementById("Bp50Percent").value = "";
-//     document.getElementById("Bp90Percent").value = "";
-//     document.getElementById("Bp95Percent").value = "";
-//     document.getElementById("Bp99Percent").value = "";
-//     document.getElementById("dBp50Percent").value = "";
-//     document.getElementById("dBp90Percent").value = "";
-//     document.getElementById("dBp95Percent").value = "";
-//     document.getElementById("dBp99Percent").value = "";
-//     return;
-//   }
-
-//   // read the data.xlsx file
-//   const workbook = await readWorkbook("data.xlsx");
-//   const sheet = workbook.Sheets["BP"];
-
-  
-//   if (gender === 'Male') {
-
-//     let heightColumn = "";
-//     if (heightpercent === "5%") {
-//       heightColumn = "E";
-//     } else if (heightpercent === "10%") {
-//       heightColumn = "F";
-//     } else if (heightpercent === "25%") {
-//       heightColumn = "G";
-//     } else if (heightpercent === "50%") {
-//       heightColumn = "H";
-//     } else if (heightpercent === "75%") {
-//       heightColumn = "I";
-//     } else if (heightpercent === "90%") {
-//       heightColumn = "J";
-//     } else if (heightpercent === "95%") {
-//       heightColumn = "K";
-//     }
-
-//     //BP 50%
-//     systolicRange = ['D2', 'K19'];
-//   // I need a code here
-
-//     diastolicRange = ['D78', 'K95'];
-//     //I need aa code her to find the 50% of diastolic blood pressure
-//   } else {
-//     //BP 50%
-//     systolicRange = ['P2', 'W19'];
-//     diastolicRange = ['P78', 'W95'];
-//   }
-
-
-// }
-
-
-async function getBloodPressurePercentiles() {  
+async function getBloodPressurePercentiles() {
   const ageInYears = parseFloat(document.getElementById("age").value);
   const gender = document.querySelector('input[name="gender"]:checked')?.value;
-  // let heightPercentile = parseFloat(document.getElementById("pthtpercent").value);
   let heightPercentile = document.getElementById("pthtpercent").value;
-  // const height = parseFloat(document.getElementById("ptHt").value);
 
-  
-  if (!ageInYears || !gender || !heightPercentile ||isNaN(heightPercentile) ) {
+  if (!ageInYears || !gender || !heightPercentile || isNaN(heightPercentile)) {
     document.getElementById("Bp50Percent").value = "";
     document.getElementById("Bp90Percent").value = "";
     document.getElementById("Bp95Percent").value = "";
@@ -943,26 +819,25 @@ async function getBloodPressurePercentiles() {
     document.getElementById("dBp99Percent").value = "";
     return;
   }
-  
+
   if (heightPercentile <= 7.5) {
     heightPercentile = "5%";
-      } else if (heightPercentile > 7.5 && heightPercentile < 17.5) {
-        heightPercentile = "10%";
-      } else if (heightPercentile >= 17.5 && heightPercentile < 37.5) {
-        heightPercentile = "25%";
-      } else if (heightPercentile >= 37.5 && heightPercentile < 62.5) {
-        heightPercentile = "50%";
-      } else if (heightPercentile >= 62.5 && heightPercentile < 82.5) {
-        heightPercentile = "75%";
-      } else if (heightPercentile >= 82.5 && heightPercentile < 92.5) {
-        heightPercentile = "90%";
-      } else {
-        heightPercentile = "95%";
-      }
+  } else if (heightPercentile > 7.5 && heightPercentile < 17.5) {
+    heightPercentile = "10%";
+  } else if (heightPercentile >= 17.5 && heightPercentile < 37.5) {
+    heightPercentile = "25%";
+  } else if (heightPercentile >= 37.5 && heightPercentile < 62.5) {
+    heightPercentile = "50%";
+  } else if (heightPercentile >= 62.5 && heightPercentile < 82.5) {
+    heightPercentile = "75%";
+  } else if (heightPercentile >= 82.5 && heightPercentile < 92.5) {
+    heightPercentile = "90%";
+  } else {
+    heightPercentile = "95%";
+  }
 
-      console.log(heightPercentile);
-      const workbook = await readWorkbookOnce('ref/data.xlsx');
-      const sheet = workbook.Sheets['BP']; 
+  const workbook = await readWorkbookOnce('ref/data.xlsx');
+  const sheet = workbook.Sheets['BP'];
 
   const bpIds = ['Bp50Percent', 'Bp90Percent', 'Bp95Percent', 'Bp99Percent'];
   const dbpIds = ['dBp50Percent', 'dBp90Percent', 'dBp95Percent', 'dBp99Percent'];
@@ -975,49 +850,6 @@ async function getBloodPressurePercentiles() {
     document.getElementById(dbpIds[i]).value = diastolic;
   }
 }
-
-// function lookupValue(sheet, gender, type, percentileIndex, ageInYears, heightPercentile) {
-
-//   const ranges = {
-//     'male': {
-//       'systolic': ['D2:K19', 'D21:K38', 'D40:K57', 'D59:K76'],
-//       'diastolic': ['D78:K95', 'D97:K114', 'D116:K133', 'D135:K152']
-//     },
-//     'female': {
-//       'systolic': ['P2:W19', 'P21:W38', 'P40:W57', 'P59:W76'],
-//       'diastolic': ['P78:W95', 'P97:W114', 'P116:W133', 'P135:W152']
-//     }
-//   };
-
-//   const currentRange = ranges[gender][type][percentileIndex];
-//   const [startCell, endCell] = currentRange.split(':');
-//   const startCol = startCell.charAt(0);
-//   const endCol = endCell.charAt(0);
-//   const startRow = parseInt(startCell.slice(1));
-//   const endRow = parseInt(endCell.slice(1));
-
-//   for (let row = startRow + 1; row <= endRow; row++) {
-//     const ageCellAddress = startCol + row;
-//     const ageCellValue = sheet[ageCellAddress]?.v;
-
-//     if (ageCellValue === ageInYears) {
-//       const heightPercentilesRow = startRow;
-//       for (let col = startCol.charCodeAt(0) + 2; col <= endCol.charCodeAt(0); col++) {
-//         const heightPercentileCellAddress = String.fromCharCode(col) + heightPercentilesRow;
-//         const heightPercentileCellValue = sheet[heightPercentileCellAddress]?.v;
-
-//         if (heightPercentileCellValue === heightPercentile) {
-//           const valueCellAddress = String.fromCharCode(col) + row;
-//           const valueCellValue = sheet[valueCellAddress]?.v;
-//           return valueCellValue ? Math.round(valueCellValue) : '';
-//         }
-//       }
-//     }
-//   }
-
-//   return '';
-// }
-
 
 function lookupValue(sheet, gender, type, percentileIndex, ageInYears, heightPercentile) {
   const ranges = {
@@ -1041,16 +873,17 @@ function lookupValue(sheet, gender, type, percentileIndex, ageInYears, heightPer
   for (let row = startRow + 1; row <= endRow; row++) {
     const ageCellAddress = startCol + row;
     const ageCellValue = sheet[ageCellAddress]?.v;
-
-    if (ageCellValue === ageInYears) {
+    
+    if (parseInt(ageCellValue) === parseInt(ageInYears)) {
       const heightPercentilesRow = startRow;
       for (let col = startCol.charCodeAt(0) + 1; col <= endCol.charCodeAt(0); col++) {
         const heightPercentileCellAddress = String.fromCharCode(col) + heightPercentilesRow;
         const heightPercentileCellValue = sheet[heightPercentileCellAddress]?.v;
-
+       
         if (parseFloat(heightPercentile) === parseFloat(heightPercentileCellValue)) {
           const valueCellAddress = String.fromCharCode(col) + row;
           const valueCellValue = sheet[valueCellAddress]?.v;
+         
           return valueCellValue ? Math.round(valueCellValue) : '';
         }
       }
@@ -1059,7 +892,6 @@ function lookupValue(sheet, gender, type, percentileIndex, ageInYears, heightPer
 
   return '';
 }
-
 
 /////////////////////////////////////////
 ///RBC's indicies calculation//////////
@@ -1087,8 +919,6 @@ function calculateIndices() {
    const mch = parseFloat(MCH.value);
    const mchc = parseFloat(MCHC.value);
  
-
-
   // Calculate based on RBCs RBCs count in millions  < 5 IDA , > 5 thalassemia
   const RBCCountResult = document.getElementById("RBCc");
   if (parseFloat(RBC.value) < 5) {
@@ -1391,14 +1221,11 @@ thalProbElement.style.backgroundColor = "#80FF80";
 
 }
 
-
-
 /////////////////////////////////////////////////////////////////////
 /////////////poisoning page codes//////////////
 /////////////////////////////////////////////////////////////////////
 
-function initializePoisonScript() {
-  console.log('DOMContentLoaded fired');
+function initializePoisonScript() {  
   function getColumnIndexFromRadioButtonValue(value) {
     const mapping = {
       "Mydriasis": "B",
@@ -1440,22 +1267,18 @@ function initializePoisonScript() {
   }
 
   function processSelections() {
-    const resultTextarea = document.getElementById("poisonResult");
+    const resultTextarea = document.getElementById("poisonResult");   
 
-    console.log("Result textarea:", resultTextarea);
     resultTextarea.value = "Processing...";
-
     const selectedColumns = [];
     const radioGroups = document.querySelectorAll('input[type="radio"]:checked');
     radioGroups.forEach(radio => {
       if (radio.value !== "Not Sure") {
-          const column = getColumnIndexFromRadioButtonValue(radio.value);
-          console.log("Radio value:", radio.value, "Column index:", column);
+          const column = getColumnIndexFromRadioButtonValue(radio.value);          
           selectedColumns.push(column);
       }
       });
-
-    console.log("Selected Columns:", selectedColumns);
+   
     fetch("ref/data.xlsx")
       .then(response => {
         if (!response.ok) {
@@ -1468,8 +1291,7 @@ function initializePoisonScript() {
         const sheet = workbook.Sheets["poison"];
 
         const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-        const poisonSet = new Set();
-        console.log("Rows:", rows);
+        const poisonSet = new Set(); 
 
         for (let i = 1; i < rows.length; i++) {
           let row = rows[i];
@@ -1477,7 +1299,7 @@ function initializePoisonScript() {
             const columnIndex = XLSX.utils.decode_col(column);
             const poison = row[columnIndex];
             if (poison && !poisonSet.has(poison)) {
-              console.log("Found poison:", poison, "in row:", row);
+              
               poisonSet.add(poison);
             }
           }
@@ -1489,9 +1311,9 @@ function initializePoisonScript() {
             return rows.some(row => row[columnIndex] === poison);
           })
         );
-        console.log("Filtered Poisons:", filteredPoisons);
+        
       if (filteredPoisons.length === 0) {
-      console.log("No poisons matched the selected criteria.");
+     
       }
       resultTextarea.value = filteredPoisons.join('\r\n');
 
@@ -1501,7 +1323,6 @@ function initializePoisonScript() {
         resultTextarea.value = error.message;
       });
   }
-
   document.querySelectorAll('input[type="radio"]').forEach(radio => {
     radio.addEventListener("change", processSelections);
   });
@@ -1509,3 +1330,4 @@ function initializePoisonScript() {
   // Initialize the results
   processSelections();
 }
+
