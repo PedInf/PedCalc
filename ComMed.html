@@ -5,158 +5,10 @@
   <title>Common Medications</title>
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <style>
-	body {
-		background: linear-gradient(to bottom, #bcebeb, #fff);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		height: 100vh;
-		margin: 0;
-	}
+  <link rel="stylesheet" href="/style/ComMed.css">
+  <!-- Load the excel reading JS library -->
+  <script src="ref/xlsx.full.min.js"></script>
 
-	header {
-		font-size: 5vw;
-		font-weight: bold;
-		text-align: center;
-		margin: 20px 0;
-		color: rgba(3, 16, 85, 0.978);
-	}
-
-	.container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		width: 100%;
-		max-width: 1200px;
-	}
-
-	select {
-		font-family: Georgia;
-		font-size: clamp(14px, 2vw, 48px);
-		background-color: lightgreen;
-		width: 50%;
-		max-width: 80%;
-		box-sizing: border-box;
-		padding: 10px;
-		margin-bottom: 10px;
-	}
-
-  textarea {
-  font-family: Georgia;
-  font-size: 32px;
-  background-color: lightgrey;
-  width: 100%;
-  box-sizing: border-box;
-  height: 65vh;
-  margin-top: 10px;
-  padding: 10px;
-  }
-
-  @media screen and (max-width: 767px) {
-    /* adjust height for smaller screens */
-    textarea {
-      height: calc(100vh - 40px);
-    }
-  }
-
-  /* Side Navigation Style */
-  .side-nav {
-    height: 100%;
-    width: 20px;
-    position: fixed;
-    z-index: 1;
-    top: 0;          
-    left: 0;
-    background: linear-gradient(to bottom, #340f3f, #380552);
-    overflow-x: hidden;
-    transition: 0.2s;
-    padding-top: 20px;
-    border-radius: 0 20px 20px 0;
-  }
-
-  .side-nav a {
-    padding: 20px 8px 8px 16px;
-    /* margin-bottom: 10px; */
-    text-decoration: none;
-    text-align: center;                   
-    font-size: clamp(16px, 8vw, 24px);
-    color: #884EA0;
-    display: block;
-    transition: 0.2s;
-  }
-
-  .side-nav a:hover {
-    color: #ffffff;
-    background-color: #884EA0;
-    border-radius: 20px;
-      
-  }
-
-  #trigger-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 100%;
-    z-index: 2;
-  }
-
-</style>
-<script src="ref/xlsx.full.min.js"></script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const select = document.querySelector('select');
-    const textarea = document.querySelector('textarea');
-
-    // load the Excel file
-    const url = 'ref/data.xlsx';
-    const oReq = new XMLHttpRequest();
-    oReq.open('GET', url, true);
-    oReq.responseType = 'arraybuffer';
-    oReq.onload = function(e) {
-      const arraybuffer = oReq.response;
-      const data = new Uint8Array(arraybuffer);
-      const workbook = XLSX.read(data, {type: 'array'});
-
-      // get the data from the "PDC" sheet
-      const sheetName = 'CM';
-      const worksheet = workbook.Sheets[sheetName];
-      const range = XLSX.utils.decode_range(worksheet['!ref']);
-      const dataArr = [];
-      for (let row = range.s.r + 1; row <= range.e.r; row++) {
-        const cell = worksheet[XLSX.utils.encode_cell({r: row, c: 0})];
-        if (cell && cell.v) {
-          dataArr.push({
-            key: cell.v,
-            value: worksheet[XLSX.utils.encode_cell({r: row, c: 1})]?.v || ''
-          });
-        }
-      }
-
-      // populate the select element
-      dataArr.forEach((dataObj) => {
-        const option = document.createElement('option');
-        option.value = dataObj.key;
-        option.text = dataObj.key;
-        select.add(option);
-      });
-
-      // show the value of cell B2 in the textarea
-      const cellB2 = worksheet['B2'];
-      textarea.value = cellB2 ? cellB2.v : '';
-
-      // update the text area when the selection changes
-      select.addEventListener('change', () => {
-        const selectedValue = select.value;
-        const selectedDataObj = dataArr.find((dataObj) => dataObj.key === selectedValue);
-        textarea.value = selectedDataObj ? selectedDataObj.value : '';
-      });
-    };
-    oReq.send();
-  });
-</script>
 
 </head>
 <body>
@@ -175,18 +27,12 @@
         <a href="Poison.html" class="poisoning">Poisoning</a>
         <a href="#" class="help">Help</a>
     </div>
-    <select>
+    <select id="selectCM">
+      
       <!-- options will be populated dynamically by JavaScript -->
     </select>
-    <textarea placeholder="Enter medication details here"></textarea>
-    <script>
-      document.getElementById('trigger-area').addEventListener('mouseover', function () {
-          document.getElementById('side-nav').style.width = '250px';
-      });      
-      document.getElementById('side-nav').addEventListener('mouseleave', function () {
-          document.getElementById('side-nav').style.width = '20px';
-      });
-  </script>
+    <textarea id="textareaCM" placeholder="Enter medication details here"></textarea>
+    <script src="index.js"></script> 
   </div>
 </body>
 </html>

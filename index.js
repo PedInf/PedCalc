@@ -1,20 +1,169 @@
-// JS code to work with the HTML & CSS Code of Pediatric Calculators Project
-const dataFile = "/ref/data.xlsx";
+//////////////////Side bar code///////////////////////////
+document.getElementById('trigger-area').addEventListener('mouseover', function () {
+  document.getElementById('side-nav').style.width = '250px';
+});            
+document.getElementById('side-nav').addEventListener('mouseleave', function () {
+  document.getElementById('side-nav').style.width = '20px';
+});
 
-fetch(dataFile)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`Failed to fetch ${dataFile}. Status: ${response.status}`);
+////////////////////////////////////////////////////////////////////
+////////Reading Pediatric Medications and Common Medications///////
+/// provide the link to the JS libraray that can read excel file
+////////////////////////////////////////////////////////////////
+
+
+// Home Medications
+window.addEventListener('DOMContentLoaded', () => {
+  const selectHM = document.querySelector('#selectHM');
+  const textareaHM = document.querySelector('#textareaHM');
+ 
+
+  // load the Excel file
+  const url = 'ref/data.xlsx';
+  const oReq = new XMLHttpRequest();
+  oReq.open('GET', url, true);
+  oReq.responseType = 'arraybuffer';
+  oReq.onload = function(e) {
+    const arraybuffer = oReq.response;
+    const data = new Uint8Array(arraybuffer);
+    const workbook = XLSX.read(data, {type: 'array'});
+
+    // get the data from the "PDC" sheet
+    const sheetName = 'PDC';
+    const worksheet = workbook.Sheets[sheetName];
+    const range = XLSX.utils.decode_range(worksheet['!ref']);
+    const dataArr = [];
+    for (let row = range.s.r + 1; row <= range.e.r; row++) {
+      const cell = worksheet[XLSX.utils.encode_cell({r: row, c: 0})];
+      if (cell && cell.v) {
+        dataArr.push({
+          key: cell.v,
+          value: worksheet[XLSX.utils.encode_cell({r: row, c: 1})]?.v || ''
+        });
+      }
     }
-    return response.arrayBuffer();
-  })
-  .then(data => {
-    const workbook = XLSX.read(data, { type: "buffer" });
-    // Process the workbook data here
-  })
-  .catch(error => {
-    console.error("Error fetching the data file:", error);
-  });
+
+    // populate the select element
+    dataArr.forEach((dataObj) => {
+      const option = document.createElement('option');
+      option.value = dataObj.key;
+      option.text = dataObj.key;
+      selectHM.add(option);
+    });
+
+    // show the value of cell B2 in the textarea
+    const cellB2 = worksheet['B2'];
+    textareaHM.value = cellB2 ? cellB2.v : '';
+
+    // update the text area when the selection changes
+    selectHM.addEventListener('change', () => {
+      const selectedValue = selectHM.value;
+      const selectedDataObj = dataArr.find((dataObj) => dataObj.key === selectedValue);
+      textareaHM.value = selectedDataObj ? selectedDataObj.value : '';
+    });
+  };
+  oReq.send();
+});
+
+//Common Medications
+window.addEventListener('DOMContentLoaded', () => {
+  const selectCM = document.querySelector('#selectCM');
+  const textareaCM = document.querySelector('#textareaCM');
+
+  const url = 'ref/data.xlsx';
+  const oReq = new XMLHttpRequest();
+  oReq.open('GET', url, true);
+  oReq.responseType = 'arraybuffer';
+
+  oReq.onload = function(e) {
+    const arraybuffer = oReq.response;
+    const data = new Uint8Array(arraybuffer);
+    const workbook = XLSX.read(data, {type: 'array'});
+
+    const sheetName = 'CM';
+    const worksheet = workbook.Sheets[sheetName];
+    const range = XLSX.utils.decode_range(worksheet['!ref']);
+    const dataArr = [];
+
+    for (let row = range.s.r + 1; row <= range.e.r; row++) {
+      const cell = worksheet[XLSX.utils.encode_cell({r: row, c: 0})];
+      if (cell && cell.v) {
+        dataArr.push({
+          key: cell.v,
+          value: worksheet[XLSX.utils.encode_cell({r: row, c: 1})]?.v || ''
+        });
+      }
+    }
+
+    dataArr.forEach((dataObj) => {
+      const option = document.createElement('option');
+      option.value = dataObj.key;
+      option.text = dataObj.key;
+      selectCM.add(option);
+    });
+
+    const cellB2 = worksheet['B2'];
+    textareaCM.value = cellB2 ? cellB2.v : '';
+
+    selectCM.addEventListener('change', () => {
+      const selectedValue = selectCM.value;
+      const selectedDataObj = dataArr.find((dataObj) => dataObj.key === selectedValue);
+      textareaCM.value = selectedDataObj ? selectedDataObj.value : '';
+    });
+  };
+
+  oReq.send();
+});
+
+// Convertor
+window.addEventListener('DOMContentLoaded', () => {
+  const selectConv = document.querySelector('#selectConv');
+  const textareaConv = document.querySelector('#textareaConv');
+
+  const url = 'ref/data.xlsx';
+  const oReq = new XMLHttpRequest();
+  oReq.open('GET', url, true);
+  oReq.responseType = 'arraybuffer';
+
+  oReq.onload = function(e) {
+    const arraybuffer = oReq.response;
+    const data = new Uint8Array(arraybuffer);
+    const workbook = XLSX.read(data, {type: 'array'});
+
+    const sheetName = 'Conv';
+    const worksheet = workbook.Sheets[sheetName];
+    const range = XLSX.utils.decode_range(worksheet['!ref']);
+    const dataArr = [];
+
+    for (let row = range.s.r + 1; row <= range.e.r; row++) {
+      const cell = worksheet[XLSX.utils.encode_cell({r: row, c: 0})];
+      if (cell && cell.v) {
+        dataArr.push({
+          key: cell.v,
+          value: worksheet[XLSX.utils.encode_cell({r: row, c: 1})]?.v || ''
+        });
+      }
+    }
+
+    dataArr.forEach((dataObj) => {
+      const option = document.createElement('option');
+      option.value = dataObj.key;
+      option.text = dataObj.key;
+      selectConv.add(option);
+    });
+
+    const cellB2 = worksheet['B2'];
+    textareaConv.value = cellB2 ? cellB2.v : '';
+
+    selectConv.addEventListener('change', () => {
+      const selectedValue = selectConv.value;
+      const selectedDataObj = dataArr.find((dataObj) => dataObj.key === selectedValue);
+      textareaConv.value = selectedDataObj ? selectedDataObj.value : '';
+    });
+  };
+
+  oReq.send();
+});
 
 
 /////////////////DOB & Age Calculation//////////////////////

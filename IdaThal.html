@@ -4,264 +4,7 @@
     <title>IDA and β-Thalassemia Discrimination</title>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-     <style>
-         /* the whole page background color*/
-        body {
-            background: linear-gradient(to bottom, #fef3f3, #fff);            
-        }
-        /* the Header style*/
-        header {
-            font-size: 4vw;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-            color: rgba(3, 16, 85, 0.978);
-        }
-        /* Design the whole page container to design inside it*/
-        .container {
-            max-width: 1500px;
-            margin: 0 auto;
-            min-height: 100vh;
-        }        
-        .MainCont {
-            display: flex;
-            flex-direction: column;
-            height: auto;
-            width: auto;
-            justify-content: center;
-            align-items: center;
-            justify-content: center;
-            background-color: #f9e5d8;
-            border-radius: 15px;           
-        }    
-
-        /* Media query for large screens */
-        @media (min-width: 768px) {
-            .MainCont {
-                flex-direction: row;
-            }
-        }
-        
-        .DataCalc {
-            display: flex;
-            flex-direction:column;
-            width: auto;
-            background-color: rgb(250, 225, 221);
-            border-radius:10px;
-            margin-right: 20px;
-            margin-left: 20px;
-        }
-        
-        .ptdataLabel{
-            font-size: clamp(20px, 40%, 32px);
-            text-align: center;
-            font-weight: bold;
-            background-color:rgb(255, 215, 255);
-            margin-bottom: 5px;
-        }
-        
-        .PatData {
-            display: flex;
-            flex-direction:column;
-            background-color: rgb(252, 213, 206);
-            margin:10px;
-            border-radius:10px;
-            padding:5px;
-        }
-        .indices-cont {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-            justify-content: center;
-        }
-        
-        .DisProb {
-            margin:10px;
-            display: flex;
-            flex-direction:column;
-            background-color: #cf7dff;
-            border-radius:10px;
-            padding:5px;
-        }
-        
-        .prob-cont {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-            border-radius:10px;
-        }
-
-        .indices-cont label {
-            width: 110px; 
-            margin-right: 10px; 
-            font-size: clamp(18px, 40%, 32px);
-            font-weight: bold;
-        }
-    
-        .prob-cont label {
-            width: 170px; 
-            margin-right: 10px; 
-            font-size: clamp(24px, 40%, 32px);
-            font-weight: bold;
-        }
-        
-        .indices-cont input {
-            width: 75px; 
-            margin-right: 10px;
-            border-radius:10px;
-            border:none;
-            height:35px;
-            text-align:center;
-            font-weight: bold;
-            font-family: 'Times New Roman';
-            font-size: clamp(16px, 40%, 24px);
-        }
-    
-        .prob-cont input {
-            width: 170px; 
-            margin-right: 10px;
-            border-radius:10px;
-            border:none;
-            height:35px;
-            font-weight:bold;
-            text-align:center;
-        } 
-        
-        .IdaThalCalc-btn {
-            font-size: clamp(24px, 40%, 32px);
-            width:75%;
-            align-self:center;
-            font-weight:bold;
-            padding: 10px;
-            background-color: #60f7f07f;
-            border: none;
-            cursor: pointer;
-            border-radius:20px;
-            margin: 10px;
-        }
-
-        .IdaThalCalc-btn:hover {
-            background-color: #9295957f;          
-                                
-        }
-        
-        .IdaThalCalc {
-            display: flex;
-            flex-direction:column;
-            
-            width: 100%;
-        }
-        
-        .IndicesTitle {
-            width: auto; 
-            font-size: clamp(20px, 40%, 32px);
-            font-weight: bold;
-            text-align:center;
-            padding: 10px;
-            background-color: #ffb5a7;
-            border-radius:20px;
-        }
-
-        .hovermsg {
-            width: auto; 
-            font-size: clamp(14px, 40%, 32px);
-            font-weight: bold;
-            font-style: italic;
-            text-align:center;
-            padding: 3px;
-            color: #d900fa;           
-        }
-        
-        .indOutCont {
-            display: flex;
-            flex-direction:column;            
-        }
-
-        .AllIndices {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin:5px;           
-            border-radius:5px;
-        }
-        
-        @media (max-width: 768px) {
-            .AllIndices {
-                flex-direction: column;
-            }
-        }
-                
-        .LtIndices, .RtIndices{
-            background-color: #f9dcc4;
-            padding:1px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1; 
-            border-radius: 10px;
-        }
-        
-        .CalculatedIndices input {
-            width:140px;
-            border-radius: 10px;
-            height: 20px;
-            text-align: center;            
-        }
-
-        .CalculatedIndices label {
-            display: inline-block;
-            min-width: 210px; 
-            margin-right: 10px; 
-            padding: 3px;
-            font-size: clamp(20px, 40%, 32px);
-            font-weight: bold;
-            text-align: left;
-        }
-        
-        /* Side Navigation Style */
-        .side-nav {
-            height: 100%;
-            width: 20px;
-            position: fixed;
-            z-index: 1;
-            top: 0;          
-            left: 0;
-            background: linear-gradient(to bottom, #340f3f, #380552);
-            overflow-x: hidden;
-            transition: 0.2s;
-            padding-top: 20px;
-            border-radius: 0 20px 20px 0;
-        }
-
-        .side-nav a {
-            padding: 20px 8px 8px 16px;
-            /* margin-bottom: 10px; */
-            text-decoration: none;
-            text-align: center;                   
-            font-size: clamp(16px, 8vw, 24px);
-            color: #884EA0;
-            display: block;
-            transition: 0.2s;
-        }
-
-        .side-nav a:hover {
-            color: #ffffff;
-            background-color: #884EA0;
-            border-radius: 20px;
-            
-        }
-
-        #trigger-area {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 20px;
-            height: 100%;
-            z-index: 2;
-        }
-        
-
-    </style>
+    <link rel="stylesheet" href="/style/IdaThal.css">
 </head>
 
 <body>
@@ -333,113 +76,113 @@
                     <div class="AllIndices">
                         <div class="LtIndices">
                             <div class="CalculatedIndices">
-                                <label for="RBC" title="RBCs count in millions if < 5 IDA , > 5 thalassemia">RBC count</label>
+                                <label for="RBC" title="RBCs count in millions if &lt; 5 IDA , > 5 thalassemia">RBC count</label>
                                 <input id="RBCc" type="text" placeholder="RBC count" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="RDW" title="RDW%. In IDA> 14 , in β-Thal<14.">RDW</label>
+                                <label for="RDW" title="RDW%. In IDA> 14 , in β-Thal&lt;14.">RDW</label>
                                 <input id="inRDW" type="text" placeholder="RDW" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Mentzer" title="MCV/RBC . In IDA> 13 , in β-Thal< 13.Most reliable index(98.7%, 82.3%, 81%)">Mentzer</label>
+                                <label for="Mentzer" title="MCV/RBC . In IDA> 13 , in β-Thal&lt; 13.Most reliable index(98.7%, 82.3%, 81%)">Mentzer</label>
                                 <input id="Mentzer" type="text" placeholder="Mentzer" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="ShineLal" title="MCV ×MCV x MCH. In IDA> 1530 , in β-Thal< 1530.Lowest reliability">Shine and Lal</label>
+                                <label for="ShineLal" title="MCV ×MCV x MCH. In IDA> 1530 , in β-Thal&lt; 1530.Lowest reliability">Shine and Lal</label>
                                 <input id="ShineLal" type="text" placeholder="Shine and Lal" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="EnglFras" title="MCV – RBC – 5Hb – 3.4 . In IDA>0, in β-Thal<0.">England and Fraser</label>
+                                <label for="EnglFras" title="MCV – RBC – 5Hb – 3.4 . In IDA>0, in β-Thal&lt;0.">England and Fraser</label>
                                 <input id="EnglFras" type="text" placeholder="England and Fraser" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Srivastava" title="MCH/RBC. In IDA> 3.8 , in β-Thal< 3.8.lowest reliability">Srivastava</label>
+                                <label for="Srivastava" title="MCH/RBC. In IDA> 3.8 , in β-Thal&lt; 3.8.lowest reliability">Srivastava</label>
                                 <input id="Srivastava" type="text" placeholder="Srivastava" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="GK" title="(MCV x MCV × RDW)/(100 HB). In IDA> 65 , in β-Thal< 65. Highest reliability">Green and King (G&K)</label>
+                                <label for="GK" title="(MCV x MCV × RDW)/(100 HB). In IDA> 65 , in β-Thal&lt; 65. Highest reliability">Green and King (G&K)</label>
                                 <input id="GK" type="text" placeholder="Green and King (G&K)" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="RDWI" title="MCV × RDW/RBC. In IDA> 220 , in β-Thal< 220.">RDWI</label>
+                                <label for="RDWI" title="MCV × RDW/RBC. In IDA> 220 , in β-Thal&lt; 220.">RDWI</label>
                                 <input id="RDWI" type="text" placeholder="RDWI" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Ricerca" title="RDW/RBC. In IDA> 4.4, in β-Thal< 4.4.">Ricerca</label>
+                                <label for="Ricerca" title="RDW/RBC. In IDA> 4.4, in β-Thal&lt; 4.4.">Ricerca</label>
                                 <input id="Ricerca" type="text" placeholder="Ricerca" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Ehsani" title="MCV - (10 RBC). In IDA> 15, in β-Thal< 15.Sensitivity, Specificity ,Youden’s index(94.8%, 73.5%, 68.3%)">Ehsani</label>
+                                <label for="Ehsani" title="MCV - (10 RBC). In IDA> 15, in β-Thal&lt;15.Sensitivity, Specificity ,Youden’s index(94.8%, 73.5%, 68.3%)">Ehsani</label>
                                 <input id="Ehsani" type="text" placeholder="Ehsani" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Sirdah" title="MCV - RBC - (3 Hb). In IDA>27, in β-Thal<27.">Sirdah</label>
+                                <label for="Sirdah" title="MCV - RBC - (3 Hb). In IDA>27, in β-Thal&lt;27.">Sirdah</label>
                                 <input id="Sirdah" type="text" placeholder="Sirdah" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="HubHer" title="(MCH × RDW/10 RBC) + RDW. In IDA>20, in β-Thal<20.">Huber-Herklotz</label>
+                                <label for="HubHer" title="(MCH × RDW/10 RBC) + RDW. In IDA>20, in β-Thal&lt;20.">Huber-Herklotz</label>
                                 <input id="HubHer" type="text" placeholder="Huber-Herklotz" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="KermanI" title="(MCV × MCH)/RBC. In IDA300-400, in β-Thal<300.">Kerman I</label>
+                                <label for="KermanI" title="(MCV × MCH)/RBC. In IDA300-400, in β-Thal&lt;00.">Kerman I</label>
                                 <input id="KermanI" type="text" placeholder="Kerman I" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="KermanII" title="(MCV × MCH × 10)/(RBC × MCHC). In IDA85-105, in β-Thal<85.">Kerman II</label>
+                                <label for="KermanII" title="(MCV × MCH × 10)/(RBC × MCHC). In IDA85-105, in β-Thal&lt;85.">Kerman II</label>
                                 <input id="KermanII" type="text" placeholder="Kerman II" readonly>
                             </div>
                         </div>
                         <div class="RtIndices">
                             <div class="CalculatedIndices">
-                                <label for="Bessman" title="RDW. In IDA>15, in β-Thal<15.">Bessman</label>
+                                <label for="Bessman" title="RDW. In IDA>15, in β-Thal&lt;15.">Bessman</label>
                                 <input id="Bessman" type="text" placeholder="Bessman" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="DasGupta" title="1.89 RBC - 0.33 RDW - 3.28. In IDA<0, in β-Thal>0.">Das Gupta</label>
+                                <label for="DasGupta" title="1.89 RBC - 0.33 RDW - 3.28. In IDA&lt;0, in β-Thal>0.">Das Gupta</label>
                                 <input id="DasGupta" type="text" placeholder="Das Gupta" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="TMCHD" title="MCH /MCV. In IDA>0.34, in β-Thal<0.34.">Telmissani – MCHD</label>
+                                <label for="TMCHD" title="MCH /MCV. In IDA>0.34, in β-Thal&lt;0.34.">Telmissani – MCHD</label>
                                 <input id="TMCHD" type="text" placeholder="Telmissani – MCHD" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="TMDHL" title="(MCH × RBC)/MCV. In IDA<1.75, in β-Thal>1.75.">Telmissani – MDHL</label>
+                                <label for="TMDHL" title="(MCH × RBC)/MCV. In IDA&lt;1.75, in β-Thal>1.75.">Telmissani – MDHL</label>
                                 <input id="TMDHL" type="text" placeholder="Telmissani – MDHL"readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Keikhaei" title="(HB × RDW × 100)/(RBC x RBC × MCHC). In IDA>21, in β-Thal<21.">Keikhaei</label>
+                                <label for="Keikhaei" title="(HB × RDW × 100)/(RBC x RBC × MCHC). In IDA>21, in β-Thal&lt;21.">Keikhaei</label>
                                 <input id="Keikhaei" type="text" placeholder="Keikhaei"readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Nishad" title="0.615 MCV + 0.518 MCH + 0.446 RDW. In IDA>59, in β-Thal<59.">Nishad</label>
+                                <label for="Nishad" title="0.615 MCV + 0.518 MCH + 0.446 RDW. In IDA>59, in β-Thal&lt;59.">Nishad</label>
                                 <input id="Nishad" type="text" placeholder="Nishad"readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Wongprachum" title="(MCV × RDW/RBC) – 10 HB. In IDA>104, in β-Thal<104.">Wongprachum</label>
+                                <label for="Wongprachum" title="(MCV × RDW/RBC) – 10 HB. In IDA>104, in β-Thal&lt;104.">Wongprachum</label>
                                 <input id="Wongprachum" type="text" placeholder="Wongprachum"readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Sehgal" title="MCV x MCV/RBC. In IDA<972, in β-Thal>972.">Sehgal</label>
+                                <label for="Sehgal" title="MCV x MCV/RBC. In IDA&lt;972, in β-Thal>972.">Sehgal</label>
                                 <input id="Sehgal" type="text" placeholder="Sehgal"readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Pornprasert" title="MCHC. In IDA>31, in β-Thal<31.">Pornprasert</label>
+                                <label for="Pornprasert" title="MCHC. In IDA>31, in β-Thal&lt;31.">Pornprasert</label>
                                 <input id="Pornprasert" type="text" placeholder="Pornprasert"readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Sirachainan" title="1.5 HB – 0.05 MCV. In IDA<14, in β-Thal>14.">Sirachainan</label>
+                                <label for="Sirachainan" title="1.5 HB – 0.05 MCV. In IDA&lt;14, in β-Thal>14.">Sirachainan</label>
                                 <input id="Sirachainan" type="text" placeholder="Sirachainan"readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="Bordbar" title="|80-MCV| × |27-MCH|. In IDA<44.76, in β-Thal>44.76.">Bordbar</label>
+                                <label for="Bordbar" title="|80-MCV| × |27-MCH|. In IDA&lt;44.76, in β-Thal>44.76.">Bordbar</label>
                                 <input id="Bordbar" type="text" placeholder="Bordbar" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="MatCar" title="1.91 RBC + 0.44 MCHC. In IDA<23.85, in β-Thal>23.85.">Matos and Carvalho</label>
+                                <label for="MatCar" title="1.91 RBC + 0.44 MCHC. In IDA&lt;23.85, in β-Thal>23.85.">Matos and Carvalho</label>
                                 <input id="MatCar" type="text" placeholder="Matos and Carvalho" readonly>
                             </div>
                             <div class="CalculatedIndices">
-                                <label for="CRUISE" title="MCHC + 0.603 RBC + 0.523 RDW. In IDA< 42.63, in β-Thal= 42.63">CRUISE</label>
+                                <label for="CRUISE" title="MCHC + 0.603 RBC + 0.523 RDW. In IDA&lt; 42.63, in β-Thal= 42.63">CRUISE</label>
                                 <input id="CRUISE" type="text" placeholder="CRUISE" readonly>
                             </div>
                         </div>
@@ -450,14 +193,6 @@
         
         <!-- link JavaScript index file to HtmlPedCalc -->
           <script src="index.js"></script>
-          <script>
-            document.getElementById('trigger-area').addEventListener('mouseover', function () {
-                document.getElementById('side-nav').style.width = '250px';
-            });            
-            document.getElementById('side-nav').addEventListener('mouseleave', function () {
-                document.getElementById('side-nav').style.width = '20px';
-            });
-        </script>  
     </div>
 </body>
 </html>
