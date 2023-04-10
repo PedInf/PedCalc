@@ -421,7 +421,7 @@ async function wtPercentCalc() {
   }
 
   // Fourth: Read data from the .xlsx file
-  const dataFile = "/ref/data.xlsx";
+  const dataFile = "ref/data.xlsx";
   const workbook = await readWorkbook(dataFile);
 
   // Fifth: Convert the age to months and find the approximate match
@@ -500,7 +500,7 @@ async function htPercentCalc() {
   }
 
   // Fourth: Read data from the .xlsx file
-  const dataFile = "/ref/data.xlsx";
+  const dataFile = "ref/data.xlsx";
   const workbook = await readWorkbook(dataFile);
 
   // Fifth: Convert the age to months and find the approximate match
@@ -580,7 +580,7 @@ async function bmiPercentCalc() {
   }
 
   // Fourth: Read data from the .xlsx file
-  const dataFile = "/ref/data.xlsx";
+  const dataFile = "ref/data.xlsx";
   const workbook = await readWorkbook(dataFile);
 
   // Fifth: Convert the age to months and find the approximate match
@@ -640,7 +640,7 @@ async function hcPercentCalc() {
   }
 
   // Fourth: Read data from the .xlsx file
-  const dataFile = "/ref/data.xlsx";
+  const dataFile = "ref/data.xlsx";
   const workbook = await readWorkbook(dataFile);
 
   // Fifth: Convert the age to months and find the approximate match
@@ -723,7 +723,7 @@ async function wtstatPercentCalc() {
   }
 
   // Fourth: Read data from the .xlsx file
-  const dataFile = "/ref/data.xlsx";
+  const dataFile = "ref/data.xlsx";
   const workbook = await readWorkbook(dataFile);
 
   // Fifth: find Height approximate match  
@@ -766,7 +766,7 @@ async function getVitalSignsForAge() {
   const ageInMonths = ageInYears * 12;
 
   // Read data from the .xlsx file
-  const dataFile = "/ref/data.xlsx";
+  const dataFile = "ref/data.xlsx";
   const workbook = await readWorkbook(dataFile);
 
   // Get the VitalSigns sheet
@@ -961,7 +961,7 @@ async function getBloodPressurePercentiles() {
       }
 
       console.log(heightPercentile);
-      const workbook = await readWorkbookOnce('/ref/data.xlsx');
+      const workbook = await readWorkbookOnce('ref/data.xlsx');
       const sheet = workbook.Sheets['BP']; 
 
   const bpIds = ['Bp50Percent', 'Bp90Percent', 'Bp95Percent', 'Bp99Percent'];
