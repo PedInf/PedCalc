@@ -1,0 +1,6 @@
+
+validator.w3.org
+jigsaw.w3.org/css-validator/
+add about 
+Move all scripts to javascript
+change the variable names tomeaningfull names
