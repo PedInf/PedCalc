@@ -33,10 +33,29 @@ function initializeDropdown() {
   document.addEventListener("click", closeDropdown);
 }
 
+function isPageInSubfolder() {
+  const currentPath = window.location.pathname.split('/');
+  currentPath.pop(); // Remove the current HTML file from the path
+  return currentPath.length > 1; // Check if there are any remaining path segments
+}
+
+function getBaseURL() {
+  const currentPath = window.location.pathname.split('/');
+  const repoName = "PedCalc";
+  const repoIndex = currentPath.indexOf(repoName);
+
+  if (repoIndex !== -1) {
+    return '/' + currentPath.slice(0, repoIndex + 1).join('/') + '/';
+  } else {
+    return '/';
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   var headerContainer = document.getElementById("header-container");
+  const baseURL = getBaseURL();
 
-  fetch('/PedCalc/header.html') // Always include the repository name in the path
+  fetch(baseURL + 'header.html')
     .then(response => response.text())
     .then(html => {
       headerContainer.innerHTML = html;
@@ -54,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.warn("Something went wrong with loading the header:", err);
     });
 });
+
 
 
 
