@@ -4,17 +4,10 @@
 ////////////////////////////////////////////////////////////////
 
 // handles the home button toggles in windows screens and mobile devices
-function isPageInSubfolder() {
-  const currentPath = window.location.pathname.split('/');
-  currentPath.pop(); // Remove the current HTML file from the path
-  return currentPath.length > 1; // Check if there are any remaining path segments
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   var headerContainer = document.getElementById("header-container");
-  const inSubfolder = isPageInSubfolder();
 
-  fetch((inSubfolder ? '../' : '') + 'header.html') // Construct the path based on whether the page is in a subfolder
+  fetch('/PedCalc/header.html') // Always include the repository name in the path
     .then(response => response.text())
     .then(html => {
       headerContainer.innerHTML = html;
