@@ -4,6 +4,35 @@
 ////////////////////////////////////////////////////////////////
 
 // handles the home button toggles in windows screens and mobile devices
+function initializeDropdown() {
+  function toggleDropdown(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    var dropdown = document.querySelector(".dropdown-content");
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none";
+    } else {
+      dropdown.style.display = "block";
+    }
+  }
+
+  function closeDropdown() {
+    var dropdown = document.querySelector(".dropdown-content");
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none";
+    }
+  }
+
+  var homeBtn = document.getElementById("home-btn-toggle");
+  if ('ontouchstart' in window) {
+    homeBtn.addEventListener("touchstart", toggleDropdown);
+  } else {
+    homeBtn.addEventListener("click", toggleDropdown);
+  }
+
+  document.addEventListener("click", closeDropdown);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   var headerContainer = document.getElementById("header-container");
 
