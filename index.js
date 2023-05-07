@@ -36,38 +36,17 @@ function initializeDropdown() {
 function isPageInSubfolder() {
   const currentPath = window.location.pathname.split('/');
   currentPath.pop(); // Remove the current HTML file from the path
-  return currentPath.length > 1; // Check if there are any remaining path segments
-}
-
-function getBaseURL() {
-  const currentPath = window.location.pathname.split('/');
-  const repoName = "PedCalc";
-  const repoIndex = currentPath.indexOf(repoName);
-
-  if (repoIndex !== -1) {
-    return '/' + currentPath.slice(0, repoIndex + 1).join('/') + '/';
-  } else {
-    return '/';
-  }
+  return currentPath.includes('cpg'); // Check if 'cpg' is in the remaining path segments
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   var headerContainer = document.getElementById("header-container");
-  const baseURL = getBaseURL();
 
-  fetch(baseURL + 'header.html')
+  fetch((isPageInSubfolder() ? '../../' : '/') + 'PedCalc/header.html')
     .then(response => response.text())
     .then(html => {
       headerContainer.innerHTML = html;
-
-      // Add the load event listener to the headerContainer element
-      headerContainer.addEventListener("load", function () {
-        initializeDropdown(); // Call the function after loading the header
-      });
-
-      // Manually trigger the load event if the header content is already loaded
-      const event = new Event("load");
-      headerContainer.dispatchEvent(event);
+      initializeDropdown(); // Call the function after loading the header
     })
     .catch(err => {
       console.warn("Something went wrong with loading the header:", err);
