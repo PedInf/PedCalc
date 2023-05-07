@@ -2,19 +2,22 @@
   body {
     background: linear-gradient(to bottom, #fef3f3, #fff);            
 }
-/* the Header style*/
-header {
+
+/* Specific Page Header */
+.page-header {
     font-size: 4vw;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
     color: rgba(3, 16, 85, 0.978);
+    margin-top: 40px;   
 }
+
+
 /* Design the whole page container to design inside it*/
 .container {
     max-width: 1500px;
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: 80vh;
 }        
 .MainCont {
     display: flex;
@@ -24,7 +27,7 @@ header {
     justify-content: center;
     align-items: center;
     justify-content: center;
-    background-color: #f9e5d8;
+    background-color: #ffceff;
     border-radius: 15px;           
 }    
 
@@ -39,7 +42,7 @@ header {
     display: flex;
     flex-direction:column;
     width: auto;
-    background-color: rgb(250, 225, 221);
+    background-color: #ffc9ff;
     border-radius:10px;
     margin-right: 20px;
     margin-left: 20px;
@@ -56,7 +59,7 @@ header {
 .PatData {
     display: flex;
     flex-direction:column;
-    background-color: rgb(252, 213, 206);
+    background-color: #ffb7ff;
     margin:10px;
     border-radius:10px;
     padding:5px;
@@ -129,14 +132,19 @@ header {
     font-weight:bold;
     padding: 10px;
     background-color: #60f7f07f;
-    border: none;
+    border: 1px solid black;
     cursor: pointer;
     border-radius:20px;
     margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
 }
 
 .IdaThalCalc-btn:hover {
-    background-color: #9295957f;          
+    background-color: #7676767f;
+    color:white;  
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);        
                         
 }
 
@@ -153,7 +161,7 @@ header {
     font-weight: bold;
     text-align:center;
     padding: 10px;
-    background-color: #ffb5a7;
+    background-color: #ac82fe;
     border-radius:20px;
 }
 
@@ -164,7 +172,7 @@ header {
     font-style: italic;
     text-align:center;
     padding: 3px;
-    color: #d900fa;           
+    color: #4361ee;           
 }
 
 .indOutCont {
@@ -188,7 +196,7 @@ header {
 }
         
 .LtIndices, .RtIndices{
-    background-color: #f9dcc4;
+    background-color: #ffc9ff;
     padding:1px;
     display: flex;
     flex-direction: column;
@@ -213,64 +221,9 @@ header {
     text-align: left;
 }
 
-/* Side Navigation Style */
-.side-nav {
-    height: 100%;
-    width: 20px;
-    position: fixed;
-    z-index: 1;
-    top: 0;          
-    left: 0;
-    background: linear-gradient(to bottom, #340f3f, #380552);
-    overflow-x: hidden;
-    transition: 0.2s;
-    padding-top: 20px;
-    border-radius: 0 20px 20px 0;
-}
+@media only screen and (max-width: 768px) {
 
-.side-nav a {
-    padding: 20px 8px 8px 16px;
-    /* margin-bottom: 10px; */
-    text-decoration: none;
-    text-align: center;                   
-    font-size: clamp(16px, 8vw, 24px);
-    color: #884EA0;
-    display: block;
-    transition: 0.2s;
-}
-
-.side-nav a:hover {
-    color: #ffffff;
-    background-color: #884EA0;
-    border-radius: 20px;
-    
-}
-
-#trigger-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 100%;
-    z-index: 2;
-}
-
-.back-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 16px;    
-    padding: 10px;
-    font-weight: bold;
-    background-color: #fdff98;
-    color: #ff0000;
-    border: none;
-    cursor: pointer;
-    border-radius:20px;
-    width: 130px;
+    .page-header {
+        font-size: 4vw;       
     }
-
-.back-btn:hover {
-    background-color:  #ff0000;
-    color:#ffffff;
 }

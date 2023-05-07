@@ -2,36 +2,27 @@
 <html lang="en">
   <head>
     <title>Pediatric Clinical Practice Guidelines</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="style/pedcpg.css">
-    <script src="ref/xlsx.full.min.js"></script>
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style/pedcpg.css" />
   </head>
   <body>
-    <header>Common Pediatric CPGs</header>
+    <div id="header-container"></div>
+    <header class="page-header">Common Pediatric CPGs</header>    
     <div class="container">
-      <div id="trigger-area"></div>
-      <div id="side-nav" class="side-nav">
-        <a href="index.html" class="pediatric-calculator">Home</a>
-        <a href="HMed.html" class="pediatric-medications"
-          >Pediatric Medications</a
-        >
-        <a href="ComMed.html" class="common-medications">Common Medications</a>
-        <a href="FlCal.html" class="fluid-calculators">Fluid Calculators</a>
-        <a href="GrVs.html" class="growth-vital-signs">Growth & Vital Signs</a>
-        <a href="Conv.html" class="convertors">Convertors</a>
-        <a href="IdaThal.html" class="rbc-indices">RBC Indices</a>
-        <a href="Poison.html" class="poisoning">Poisoning</a>
-        <a href="pedcpg.html" class="Pediatric Guidelines">Pediatric Guidelines</a>
-        <a href="peder.html" class="Pediatric ER">Pediatric ER</a>
-      </div>
-      <select id="selectCPG">
-        <!-- options will be populated dynamically by JavaScript -->
-      </select>
-      <textarea id="textareaCPG" placeholder="Pediatric CPGs -- Under Development"></textarea>
+      <a href="cpg/asthma.html" class="asthma">Pediatric Asthma</a>
+      <a href="cpg/bronchiolitis.html" class="bronchiolitis">Acute Bronchiolitis</a>
+      <a href="cpg/cap.html" class="cap">Community Acquired Pneumonia</a>
+      <a href="cpg/dm.html" class="dm">Type 1 Diabetes Mellitus</a>
+      <a href="cpg/fever.html" class="fever">Pediatric Fever without focus</a>
+      <a href="cpg/hypoglycemia.html" class="hypoglycemia">Hypoglycemia</a>
+      <a href="cpg/ivfluids.html" class="ivfluids">IV Fluids in Pediatric Patients</a>
+      <a href="cpg/urti.html" class="urti">Upper respiratory tract infections</a>
+      <a href="cpg/uti.html" class="uti">Pediatric Urinary Tract Infection</a>
+      <a href="cpg/seizures.html" class="seizures">Pediatric Seizures</a>
+      
       <script src="index.js"></script> 
     </div>
-    <button class="back-btn" onclick="location.href='index.html'">Home</button> 
+
   </body>
 </html>

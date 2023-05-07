@@ -1,20 +1,32 @@
-    /* the whole page background color*/
-    body {
-        background: linear-gradient(to bottom, #e6ffff, #fff);            
+/* the whole page background color*/
+body {
+    background: linear-gradient(to bottom, #e6ffff, #fff);            
+}
+
+
+
+/* Specific Page Header */
+.page-header {
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    color: rgba(3, 16, 85, 0.978);
+    margin-top: 40px;   
+}
+
+@media only screen and (max-width: 768px) {
+
+    .page-header {
+        font-size: 4vw;       
     }
-    /* the Header style*/
-    header {
-        font-size: 4vw;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 20px;
-        color: rgba(3, 16, 85, 0.978);
-    }
+}
+
+   
     /* Design the whole page container to design inside it*/        
     .container {
         max-width: 1500px;
         margin: 0 auto;
-        min-height: 100vh;
+        min-height: 80vh;
         display: grid;
         grid-template-rows: auto 1fr;
     }
@@ -39,7 +51,7 @@
     /* container for S&S and reset button */
     .SSandbutton {
         flex: 2; 
-        background-color: #ccffff;
+        background-color: #b9faff;
         border-radius: 10px;
                   
     }
@@ -83,14 +95,15 @@
         width: 50%;
         padding: 10px;
         margin: 5px;
-        background-color: #80ed99;
+        background-color: #53ff7b;
         border: none;
         cursor: pointer;
         border-radius: 15px;
     }
 
     .clear-btn:hover {
-        background: #eee;
+        background: #7e8fff;
+        color: white;
     }
   
 
@@ -102,9 +115,10 @@
         text-align: center;            
         width:75%;
         font-style: italic;
-        background-color: #ffe1a8;
-        color: #99582a;
+        background-color: #a4faff;
+        color: #000000;
         font-size: 18px;
+        font-weight: bold;
         padding: 5px;       
         margin:5px;
         border-radius: 15px;
@@ -119,9 +133,10 @@
         text-align: center;            
         width:75%;
         font-weight: bold;
-        background-color: #bee9e8;
-        color: #1b4965;
+        background-color: #7efffd;
+        color: #2900f8;
         font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
         padding: 5px;       
         margin:5px;
         border-radius: 15px;
@@ -141,7 +156,7 @@
     font-family: Georgia;
     align-self: center;
     font-size: clamp(16px, 1vw, 24px);
-    background-color: #FFEFD5;
+    background-color: #fff3dc;
     width: 100%;
     box-sizing: border-box;
     height: 65vh;
@@ -152,66 +167,6 @@
     textarea.PoisonList {
     white-space: pre-wrap;
     }
-    /* Side Navigation Style */
-    .side-nav {
-        height: 100%;
-        width: 20px;
-        position: fixed;
-        z-index: 1;
-        top: 0;          
-        left: 0;
-        background: linear-gradient(to bottom, #340f3f, #380552);
-        overflow-x: hidden;
-        transition: 0.2s;
-        padding-top: 20px;
-        border-radius: 0 20px 20px 0;
-    }
+ 
+ 
 
-    .side-nav a {
-        padding: 20px 8px 8px 16px;
-        /* margin-bottom: 10px; */
-        text-decoration: none;
-        text-align: center;                   
-        font-size: clamp(16px, 8vw, 24px);
-        color: #884EA0;
-        display: block;
-        transition: 0.2s;
-    }
-
-    .side-nav a:hover {
-        color: #ffffff;
-        background-color: #884EA0;
-        border-radius: 20px;
-        
-    }
-
-    #trigger-area {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20px;
-        height: 100%;
-        z-index: 2;
-    }   
-
-
-
-    .back-btn {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        font-size: 16px;    
-        padding: 10px;
-        font-weight: bold;
-        background-color: #fdff98;
-        color: #ff0000;
-        border: none;
-        cursor: pointer;
-        border-radius:20px;
-        width: 130px;
-        }
-    
-    .back-btn:hover {
-        background-color:  #ff0000;
-        color:#ffffff;
-    }

@@ -1,62 +1,26 @@
 body {
     background: linear-gradient(to bottom, #cde6d0, #fff);            
 }
-/* the "Pediatric References and Calculators" Header design*/        
-header {
-    font-size: 5vw;
+
+/* Specific Page Header */
+.page-header {
+    font-size: 4vw;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
     color: rgba(3, 16, 85, 0.978);
+    margin-top: 40px;   
 }
+
+
+
  /* the whole page container*/       
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
-/* styles for tablets and smaller screens */
-@media only screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .frame-container {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-
-    .frame {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* styles for mobile devices */
-@media only screen and (max-width: 480px) {
-    .container {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .frame input {
-        width: 80%;
-    }
-
-    .grid-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .grid a {
-        width: 100%;
-    }
-}
-
-/* Formating the grid which calls the windows for medications and calculations */     
+/* Formatting the grid which calls the windows for medications and calculations */     
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -91,153 +55,122 @@ header {
 .grid-container .pediatric-medications {
     background-color: #FEE8D3;
     color: #E46E36;
-    /* font-style: italic; */
     font-size: clamp(24px, 8vw, 48px);
     line-height: 2;
-}
-
-@media screen and (max-width: 600px) {
-    .grid-container .pediatric-medications {                
-        line-height: 1;
-    }
 }
 
 .grid-container .common-medications {
     background-color: #EBF5FB;
-    color: #3498DB;
-    /* font-style: italic; */
+    color: #3498DB;    
     font-size: clamp(24px, 8vw, 48px);
     line-height: 2;
-}
-
-@media screen and (max-width: 600px) {
-    .grid-container .common-medications {
-        line-height: 1;
-    }
 }
 
 .grid-container .fluid-calculators {
     background-color: #FDE9E7;
     color: #FF5A5F;
-    /* font-style: italic; */
     font-size: clamp(24px, 8vw, 48px);
     line-height: 2;
-}
-
-@media screen and (max-width: 600px) {
-    .grid-container .fluid-calculators {
-        line-height: 1;
-    }
 }
 
 .grid-container .growth-vital-signs {
     background-color: #E8F5E9;
     color: #43A047;
-    /* font-style: italic; */
     font-size: clamp(24px, 8vw, 48px);
     line-height: 2;
-}
-
-@media screen and (max-width: 600px) {
-    .grid-container .growth-vital-signs {
-        line-height: 1;
-    }
 }
 
 .grid-container .convertors {
     background-color: #FFF9C4;
     color: #B7950B;
-    /* font-style: italic; */
     font-size: clamp(24px, 8vw, 48px);
     line-height: 2;
-}
-
-@media screen and (max-width: 600px) {
-    .grid-container .convertors {
-        line-height: 1;
-    }
 }
 
 .grid-container .rbc-indices {
     background-color: #ede0d4;
     color: #7f5539;
-    /* font-style: italic; */
     font-size: clamp(24px, 8vw, 48px);
     line-height: 2;
-}
-
-@media screen and (max-width: 600px) {
-    .grid-container .rbc-indices {
-        line-height: 1;
-    }
 }
 
 .grid-container .poisoning {
     background-color: #D2B4DE;
     color: #884EA0;
-    /* font-style: italic; */
     font-size: clamp(24px, 8vw, 48px);
     line-height: 2;
-}
-
-@media screen and (max-width: 600px) {
-    .grid-container .poisoning {
-        line-height: 1;
-    }
 }
 
 .grid-container .pediatric-guidelines {
-    background-color: #FAFAFA;
-    color: #212121;
-    /* font-style: italic; */
+    background-color: #ffe5ec;
+    color: #9d8189;
     font-size: clamp(24px, 8vw, 48px);
     line-height: 2;
 }
 
-@media screen and (max-width: 600px) {
-    .grid-container .pediatric-guidelines {
-        line-height: 1;
+.grid-container .pediatric-er {
+    background-color: #b2ff9e;
+    color: #006400;
+    font-size: clamp(24px, 8vw, 48px);
+    line-height: 2;
+}
+
+/* styles for tablets and smaller screens */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .frame-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .frame {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .page-header {
+        font-size: 4vw;       
     }
 }
-/* Side Navigation Style */
-.side-nav {
-    height: 100%;
-    width: 20px;
-    position: fixed;
-    z-index: 1;
-    top: 0;          
-    left: 0;
-    background: linear-gradient(to bottom, #340f3f, #380552);
-    overflow-x: hidden;
-    transition: 0.2s;
-    padding-top: 20px;
-    border-radius: 0 20px 20px 0;
+
+/* styles for mobile devices */
+@media only screen and (max-width: 480px), (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .frame input {
+        width: 80%;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid a {
+        width: 100%;
+    }
+
+    .grid-container .pediatric-medications,
+    .grid-container .common-medications,
+    .grid-container .fluid-calculators,
+    .grid-container .growth-vital-signs,
+    .grid-container .convertors,
+    .grid-container .rbc-indices,
+    .grid-container .poisoning,
+    .grid-container .pediatric-guidelines,
+    .grid-container .pediatric-er {
+        line-height: 1;
+        font-size: clamp(14px, 8vw, 36px);
+    }
 }
 
-.side-nav a {
-    padding: 20px 8px 8px 16px;
-    /* margin-bottom: 10px; */
-    text-decoration: none;
-    text-align: center;                   
-    font-size: clamp(16px, 8vw, 24px);
-    color: #884EA0;
-    display: block;
-    transition: 0.2s;
-}
 
-.side-nav a:hover {
-    color: #ffffff;
-    background-color: #884EA0;
-    border-radius: 20px;
-    
-}
-
-#trigger-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 100%;
-    z-index: 2;
-}
 

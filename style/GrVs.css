@@ -2,19 +2,23 @@
   body {
     background: linear-gradient(to bottom, #E8F5E9, #fff);            
 }
-/* Header style */
-header {
-    font-size: 5vw;
+
+
+/* Specific Page Header */
+.page-header {
+    font-size: 4vw;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 3px;
     color: rgba(3, 16, 85, 0.978);
+    margin-top: 40px;   
 }
+
+
 /* container of the whole page */
 .MainContainer {
     max-width: 1500px;
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 /* contains "Patient Profile" and "Percentiles with VS" supposed to be row*/
@@ -150,7 +154,7 @@ header {
 .PerCont{
     display: flex;
     flex-direction: column;            
-    background-color:rgba(247, 202, 245, 0.834);
+    background-color:rgba(254, 226, 253, 0.834);
     width: 100%; 
     height: 100%; 
     border-radius: 10px; 
@@ -167,7 +171,6 @@ header {
     border-radius: 10px;
 }
 
-
 /* PerValues which contain all the percentiles  */
 .PerValues {
     display: flex;
@@ -180,6 +183,7 @@ header {
     margin-right: 5px;
     margin-bottom: 5px;
     font-size: clamp(12px, 1.6vw, 16px);
+    font-weight: bold;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -243,7 +247,6 @@ header {
     .input-group label {
         width: 160px;
     }
-
     .empty-space {
         width: 160px;
     }
@@ -293,7 +296,6 @@ header {
     }
 }
 
-
 .percentile-label {
     width: calc(25% - 10px);
     text-align: center;
@@ -341,7 +343,7 @@ header {
 }
 
 .VsCont label {
-    font-size: clamp(10px, 2vw, 20px);
+    font-size: clamp(14px, 2vw, 20px);
     font-weight: bold;            
     margin-bottom: 3px;
     display: block;
@@ -375,7 +377,7 @@ header {
 .NormalRangeVS input {
     margin-bottom: 10px;
     margin-left: 10px;
-    font-size: clamp(10px, 1.2vw, 20px);
+    font-size: clamp(14px, 1.2vw, 20px);
     font-weight: bold;
     padding: 10px; 
     width: 30%;
@@ -404,7 +406,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:rgba(248, 180, 246, 0.834);
+    background-color:rgb(166, 243, 252);
     width: 90%; 
     max-width: 90%;
     border-radius: 10px;
@@ -423,26 +425,26 @@ header {
     border: none;
     text-align: center;
     margin-left: 12px;
-    font-weight: bold;
-    font-size: clamp(12px, 1.5vw, 32px);
+    font-weight:bold;
+    font-size: clamp(14px, 1.5vw, 32px);
     font-style: normal;
     font-family:'Times New Roman';            
 }
 
 .LabelesBP input:nth-child(2){
-    background-color:rgba(221, 178, 243, 0.763);
+    background-color:rgb(227, 175, 254);
 }
 .LabelesBP input:nth-child(3){
-    background-color:rgba(182, 247, 163, 0.763);
+    background-color:rgb(193, 253, 176);
 }
 .LabelesBP input:nth-child(4){
-    background-color:rgba(178, 208, 243, 0.763);
+    background-color:rgb(180, 215, 255);
 }
 .LabelesBP input:nth-child(5){
-    background-color:rgba(242, 151, 236, 0.763);
+    background-color:rgb(255, 149, 246);
 }
 .LabelesBP input:nth-child(6){
-    background-color:rgba(245, 138, 138, 0.763);
+    background-color:rgb(255, 143, 143);
 }
 
 .SysBP {
@@ -491,66 +493,10 @@ header {
     font-weight: bold;
 } 
 
+@media only screen and (max-width: 768px) {
 
-
-/* Side Navigation Style */
-.side-nav {
-    height: 100%;
-    width: 20px;
-    position: fixed;
-    z-index: 1;
-    top: 0;          
-    left: 0;
-    background: linear-gradient(to bottom, #340f3f, #380552);
-    overflow-x: hidden;
-    transition: 0.2s;
-    padding-top: 20px;
-    border-radius: 0 20px 20px 0;
-}
-
-.side-nav a {
-    padding: 20px 8px 8px 16px;
-    /* margin-bottom: 10px; */
-    text-decoration: none;
-    text-align: center;                   
-    font-size: clamp(16px, 8vw, 24px);
-    color: #884EA0;
-    display: block;
-    transition: 0.2s;
-}
-
-.side-nav a:hover {
-    color: #ffffff;
-    background-color: #884EA0;
-    border-radius: 20px;
-    
-}
-
-#trigger-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 100%;
-    z-index: 2;
-}
-
-.back-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 16px;    
-    padding: 10px;
-    font-weight: bold;
-    background-color: #fdff98;
-    color: #ff0000;
-    border: none;
-    cursor: pointer;
-    border-radius:20px;
-    width: 130px;
+    .page-header {
+        font-size: 4vw;       
     }
-
-.back-btn:hover {
-    background-color:  #ff0000;
-    color:#ffffff;
 }
+

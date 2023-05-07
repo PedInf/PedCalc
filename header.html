@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Pediatric References and Calculators</title> 
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">   
+    <style>
+        /* Pediatric References Header for all pages */
+        .main-header {
+            font-size: 2vw;
+            font-weight: bold;
+            font-family:Georgia, 'Times New Roman', Times, serif ;
+            font-style: italic;
+            text-align: left;
+            color: rgb(255, 255, 255);
+            padding-left: 100px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            height: auto;
+            margin: 0;
+            background-color: #00a2ff; /* Change this color to the desired color */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;    
+            z-index: 1000;
+        }
+
+        .pedlogopic {
+            position: fixed;
+            top:0;
+            left:0;
+            height:45px;
+            z-index: 1003;
+        }
+
+            
+        /* Home button CSS code */
+        /* //////////////////////// */
+        .home-btn {
+            position: fixed;
+            top: 1px;
+            right: 15px;
+            display: inline-block;
+            z-index: 1001;    
+        }
+
+        .home-btn button {
+            right: 15px;
+            border-radius: 15px;
+            border:none;
+        }
+        .menuIcon {
+            height: 35px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .home-btn button:hover {
+            background-color:#adadad;
+            color: #0388d5;
+            
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #00a2ff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1002;
+            border-radius: 10px;    
+            right: 0;
+        }
+
+        .dropdown-content a {
+            color: rgb(255, 255, 255);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: clamp(1em, calc(1em + 0.8vw), 20px);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            color: black;
+            border-radius: 20px;
+        }
+
+
+        /* apply hover for large screens*/
+        @media screen and (min-width: 769px) {
+            .home-btn:hover .dropdown-content {
+            display: block;
+            }
+        }
+
+
+        /* ////////////////////////////// */
+        /* Media changes for small screens */
+        @media screen and (max-width: 768px) {
+            .home-btn {
+                top: 0px;
+                right:0px;
+            }
+        
+            .home-btn button {               
+                top: 0px; 
+                height: 30px;
+            }
+
+            .menuIcon {
+                height: 100%;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            .main-header {
+                font-size: 4vw;
+            }
+            .page-header {
+                font-size: 4vw;       
+            }
+            .dropdown-content a {
+                font-size: 16px;
+            }
+            .pedlogopic {
+                height:30px;
+            }  
+
+        }
+
+    </style>
+
+
+
+</head>
+    <body>
+        <header class="main-header">Pediatric References</header>
+        <img class="pedlogopic" src="img/pedlogo.png">
+            
+            
+        <div class="home-btn">
+            <button id="home-btn-toggle"><img class="menuIcon" src="img/menu.png"></button>
+            <div class="dropdown-content">
+                <a href="index.html" class="pediatric-calculator">Home</a>
+                <a href="HMed.html" class="pediatric-medications">Pediatric Medications</a>
+                <a href="ComMed.html" class="common-medications">Common Medications</a>
+                <a href="FlCal.html" class="fluid-calculators">Fluid Calculators</a>
+                <a href="GrVs.html" class="growth-vital-signs">Growth & Vital Signs</a>
+                <a href="Conv.html" class="convertors">Convertors</a>
+                <a href="IdaThal.html" class="rbc-indices">RBC Indices</a>
+                <a href="Poison.html" class="poisoning">Poisoning</a>
+                <a href="pedcpg.html" class="pediatric-guidelines">Pediatric Guidelines</a>
+                <a href="peder.html" class="pediatric-er">Pediatric ER</a>
+            </div>
+        </div>
+    </body>
+</html>

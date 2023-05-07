@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+body {
+    background: linear-gradient(to bottom, #fdffce, #feffdb);
+    font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+ 
+}
+
+    
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page-header {
+    font-size: 4vw;
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    color: rgba(3, 16, 85, 0.978);
+    margin-top: 60px;   
+}
+
+.cpg-title {
+    margin-left: 3pt;
+    text-align: center;
+    font-size: 24pt;
+    font-weight:bold;
+    font-family: 'Noto Sans', sans-serif;
+    color: blue;
+}
+.cpg-headers {
+    margin-left: 3pt;
+    text-align: left;
+    font-size: 18pt;
+    font-weight:bold;
+    font-family: 'Noto Sans', sans-serif;
+    color: #00b050;
+    padding-bottom:5px;
+    margin-top:10px;
+    margin-bottom:0px;    
+}
+
+.cpg-sub-headers {
+    margin-left: 3pt;
+    text-align: left;
+    font-size: 16pt;
+    font-weight:bold;
+    font-family: 'Noto Sans', sans-serif;
+    color: #001aff;
+    padding-bottom:3px;
+    margin-top:5px;
+    margin-bottom:0px;    
+}
+
+
+.cpg-text {
+    margin-left: 3pt;
+    font-family: 'Noto Sans';
+    font-size:14pt;
+    padding-bottom: 10px;
+    padding-top:3px;    
+}
+
+.border-btm {
+    border-bottom: solid rgb(80, 80, 80) 1pt;
+    margin-left: 3pt;
+}
+    
+.cpg-table {
+    font-family: arial, sans-serif;
+    border:1px solid black;
+    padding: 8px;
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    max-width: 800px;
+}
+td, th {
+    border:1px solid black;
+    padding: 8px;
+    
+}
+.cpg-table:th {
+    text-align:center;
+    font-weight:bold;
+    
+    }
+
+ul, ol{
+    
+    font-size:14pt;     
+}
+
+.image {    
+    height: auto;
+}
+
+
+/*adjusts the font size in the table, shrinks the cells, and decreases the indentation in lists */ 
+@media (max-width: 768px) {
+    .cpg-table {
+        font-size: 12pt;
+    }
+    td, th {
+        padding: 4px;
+    }
+    ul, ol {
+        font-size: 12pt;
+        padding-left: 15px;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+    
+}
+
+

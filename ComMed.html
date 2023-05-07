@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	
+<head>	
   <title>Common Medications</title>
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="style/ComMed.css">
   <!-- Load the excel reading JS library -->
   <script src="ref/xlsx.full.min.js"></script>
-
-
 </head>
 <body>
-  <header>Common Pediatric Medications</header>
- 
+  <div id="header-container"></div>
+  <header class="page-header">Common Pediatric Medications</header>
+  <img class="pedlogopic" src="img/pedlogo.png">
+  
+
+
   <div class="container">
-    <div id="trigger-area"></div>
-    <div id="side-nav" class="side-nav">
-        <a href="index.html" class="pediatric-calculator">Home</a>
-        <a href="HMed.html" class="pediatric-medications">Pediatric Medications</a>
-        <a href="ComMed.html" class="common-medications">Common Medications</a>
-        <a href="FlCal.html" class="fluid-calculators">Fluid Calculators</a>
-        <a href="GrVs.html" class="growth-vital-signs">Growth & Vital Signs</a>
-        <a href="Conv.html" class="convertors">Convertors</a>
-        <a href="IdaThal.html" class="rbc-indices">RBC Indices</a>
-        <a href="Poison.html" class="poisoning">Poisoning</a>
-        <a href="pedcpg.html" class="Pediatric Guidelines">Pediatric Guidelines</a>
-        <a href="peder.html" class="Pediatric ER">Pediatric ER</a>
-    </div>
-    <select id="selectCM">
-      
+    <select id="selectCM">      
       <!-- options will be populated dynamically by JavaScript -->
     </select>
-    <textarea id="textareaCM" placeholder="Enter medication details here"></textarea>
-    <button class="back-btn" onclick="location.href='index.html'">Home</button> 
+    <textarea id="textareaCM"></textarea>       
     <script src="index.js"></script> 
   </div>
 </body>

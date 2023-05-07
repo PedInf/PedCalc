@@ -1,15 +1,65 @@
-//////////////////Side bar code///////////////////////////
-document.getElementById('trigger-area').addEventListener('mouseover', function () {
-  document.getElementById('side-nav').style.width = '250px';
-});            
-document.getElementById('side-nav').addEventListener('mouseleave', function () {
-  document.getElementById('side-nav').style.width = '20px';
-});
-
 ////////////////////////////////////////////////////////////////////
 ////////Reading Pediatric Medications and Common Medications///////
-/// provide the link to the JS libraray that can read excel file
+/// provide the link to the JS library that can read excel file
 ////////////////////////////////////////////////////////////////
+
+// handles the home button toggles in windows screens and mobile devices
+function initializeDropdown() {
+  function toggleDropdown(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    var dropdown = document.querySelector(".dropdown-content");
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none";
+    } else {
+      dropdown.style.display = "block";
+    }
+  }
+
+  function closeDropdown() {
+    var dropdown = document.querySelector(".dropdown-content");
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none";
+    }
+  }
+
+  var homeBtn = document.getElementById("home-btn-toggle");
+  if ('ontouchstart' in window) {
+    homeBtn.addEventListener("touchstart", toggleDropdown);
+  } else {
+    homeBtn.addEventListener("click", toggleDropdown);
+  }
+
+  document.addEventListener("click", closeDropdown);
+}
+
+function isPageInSubfolder() {
+  const currentPath = window.location.pathname.split('/');
+  currentPath.pop(); // Remove the current HTML file from the path
+  return currentPath.length > 1; // Check if there are any remaining path segments
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var headerContainer = document.getElementById("header-container");
+  const inSubfolder = isPageInSubfolder();
+
+  fetch((inSubfolder ? '../' : '') + 'header.html') // Construct the path based on whether the page is in a subfolder
+    .then(response => response.text())
+    .then(html => {
+      headerContainer.innerHTML = html;
+      initializeDropdown(); // Call the function after loading the header
+    })
+    .catch(err => {
+      console.warn("Something went wrong with loading the header:", err);
+    });
+});
+
+
+
+
+
+
+
 
 // Home Medications
 window.addEventListener('DOMContentLoaded', () => {
