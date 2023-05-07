@@ -4,35 +4,6 @@
 ////////////////////////////////////////////////////////////////
 
 // handles the home button toggles in windows screens and mobile devices
-function initializeDropdown() {
-  function toggleDropdown(event) {
-    event.stopPropagation();
-    event.preventDefault();
-    var dropdown = document.querySelector(".dropdown-content");
-    if (dropdown.style.display === "block") {
-      dropdown.style.display = "none";
-    } else {
-      dropdown.style.display = "block";
-    }
-  }
-
-  function closeDropdown() {
-    var dropdown = document.querySelector(".dropdown-content");
-    if (dropdown.style.display === "block") {
-      dropdown.style.display = "none";
-    }
-  }
-
-  var homeBtn = document.getElementById("home-btn-toggle");
-  if ('ontouchstart' in window) {
-    homeBtn.addEventListener("touchstart", toggleDropdown);
-  } else {
-    homeBtn.addEventListener("click", toggleDropdown);
-  }
-
-  document.addEventListener("click", closeDropdown);
-}
-
 function isPageInSubfolder() {
   const currentPath = window.location.pathname.split('/');
   currentPath.pop(); // Remove the current HTML file from the path
@@ -47,12 +18,21 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(response => response.text())
     .then(html => {
       headerContainer.innerHTML = html;
-      initializeDropdown(); // Call the function after loading the header
+
+      // Add the load event listener to the headerContainer element
+      headerContainer.addEventListener("load", function () {
+        initializeDropdown(); // Call the function after loading the header
+      });
+
+      // Manually trigger the load event if the header content is already loaded
+      const event = new Event("load");
+      headerContainer.dispatchEvent(event);
     })
     .catch(err => {
       console.warn("Something went wrong with loading the header:", err);
     });
 });
+
 
 
 
