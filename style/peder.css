@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom, #fdffb6, #fff);
+    background: linear-gradient(to bottom, #afeaff, #cbfcff);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,50 +16,36 @@ body {
     margin-top: 40px;   
 }
 
-
-
-
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start; /* Change this to flex-start to align the links to the left side */
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
     max-width: 1200px;
+    padding-left: 20px; /* Add some left padding to the container */
+  }
+  
+  .container a {
+    font-size: 1.5rem; /* Increase the font size */
+    margin-bottom: 10px; /* Add space between the links */
+    text-decoration: none; /* Remove the underline from the links */
+    color: inherit; /* Use the same color as the parent element */
+    padding: 5px;
+  }
+
+  .container a:hover {
+    background-color: #fffbaa;
+    color: rgb(0, 21, 255);
+    border-radius: 10px;
 }
 
-select {
-    font-family: Georgia;
-    font-size: clamp(14px, 2vw, 48px);
-    background-color: lightgreen;
-    width: 50%;
-    max-width: 80%;
-    box-sizing: border-box;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-textarea {
-font-family: Georgia;
-font-size: 32px;
-background-color: lightgrey;
-width: 100%;
-box-sizing: border-box;
-height: 65vh;
-margin-top: 10px;
-padding: 10px;
-}
-
-@media screen and (max-width: 767px) {
-/* adjust height for smaller screens */
-textarea {
-  height: calc(100vh - 40px);
-}
-}
-
-@media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
 
     .page-header {
         font-size: 4vw;       
     }
 }
+  
+
