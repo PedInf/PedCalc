@@ -2,7 +2,7 @@
 
 
 body {
-    background: linear-gradient(to bottom, #fdffce, #feffdb);
+    background: linear-gradient(to bottom, rgb(239, 239, 255), rgb(235, 235, 242));
     font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
  
 }
