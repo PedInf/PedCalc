@@ -1,10 +1,7 @@
-
 /* the whole page background color*/
 body {
-  background: linear-gradient(to bottom, #c1d3fe, #fff);
+  background: #c1d3fe;
 }
-
-
 
 /* Specific Page Header */
 .page-header {
@@ -12,18 +9,18 @@ body {
   font-weight: bold;
   text-align: center;
   color: rgba(3, 16, 85, 0.978);
-  margin-top: 40px;
+  margin-top: 44px;
 }
 
-/* Design the whole page container to desgin inside it*/
+/* Design the whole page container to design inside it*/
 .container {
   max-width: 1500px;
   margin: 0 auto;
-  min-height: 80vh;
+  height: 80vh;
 }
 
 /* the design inside the main container is building frame containers*/
-/* this will design the top frames */
+/* This will design the top frames */
 .Bwcontainer {
   display: flex;
   justify-content: center;
@@ -43,7 +40,7 @@ body {
   border-radius: 10px;
   background-color: #edf2fb;
 }
-/* Designing the top frames lable/
+/* Designing the top frames label/
     /* in this case only one frame bwt*/
 .bwframe label {
   font-size: clamp(16px, 2vw, 20px);
@@ -118,7 +115,7 @@ body {
   white-space: nowrap;
 }
 .input-container label {
-  width: 150px; /* fixed number to show all boxes aligned verically */
+  width: 150px; /* fixed number to show all boxes aligned vertically */
   margin-left: 10px;
   min-width: 80px;
   text-align: center;
@@ -129,7 +126,7 @@ body {
 .MainIVframe input,
 .DehIVframe input {
   margin-bottom: 10px;
-  font-size: clamp(14px, 1.2vw, 20px);
+  font-size: clamp(12px, 1.2vw, 20px);
   font-weight: bold;
   padding: 10px;
   width: 50%;
@@ -141,7 +138,7 @@ body {
 
 .MainIVframe label,
 .DehIVframe label {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(12px, 2vw, 20px);
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
@@ -157,7 +154,6 @@ body {
   justify-content: center;
 }
 
-
 /* Frame for all related to DKA calculations*/
 .DKAfr {
   width: 100%;
@@ -165,7 +161,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   background-color: #c5eeea;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: flex; */
@@ -181,7 +177,7 @@ body {
   gap: 3px;
 }
 
-/* Frame for DKA-user-iputs and DKA-managment */
+/* Frame for DKA-user-inputs and DKA-management */
 .DKAcont {
   width: 100%;
   height: 100%;
@@ -221,7 +217,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* allign the DKA-user-iputs*/
+/* align the DKA-user-inputs*/
 .DKAuserInputs input {
   display: flex;
   align-items: center;
@@ -231,7 +227,7 @@ body {
 
 .DKAuserInputs label {
   width: 250px;
-  font-size: clamp(20px, 40%, 32px);
+  font-size: clamp(14px, 2vw, 22px);
   font-weight: bold;
   text-align: left;
 }
@@ -241,7 +237,7 @@ body {
   width: 130px;
   margin-right: 10px;
   border-radius: 10px;
-  font-size: clamp(14px, 1.2vw, 24px);
+  font-size: clamp(12px, 1.2vw, 24px);
   border: none;
   height: 45px;
   font-weight: bold;
@@ -268,7 +264,7 @@ body {
   height: 100%;
 }
 
-/* allign the DKA-user-iputs*/
+/* align the DKA-user-inputs*/
 .DKAmanRes input {
   display: flex;
   align-items: center;
@@ -286,19 +282,19 @@ body {
 
 .DKAmanRes label {
   width: 190px;
-  font-size: clamp(20px, 40%, 32px);
+  font-size: clamp(14px, 40%, 32px);
   font-weight: bold;
   text-align: left;
 }
 
 #KCorrec {
-  height: 60px; 
+  height: 60px;
   resize: none;
-  white-space: pre-wrap; 
-  overflow: auto; 
+  white-space: pre-wrap;
+  overflow: auto;
   background-color: #fdfdc1;
   font-size: clamp(14px, 1.2vw, 24px);
-  font-family: 'Times New Roman';
+  font-family: "Times New Roman";
   text-align: center;
 }
 
@@ -306,7 +302,10 @@ body {
   font-style: italic;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .page-header {
+    font-size: 4vw;
+  }
   .IVDKAframe,
   .IVFluframe,
   .DKAcont {
@@ -317,11 +316,7 @@ body {
   .DKAman {
     width: 90%;
   }
-}
-@media only screen and (max-width: 768px) {
-
-  .page-header {
-      font-size: 4vw;       
+  p {
+    font-size: 4vw;
   }
 }
-
