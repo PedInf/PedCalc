@@ -376,8 +376,8 @@ function calculateTotals() {
     const totFluidInput = document.getElementById("TotFluid");
     const fluidMlHrInput = document.getElementById("Fluidmlhr");
 
-    totFluidInput.value = totDKAIVFluids.toFixed(2);
-    fluidMlHrInput.value = (fluOver === "24 Hours" ? (totDKAIVFluids / 23) : (totDKAIVFluids / 47)).toFixed(2);
+    totFluidInput.value = totDKAIVFluids.toFixed(0);
+    fluidMlHrInput.value = (fluOver === "24 Hours" ? (totDKAIVFluids / 23) : (totDKAIVFluids / 47)).toFixed(0);
   }
 }
 
