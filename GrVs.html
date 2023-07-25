@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    
+
+<head>
     <title>Growth Vital Signs</title>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <script src="ref/xlsx.full.min.js"></script>
     <script src="ref/jstat.min.js"></script>
     <link rel="stylesheet" href="style/GrVs.css">
 </head>
 
 <body>
-    <div id="header-container"></div>    
-    <header class="page-header">Growth Vital Signs</header>    
+    <div id="header-container"></div>
+    <header class="page-header">Growth Vital Signs</header>
     <div class="MainContainer"> <!-- container of the whole page  -->
         <div class="PtPerVsContainer">
             <div class="ptContainer">
                 <div class="patDOB">
                     <label>Age & Gender</label>
-                    <input type="text" placeholder="Select Date" id="datepicker" style="text-align:center;" title="DOB will be in DD/MM/YYYY format">
+                    <input type="text" placeholder="Select Date" id="datepicker" style="text-align:center;"
+                        title="DOB will be in DD/MM/YYYY format">
                     <input type="text" placeholder="Age" id="age" style="text-align:center;" readonly>
                     <div class="radio-group">
-                        <input type="radio" id="male" name="gender" value="male" checked> 
+                        <input type="radio" id="male" name="gender" value="male" checked>
                         <label for="male">Male</label>
-                        <input type="radio" id="female" name="gender" value="female"> 
+                        <input type="radio" id="female" name="gender" value="female">
                         <label for="female">Female</label>
                     </div>
                 </div>
@@ -36,92 +38,94 @@
             <div class="PerVsContainer">
                 <div class="PerCont"> <!-- Percentiles container  -->
                     <div class="PerContTitle">
-                      <label>Percentiles</label>
+                        <label>Percentiles</label>
                     </div>
-                    <div class="PerValues">                    
-                      <div class="measurement-labels">
-                        <div class="labels-row">
-                            <div class="empty-space"></div>
-                            <label class="percentile-label">Patient's <br> Percentile</label>
-                            <label class="percentile-label"><br>3%</label>
-                            <label class="percentile-label"><br>50%</label>
-                            <label class="percentile-label"><br>97%</label>
-                        </div>                        
-                        <div class="input-container">                         
-                            <div class="input-group">
-                                <label>Weight % </label>
-                                <input id="ptwtpercent" readonly>
-                                <input id="ptwt3percent" readonly>
-                                <input id="ptwt50percent" readonly>
-                                <input id="ptwt97percent" readonly>
+                    <div class="PerValues">
+                        <div class="measurement-labels">
+                            <div class="labels-row">
+                                <div class="empty-space"></div>
+                                <label class="percentile-label">Patient's <br> Percentile</label>
+                                <label class="percentile-label"><br>3%</label>
+                                <label class="percentile-label"><br>50%</label>
+                                <label class="percentile-label"><br>97%</label>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-group">
+                                    <label>Weight % </label>
+                                    <input id="ptwtpercent" readonly>
+                                    <input id="ptwt3percent" readonly>
+                                    <input id="ptwt50percent" readonly>
+                                    <input id="ptwt97percent" readonly>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-group">
+                                    <label>Height %</label>
+                                    <input id="pthtpercent" readonly>
+                                    <input id="ptht3percent" readonly>
+                                    <input id="ptht50percent" readonly>
+                                    <input id="ptht97percent" readonly>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-group">
+                                    <label>BMI</label>
+                                    <input id="BMI" readonly>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-group">
+                                    <label>BMI %</label>
+                                    <input id="ptbmipercent" readonly>
+                                    <input id="ptbmi3percent" readonly>
+                                    <input id="ptbmi50percent" readonly>
+                                    <input id="ptbmi97percent" readonly>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-group">                                    
+                                    <label class="wtstat">Weight/Stature %</label>                                                                       
+                                    <input id="ptwtstatpercent" readonly>
+                                    <input id="ptwtstat3percent" readonly>
+                                    <input id="ptwtstat50percent" readonly>
+                                    <input id="ptwtstat97percent" readonly>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-group">
+                                    <label class="HCpercent">Head Circumference %</label>
+                                    <input id="pthcpercent" readonly>
+                                    <input id="pthc3percent" readonly>
+                                    <input id="pthc50percent" readonly>
+                                    <input id="pthc97percent" readonly>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-group">
+                                    <label class="saLabel">Surface Area (sq m)</label>
+                                    <input id="bsa" readonly>
+                                </div>
                             </div>
                         </div>
-                        <div class="input-container">                            
-                            <div class="input-group">
-                                <label>Height %</label>
-                                <input id="pthtpercent" readonly>
-                                <input id="ptht3percent" readonly>
-                                <input id="ptht50percent" readonly>
-                                <input id="ptht97percent" readonly>
-                            </div>
-                        </div>
-                        <div class="input-container">                            
-                            <div class="input-group">
-                                <label>BMI</label>
-                                <input id="BMI" readonly>
-                            </div>
-                        </div>
-                        <div class="input-container">                            
-                            <div class="input-group">
-                                <label>BMI %</label>
-                                <input id="ptbmipercent" readonly>
-                                <input id="ptbmi3percent" readonly>
-                                <input id="ptbmi50percent" readonly>
-                                <input id="ptbmi97percent" readonly>
-                            </div>
-                        </div>
-                        <div class="input-container">                                
-                            <div class="input-group">
-                                <label>Weight/Stature %</label>
-                                <input id="ptwtstatpercent" readonly>
-                                <input id="ptwtstat3percent" readonly>
-                                <input id="ptwtstat50percent" readonly>
-                                <input id="ptwtstat97percent" readonly>
-                            </div>
-                        </div>
-                        <div class="input-container">                                
-                            <div class="input-group">
-                                <label>Head Circumference %</label>
-                                <input id="pthcpercent" readonly>
-                                <input id="pthc3percent" readonly>
-                                <input id="pthc50percent" readonly>
-                                <input id="pthc97percent" readonly>
-                            </div>
-                        </div>
-                        <div class="input-container">                                
-                            <div class="input-group">
-                                <label>Surface Area (sq m)</label>
-                                <input id="bsa" readonly>
-                            </div>
-                        </div>
-                      </div>
-                    </div>             
-                    
-                    <div class="Pertext">                        
-                        <ul>
-                            <li>-BMI and BMI % is Calculated if the age >24 months</li>
-                            <li>-Weight/Stature % is Calculated if Age &lt; 3 years and the Weight 9-29 Kg and Height 77-120 cm</li>
-                            <li>-Head Circumference is Calculated if Age &lt; 3 years</li>
-                            <li>-"NaN" values means some inputs are missing</li>
-                        </ul>                        
+                    </div>
+
+                    <div class="Pertext">
+                        <!-- styles used to make hanging indent in small screens -->
+                        <ul style="list-style: none; padding-left: 1.5em;">
+                            <li style="text-indent: -1.5em;">-<strong>BMI and BMI %</strong> are calculated if the age >24 months</li>
+                            <li style="text-indent: -1.5em;">-<strong>Wt/Stat%</strong> is calculated if Age &lt; 3 years, Weight between 9-29 Kg and Height
+                               between 77-120 cm</li>
+                            <li style="text-indent: -1.5em;">-<strong>Head Circumference %</strong> is calculated if Age &lt; 3 years</li>
+                            <li style="text-indent: -1.5em;">-<strong>"NaN"</strong> values means some inputs are missing</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="VsCont"> <!-- Vital signs container  -->
                     <div class="VsContTitle">
                         <label>Vital Signs</label>
                     </div>
-                    <div class="NormalRangeVS">                        
-                        <label>Normal Vital Signs Range </label>                                         
+                    <div class="NormalRangeVS">
+                        <label>Normal HR, RR Ranges </label>
                         <div class="HR-container">
                             <label for="hr">Normal Heart Rate (Beats/Min) </label>
                             <input id="hr" type="text" placeholder="Normal HR" readonly>
@@ -152,35 +156,34 @@
                             <input id="Bp99Percent" readonly>
                         </div>
                         <div class="DiasBP">
-                            <label>Diastolic BP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>                           
+                            <label>Diastolic BP</label>
+                            <input  readonly>
                             <input id="dBp50Percent" readonly>
                             <input id="dBp90Percent" readonly>
                             <input id="dBp95Percent" readonly>
                             <input id="dBp99Percent" readonly>
                         </div>
                         <div class="MAPBP">
-                            <label>MAP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>                                                     
+                            <label>MAP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            
                             <input id="MAP5Percent" readonly>
                             <input id="MAP50Percent" readonly>
-                            <label></label> 
-                            <label>Mean</label> 
-                            <label>Blood</label>
-                            <label>Pressure</label> 
-                            <label></label> 
-   
+                            <input  readonly placeholder="Mean">
+                            <input  readonly placeholder="BP">
+                            <input  readonly>
+                            
                         </div>
-                        
                     </div>
-                           
                 </div>
             </div>
-        </div>    
-    </div>    
+        </div>
+    </div>
     <!-- Load the css and js files needed for Pickday calender -->
     <link rel="stylesheet" type="text/css" href="ref/pikaday.css">
     <script src="ref/pikaday.js"></script>
     <script src="ref/moment.min.js"></script>
     <!-- link JavaScript index file to index -->
-    <script src="index.js"></script>    
+    <script src="index.js"></script>
 </body>
+
 </html>
