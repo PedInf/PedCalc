@@ -374,6 +374,9 @@ body {
   font-family: "Times New Roman";
 }
 
+.LabelesBP input::placeholder {
+  color: black
+}
 .LabelesBP input:nth-child(2) {
   background-color: rgb(227, 175, 254);
 }
