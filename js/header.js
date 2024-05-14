@@ -6,7 +6,7 @@
     var headerContainer = document.getElementById("header-container");
     const inSubfolder = isPageInSubfolder(); // calling the function that detect if the HTML file in subfolder
   
-    fetch((inSubfolder ? '../' : '') + 'header.html') // Construct the path based on whether the page is in a subfolder
+    fetch((inSubfolder ? '../' : './') + 'header.html') // Construct the path based on whether the page is in a subfolder
       .then(response => response.text())
       .then(html => {
         headerContainer.innerHTML = html;

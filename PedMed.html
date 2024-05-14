@@ -4,9 +4,9 @@
 <head>
   <title>Detailed Pediatric Medications</title>
   <meta charset="UTF-8">
-  <link rel="icon" href="img/TitleLogo.png" />
+  <link rel="icon" href="./img/TitleLogo.png" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="stylesheet" href="style/Select.css">
+  <link rel="stylesheet" href="./style/Select.css">
   <style>
     body {
       background-color: #f9f0cf;
@@ -29,12 +29,12 @@
     <select id="selectHM"></select>
     <textarea id="textareaHM"></textarea>
   </div>
-  <script src="/js/header.js"></script>
-  <script src="/js/Select.js"></script>
+  <script src="./js/header.js"></script>
+  <script src="./js/Select.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      loadDataAndPopulateSelectAndTextarea('ref/PDC.json', 'MedicName', 'Dose', 'selectHM', 'textareaHM');
+      loadDataAndPopulateSelectAndTextarea('./ref/PDC.json', 'MedicName', 'Dose', 'selectHM', 'textareaHM');
     });
   </script>
 </body>

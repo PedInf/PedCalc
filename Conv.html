@@ -4,9 +4,9 @@
 <head>
   <title>Laboratory Reference Values and Units Conversion</title>
   <meta charset="UTF-8">
-  <link rel="icon" href="img/TitleLogo.png" />
+  <link rel="icon" href="./img/TitleLogo.png" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="stylesheet" href="style/Select.css">
+  <link rel="stylesheet" href="./style/Select.css">
 </head>
 
 <body>
@@ -22,15 +22,15 @@
       <textarea class="textarea-Conv" id="textareaConv"></textarea>
 
   </div>
-  <script src="/js/header.js"></script>
-  <script src="/js/Select.js"></script>
+  <script src="./js/header.js"></script>
+  <script src="./js/Select.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      loadDataAndPopulateSelectAndTextarea('ref/lab.json', 'test', 'result', 'selectLabTest', 'taTestRV');
+      loadDataAndPopulateSelectAndTextarea('./ref/lab.json', 'test', 'result', 'selectLabTest', 'taTestRV');
     });
     document.addEventListener('DOMContentLoaded', () => {
-      loadDataAndPopulateSelectAndTextarea('ref/convertor.json', 'Material', 'ConversionFactor', 'selectConv', 'textareaConv');
+      loadDataAndPopulateSelectAndTextarea('./ref/convertor.json', 'Material', 'ConversionFactor', 'selectConv', 'textareaConv');
     });
   </script>
 </body>
