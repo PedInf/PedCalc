@@ -4,27 +4,27 @@
 
   function loadHeaderContainer() {
     var headerContainer = document.getElementById("header-container");
-    const inSubfolder = isPageInSubfolder(); // calling the function that detect if the HTML file in subfolder
-  
-    fetch((inSubfolder ? '../' : './') + 'header.html') // Construct the path based on whether the page is in a subfolder
-      .then(response => response.text())
-      .then(html => {
-        headerContainer.innerHTML = html;
-        initializeDropdown(); // Call the function after loading the header
-      })
-      .catch(err => {
-        console.warn("Something went wrong with loading the header:", err);
-      });
-  }
-  
-function isPageInSubfolder() {
-    // Get the root URL of the website
-    const rootUrl = new URL('https://pedinf.github.io/PedCalc/');
-    // Get the current URL
-    const currentUrl = new URL(window.location.href);
-    // Check if the pathname of the current URL starts with the pathname of the root URL
-    return currentUrl.pathname.startsWith(rootUrl.pathname) && currentUrl.pathname !== rootUrl.pathname;
+
+    // Determine the relative path to the header.html based on the current location
+    var headerPath = '';
+    const currentPath = window.location.pathname;
+    if (currentPath.includes('/cpg/')) {
+        headerPath = '../../header.html'; // If the current page is in the 'cpg' subfolder
+    } else {
+        headerPath = '../header.html'; // If the current page is in the main folder or any other subfolder
+    }
+
+    fetch(headerPath)
+        .then(response => response.text())
+        .then(html => {
+            headerContainer.innerHTML = html;
+            initializeDropdown(); // Call the function after loading the header
+        })
+        .catch(err => {
+            console.warn("Something went wrong with loading the header:", err);
+        });
 }
+
 
 
 // handles the home button toggles in windows screens and mobile devices
