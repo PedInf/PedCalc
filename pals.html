@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pediatric Advanced Life Support (PALS)</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="img/TitleLogo.png" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="stylesheet" href="style/pals.css" />
+</head>
+
+<body>
+  <div id="header-container"></div>
+  <header class="page-header"> (PALS) & (NRP) </header>
+  <div class="container">
+    <h1 class="palsHeaders">Resuscitation Algorithms </h1>
+
+<div class="AlgorithmContainer">
+
+    <div class="click-list" title="Click to see the Algorithm, Click again to Hide it">
+      <div class="cpr">
+        <a href="#">Cardiac Arrest</a>
+      </div>
+      <div class="Bradycardia">
+        <a href="#">Bradycardia</a>
+      </div>
+      <div class="tachycardia">
+        <a href="#">Tachycardia</a>
+      </div>
+      <div class="SepticShock">
+        <a href="#">Septic Shock</a>
+      </div>
+      <div class="ShockROSC">
+        <a href="#">Shock After ROSC</a>
+      </div>
+      <div class="NRP">
+        <a href="#">NRP</a>
+      </div>
+    </div>
+  
+    <!-- Right column (images) -->
+    <div class="image-list">
+      <!-- Image containers -->
+      <div class="image-container">
+        <img id="cpr" src="/pals/CPR.webp" alt="Pediatric Cardiac Arrest Algorithm">
+      </div>
+      <div class="image-container">
+        <img id="Bradycardia" src="/pals/Bradycardia.webp" alt="Pediatric Bradycardia With a Pulse Algorithm">
+      </div>
+      <div class="image-container">
+        <img id="tachycardia" src="/pals/Tachycardia.webp" alt="Pediatric Tachycardia With a Pulse Algorithm">
+      </div>
+      <div class="image-container">
+        <img id="SepticShock" src="/pals/SepticShock.webp" alt="Septic Shock Management Algorithm">
+      </div>
+      <div class="image-container">
+        <img id="ShockROSC" src="/pals/ShockROSC.webp" alt="Management of Shock After ROSC Algorithm">
+      </div>
+      <div class="image-container">
+        <img id="NRP" src="/pals/NRP.webp" alt="Neonatal Resuscitation Algorithm">
+      </div>
+    </div>
+
+  </div>
+
+
+  <h1 class="palsHeaders">Broselow-Tape </h1>
+  <div class="Btape">
+
+    <table id="bTable">
+
+      <tr style="text-align: center; font-weight: bold;">
+        <td style="color:white;background-color:black;text-align: center;"><b>Zone</b></td>
+        <td>3 kg</td>
+        <td>4 kg</td>
+        <td>5 kg</td>
+        <td>Pink</td>
+        <td>Red</td>
+        <td>Purple</td>
+        <td>Yellow</td>
+        <td>White</td>
+        <td>Blue</td>
+        <td>Orange</td>
+        <td>Green</td>
+      </tr>
+      <tr>
+        <td><b>ETT uncuffed (mm)</b></td>
+        <td>3.5</td>
+        <td>3.5</td>
+        <td>3.5</td>
+        <td>3.5</td>
+        <td>3.5</td>
+        <td>4.0</td>
+        <td>4.5</td>
+        <td>5.0</td>
+        <td>5.5</td>
+        <td>N/A</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td><b>ETT cuffed (mm)</b></td>
+        <td>3.0</td>
+        <td>3.0</td>
+        <td>3.0</td>
+        <td>3.0</td>
+        <td>3.0</td>
+        <td>3.5</td>
+        <td>4.0</td>
+        <td>4.5</td>
+        <td>5.0</td>
+        <td>5.5</td>
+        <td>6.0</td>
+      </tr>
+      <tr>
+        <td><b>Lip-tip (cm)</b></td>
+        <td>9-9.5</td>
+        <td>9.5-10</td>
+        <td>10-10.5</td>
+        <td>10-10.5</td>
+        <td>10.5-11</td>
+        <td>11-12</td>
+        <td>12.5-13.5</td>
+        <td>14-15</td>
+        <td>15.5-16.5</td>
+        <td>17-18</td>
+        <td>18.5-19.5</td>
+      </tr>
+      <tr>
+        <td><b>Suction (F)</b></td>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td><b>L-scope blade</b></td>
+        <td>1 straight</td>
+        <td>1 straight</td>
+        <td>1 straight</td>
+        <td>1 straight</td>
+        <td>1 straight </td>
+        <td>1-1.5 straight </td>
+        <td>2 straight/ curved</td>
+        <td>2 straight/ curved</td>
+        <td>2 straight/ curved</td>
+        <td>2-3 straight/ curved</td>
+        <td>2-3 straight/ curved</td>
+      </tr>
+      <tr>
+        <td><b>Stylet</b></td>
+        <td>6F</td>
+        <td>6F</td>
+        <td>6F</td>
+        <td>6F</td>
+        <td>6F</td>
+        <td>6F</td>
+        <td>10F</td>
+        <td>10F</td>
+        <td>10F</td>
+        <td>14F</td>
+        <td>14F</td>
+      </tr>
+      <tr>
+        <td><b>OPA (mm)</b></td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>60</td>
+        <td>60</td>
+        <td>60</td>
+        <td>70</td>
+        <td>80</td>
+        <td>80</td>
+      </tr>
+      <tr>
+        <td><b>NPA (F)</b></td>
+        <td>14</td>
+        <td>14</td>
+        <td>14</td>
+        <td>14</td>
+        <td>14</td>
+        <td>18</td>
+        <td>20</td>
+        <td>22</td>
+        <td>24</td>
+        <td>26</td>
+        <td>26</td>
+      </tr>
+      <tr>
+        <td><b>Bag-mask device (min mL)</b></td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450-750</td>
+        <td>750-1000</td>
+        <td>750-1000</td>
+        <td>1000</td>
+      </tr>
+      <tr>
+        <td><b>ETCO<sub>2</sub> detector</b></td>
+        <td>Ped</td>
+        <td>Ped</td>
+        <td>Ped</td>
+        <td>Ped</td>
+        <td>Ped</td>
+        <td>Ped</td>
+        <td>Ped</td>
+        <td>Adult</td>
+        <td>Adult</td>
+        <td>Adult</td>
+        <td>Adult</td>
+      </tr>
+      <tr>
+        <td><b>LMA</b></td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1.5</td>
+        <td>1.5</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2-2.5</td>
+        <td>2.5</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><b>Tidal volume (mL)</b></td>
+        <td>20-30</td>
+        <td>20-30</td>
+        <td>30-50</td>
+        <td>40-65</td>
+        <td>50-85</td>
+        <td>65-105</td>
+        <td>80-130</td>
+        <td>100-165</td>
+        <td>125-210</td>
+        <td>160-265</td>
+        <td>200-330</td>
+      </tr>
+      <tr>
+        <td><b>Frequency</b></td>
+        <td>20-25/min</td>
+        <td>20-25/min</td>
+        <td>20-25/min</td>
+        <td>20-25/min</td>
+        <td>20-25/min</td>
+        <td>15-25/min</td>
+        <td>15-25/min</td>
+        <td>15-25/min</td>
+        <td>12-20/min</td>
+        <td>12-20/min</td>
+        <td>12-20/min</td>
+      </tr>
+      <tr>
+        <td><b>IV CATH (ga)</b></td>
+        <td>22-24</td>
+        <td>22-24</td>
+        <td>22-24</td>
+        <td>20-24</td>
+        <td>20-24</td>
+        <td>18-22</td>
+        <td>18-22</td>
+        <td>18-22</td>
+        <td>18-20</td>
+        <td>18-20</td>
+        <td>18-20</td>        
+      </tr>
+      <tr>
+        <td><b>CVL (fr)</b></td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3-4</td>
+        <td>3-4</td>
+        <td>4</td>
+        <td>4-5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>7</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td><b>NGT/OGT (fr)</b></td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5-8</td>
+        <td>8</td>
+        <td>10</td>
+        <td>10-12</td>
+        <td>12-14</td>
+        <td>12-14</td>
+        <td>14-18</td>
+        <td>14-18</td>
+      </tr>
+      <tr>
+        <td><b>Foley (fr)</b></td>
+        <td>6</td>
+        <td>6</td>
+        <td>6</td>
+        <td>6</td>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+        <td>10</td>
+        <td>10</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td><b>Chest Tube (fr)</b></td>
+        <td>10-12</td>
+        <td>10-12</td>
+        <td>10-12</td>
+        <td>10-12</td>
+        <td>12-18</td>
+        <td>16-20</td>
+        <td>16-24</td>
+        <td>20-28</td>
+        <td>20-32</td>
+        <td>28-38</td>
+        <td>28-42</td>
+      </tr>
+    </table>
+
+ 
+  
+ 
+</div>
+<h1 class="palsHeaders">Formula </h1>
+
+<p>-<b>Uncuffed ETT size:</b> age (years)/4 + 4; Cuffed ETT size: age (years)/4 + 3</p>
+<p>-<b>ETT depth (from lip to mid-trachea):</b> ETT internal diameter (size) X 3</p>
+<p ><b>Hypotension in children</b></p>
+<ul>
+  <li>&lt;60 mm Hg in term neonates (0 to 28 days)</li>
+  <li>&lt;70 mm Hg in infants (1 month to 12 months)</li>
+  <li>&lt;70 mm Hg + (2 X age in years) in children 1 to 10 years</li>
+  <li>&lt;90 mm Hg in children ≥10 years of age</li>
+</ul>
+
+
+  <h1 class="palsHeaders">Resuscitation Medications </h1>
+  <div class="palsdrugs">
+
+    <table>
+      <tr>
+        <th>Drug</th>
+        <th>Indications/Dosages</th>
+      </tr>
+      <tr>
+        <td><strong>Adenosine</strong></td>
+        <td>
+          <strong>SVT</strong>
+          <ul>
+            <li> 0.1 mg/kg IV/IO rapid push (max 6 mg), second dose 0.2 mg/kg IV/IO rapid push
+              (max 12 mg)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Albuterol</strong></td>
+        <td>
+          <strong>Asthma, anaphylaxis (bronchospasm), hyperkalemia</strong>
+          <ul>
+            <li>MDI: 4 to 8 puffs via inhalation q 20 minutes PRN with spacer (or ET if intubated)</li>
+            <li>Nebulizer: 2.5 mg/dose (wt &lt;20 kg) or 5 mg/dose (wt &gt;20 kg) via inhalation q 20 minutes
+              PRN</li>
+            <li>Continuous nebulizer: 0.5 mg/kg per hour via inhalation (max 20 mg/h)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Amiodarone</strong></td>
+        <td>
+          <strong>SVT, VT (with pulses)</strong>
+          <ul>
+            <li>5 mg/kg IV/IO load over 20 to 60 minutes (max 300 mg), repeat to daily max 15 mg/kg (2.2 g in
+              adolescents)</li>
+          </ul>
+          <strong>Pulseless arrest (ie, VF/pulseless VT)</strong>
+          <ul>
+            <li>5 mg/kg IV/IO bolus (max 300 mg), repeat to daily max 15 mg/kg (2.2 g in adolescents)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Atropine sulfate</strong></td>
+        <td>
+          <strong>Bradycardia (symptomatic)</strong>
+          <ul>
+            <li>0.02 mg/kg IV/IO (max single dose 0.5 mg), may repeat dose once in 3 to 5 minutes, max total
+              dose child 1 mg, max total dose adolescent 3 mg</li>
+            <li>0.04 to 0.06 mg/kg ET</li>
+          </ul>
+          <strong>Toxins/overdose (eg, organophosphate, carbamate)</strong>
+          <ul>
+            <li>&lt;12 years: 0.05 mg/kg IV/IO initially; then repeated and doubling the dose every 5 minutes
+              until muscarinic symptoms reverse</li>
+            <li>&ge;12 years: 1 mg IV/IO initially; then repeated and doubling the dose every 5 minutes until
+              muscarinic symptoms reverse</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Calcium chloride 10%</strong></td>
+        <td>
+          <strong>Hypocalcemia, hyperkalemia, hypermagnesemia, calcium channel blocker overdose</strong>
+          <ul>
+            <li>20 mg/kg (0.2 mL/kg) IV/IO slow push during arrest, repeat PRN</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Calcium gluconate</strong></td>
+        <td>
+          <strong>Hypocalcemia, hyperkalemia, hypermagnesemia, calcium channel blocker overdose</strong>
+          <ul>
+            <li>60 mg/kg (0.6 mL/kg) IV/IO slow push during arrest; repeat PRN</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Dexamethasone</strong></td>
+        <td>
+          <strong>Croup</strong>
+          <ul>
+            <li>0.6 mg/kg PO/IM/IV (max 16 mg)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Dextrose (glucose)</strong></td>
+        <td>
+          <strong>Hypoglycemia</strong>
+          <ul>
+            <li>0.5 to 1 g/kg IV/IO (D<sub>25</sub>W 2 to 4 mL/kg; D<sub>10</sub>W 5 to 10 mL/kg)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Dobutamine</strong></td>
+        <td>
+          <strong>Heart failure, cardiogenic shock</strong>
+          <ul>
+            <li> 2 to 20 mcg/kg per minute IV/IO infusion; titrate to desired effect</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Dopamine</strong></td>
+        <td>
+          <strong>Cardiogenic shock, distributive shock</strong>
+          <ul>
+            <li>2 to 20 mcg/kg per minute IV/IO infusion; titrate to desired effect</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="impmed"><strong>Epinephrine</strong></td>
+        <td class="impmed">
+          <strong>Pulseless arrest, bradycardia (symptomatic)</strong>
+          <ul>
+            <li>0.01 mg/kg (0.1 mL/kg of the 0.1 mg/mL concentration) IV/IO q 3 to 5 minutes (max single dose 1
+              mg)</li>
+            <li>0.1 mg/kg (0.1 mL/kg of the 1 mg/mL concentration) ET q 3 to 5 minutes</li>
+          </ul>
+          <strong>Hypotensive shock</strong>
+          <ul>
+            <li>0.1 to 1 mcg/kg per minute IV/IO infusion (consider higher doses if needed)</li>
+          </ul>
+          <strong>Anaphylaxis</strong>
+          <ul>
+            <li>IM autoinjector 0.3 mg (for patient weighing kg) or IM junior autoinjector 0.15 mg (for patient
+              weighing 10 to 30 kg)</li>
+            <li>0.01 mg/kg (0.01 mL/kg of the 1 mg/mL concentration) IM q 15 minutes PRN (max single dose 0.3
+              mg)</li>
+            <li>0.01 mg/kg (0.1 mL/kg of the 0.1 mg/mL concentration) IV/IO q 3 to 5 minutes (max single dose 1
+              mg) if hypotensive</li>
+            <li>0.1 to 1 mcg/kg per minute IV/IO infusion if hypotension persists despite fluids and
+              IM injection</li>
+          </ul>
+          <strong>Asthma</strong>
+          <ul>
+            <li>0.01 mg/kg (0.01 mL/kg of the 1 mg/mL concentration) subcutaneously q 15 minutes (max 0.3 mg or
+              0.3 mL)</li>
+          </ul>
+          <strong>Croup</strong>
+          <ul>
+            <li>0.25 to 0.5 mL racemic solution (2.25%) mixed in 3 mL NS via inhalation</li>
+            <li>3 mg (3 mL of the 1 mg/mL concentration) epinephrine mixed with 3 mL NS (which yields 0.25 mL
+              racemic epinephrine solution) via inhalation</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Etomidate</strong></td>
+        <td>
+          <strong>RSI</strong>
+          <ul>
+            <li>0.2 to 0.4 mg/kg IV/IO infused over 30 to 60 seconds (max 20 mg) will produce rapid sedation
+              that lasts for 10 to 15 minutes</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Hydrocortisone</strong></td>
+        <td>
+          <strong>Adrenal insufficiency</strong>
+          <ul>
+            <li>2 mg/kg IV bolus (max 100 mg)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Ipratropium bromide</strong></td>
+        <td>
+          <strong>Asthma</strong>
+          <ul>
+            <li>250 to 500 mcg via inhalation q 20 minutes PRN x 3 doses</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Lidocaine</strong></td>
+        <td>
+          <strong>VF/pulseless VT, wide-complex tachycardia (with pulses)</strong>
+          <ul>
+            <li>1 mg/kg IV/IO bolus</li>
+            <li>Maintenance: 20 to 50 mcg/kg per minute IV/IO infusion (repeat bolus dose if infusion initiated
+              &gt;15 minutes after initial bolus)</li>
+            <li>2 to 3 mg/kg ET</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Magnesium sulfate</strong></td>
+        <td>
+          <strong>Asthma (refractory status asthmaticus), torsades de pointes, hypomagnesemia</strong>
+          <ul>
+            <li>25 to 50 mg/kg IV/IO bolus (max 2 g) (pulseless VT) or over 10 to 20 minutes (VT with pulses) or
+              slow infusion over 15 to 30 minutes (status asthmaticus)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Methylprednisolone</strong></td>
+        <td>
+          <strong>Asthma (status asthmaticus), anaphylactic shock</strong>
+          <ul>
+            <li>Load: 2 mg/kg IV/IO/IM (max 60 mg); only use acetate salt IM</li>
+            <li>Maintenance: 0.5 mg/kg IV/IO q 6 hours (max 120 mg/d)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Milrinone</strong></td>
+        <td>
+          <strong>Myocardial dysfunction and increased SVR/PVR</strong>
+          <ul>
+            <li>Loading dose: 50 mcg/kg IV/IO over 10 to 60 minutes followed by 0.25 to 0.75 mcg/kg per minute
+              IV/IO infusion</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Naloxone</strong></td>
+        <td>
+          <strong>Narcotic (opiate) reversal</strong>
+          <ul>
+            <li>Total reversal required (for narcotic toxicity secondary to overdose): 0.1 mg/kg
+              IV/IO/IM/subcutaneous bolus q 2 minutes PRN (max 2 mg)</li>
+            <li>Total reversal not required (eg, for respiratory depression associated with therapeutic narcotic
+              use): 1 to 5 mcg/kg IV/IO/IM/subcutaneously; titrate to desired effect</li>
+            <li>Maintain reversal: 0.002 to 0.16 mg/kg per hour IV/IO infusion</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Nitroglycerin</strong></td>
+        <td>
+          <strong>Heart failure, cardiogenic shock</strong>
+          <ul>
+            <li>Initiate at 0.25 to 0.5 mcg/kg per minute IV/IO infusion; titrate by 1 mcg/kg per minute q 15 to
+              20 minutes as tolerated. Typical dose range 1 to 5 mcg/kg per minute (max 10 mcg/kg per minute)</li>
+            <li>In adolescents, start with 5 to 10 mcg per minute (not per kilogram per minute) and increase to
+              max 200 mcg per minute</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Nitroprusside</strong></td>
+        <td>
+          <strong>Cardiogenic shock (ie, associated with high SVR), severe hypertension</strong>
+          <ul>
+            <li>0.3 to 1 mcg/kg per minute initial dose; then titrate up to 8 mcg/kg per minute PRN</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Norepinephrine</strong></td>
+        <td>
+          <strong>Hypotensive (usually distributive) shock (ie, low SVR and fluid refractory)</strong>
+          <ul>
+            <li>0.1 to 2 mcg/kg per minute IV/IO infusion; titrate to desired effect</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Procainamide</strong></td>
+        <td>
+          <strong>SVT, atrial flutter, VT (with pulses)</strong>
+          <ul>
+            <li>15 mg/kg IV/IO load over 30 to 60 minutes (do not use routinely with amiodarone)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Prostaglandin E1 (PGE1)</strong></td>
+        <td>
+          <strong>Ductal-dependent congenital heart disease (all forms)</strong>
+          <ul>
+            <li>0.05 to 0.1 mcg/kg per minute IV/IO infusion initially; then 0.01 to 0.05 mcg/kg per minute
+              IV/IO</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Sodium bicarbonate</strong></td>
+        <td>
+          <strong>Metabolic acidosis (severe), hyperkalemia</strong>
+          <ul>
+            <li>1 mEq/kg IV/IO slow bolus</li>
+          </ul>
+          <strong>Sodium channel blocker overdose (eg, tricyclic antidepressant)</strong>
+          <ul>
+            <li>1 to 2 mEq/kg IV/IO bolus until serum pH is &gt;7.45 (7.50 to 7.55 for severe poisoning) followed by
+              IV/IO infusion of 150 mEq NaHCO<sub>3</sub>/L solution titrated to maintain alkalosis</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Terbutaline</strong></td>
+        <td>
+          <strong>Asthma (status asthmaticus), hyperkalemia</strong>
+          <ul>
+            <li>0.1 to 10 mcg/kg per minute IV/IO infusion; consider 10 mcg/kg IV/IO load over 5 minutes
+              10 mcg/kg subcutaneously q 10 to 15 minutes until IV/IO infusion is initiated (max single dose 0.4 mg)
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Vasopressin</strong></td>
+        <td>
+          <strong>Catecholamine-resistant hypotension</strong>
+          <ul>
+            <li>0.0002 to 0.002 unit/kg per minute (0.2 to 2 milliunits/kg per minute) continuous infusion</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+  <h1 class="palsHeaders">Post-Cardiac Arrest Care </h1>
+  <div class="postRosc">
+
+    <table class="ROSCtable">
+      <tr>
+        <td>
+          <ul>
+            <li><b>Oxygenation and ventilation</b></li>
+            <ul>
+              <li>Measure oxygenation and target normoxemia 94%-99% (or child's normal/appropriate oxygen saturation).
+              </li>
+              <li>Measure and target PaCO<sub>2</sub> appropriate to the patient's underlying condition and limit
+                exposure to severe hypercapnia or hypocapnia. </li>
+            </ul>
+            <li><b>Hemodynamic monitoring</b></li>
+            <ul>
+              <li>Set specific hemodynamic goals during post—cardiac arrest care and review daily. </li>
+              <li>Monitor with cardiac telemetry. </li>
+              <li>Monitor arterial blood pressure. </li>
+              <li>Monitor serum lactate, urine output, and central venous oxygen saturation to help guide therapies.
+              </li>
+              <li>Use parenteral fluid bolus with or without inotropes or vasopressors to maintain a systolic blood
+                pressure greater than the fifth percentile for age and sex. </li>
+            </ul>
+            <li><b>Targeted temperature management (TTM)</b></li>
+            <ul>
+              <li>Measure and continuously monitor core temperature. </li>
+              <li>Prevent and treat fever immediately after arrest and during rewarming. </li>
+              <li>If patient is comatose apply TTM (32<sup>ᵒ</sup>C-34<sup>ᵒ</sup>C) followed by
+                (36<sup>ᵒ</sup>C-37.5<sup>ᵒ</sup>C) or only TTM (36<sup>ᵒ</sup>C-37.5<sup>ᵒ</sup>C). </li>
+              <li>Prevent shivering. </li>
+              <li>Monitor blood pressure and treat hypotension during rewarming. </li>
+            </ul>
+            <li><b>Neuromonitoring</b></li>
+            <ul>
+              <li>If patient has encephalopathy and resources are available, monitor with continuous
+                electroencephalogram.</li>
+              <li>Treat seizures. </li>
+              <li>Consider early brain imaging to diagnose treatable causes of cardiac arrest. </li>
+            </ul>
+            <li><b>Electrolytes and glucose</b></li>
+            <ul>
+              <li>Measure blood glucose and avoid hypoglycemia. </li>
+              <li>Maintain electrolytes within normal ranges to avoid possible life-threatening arrhythmias. </li>
+              <li><b>Sedation</b></li>
+              <li>Treat with sedatives and anxiolytics. </li>
+            </ul>
+            <li><b>Prognosis</b></li>
+            <ul>
+              <li>Always consider multiple modalities (clinical and other) over any single predictive factor.</li>
+              <li>Remember that assessments may be modified by TTM or induced hypothermia.</li>
+              <li>Consider electroencephalogram in conjunction with other factors within the first 7 days after
+                cardiac arrest.</li>
+              <li>Consider neuroimaging such as magnetic resonance imaging during the first 7 days.</li>
+            </ul>
+          </ul>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+
+
+
+
+
+
+  <script src="js/header.js"></script>
+  <script>
+    // Get all image containers
+    var allImages = document.querySelectorAll(".image-container");
+  
+    // Get all click list items
+    var clickListItems = document.querySelectorAll(".click-list a");
+  
+    // Add event listeners to each click list item
+    clickListItems.forEach(function (item, index) {
+      item.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default link behavior
+  
+        // Check the current visibility state of the corresponding image
+        var isVisible = allImages[index].style.display === "block";
+  
+        // Hide all images
+        allImages.forEach(function (image) {
+          image.style.display = "none";
+        });
+  
+        // Toggle the visibility of the corresponding image based on its current state
+        allImages[index].style.display = isVisible ? "none" : "block";
+      });
+    });
+  </script>
+  
+  
+  
+  
+  
+  
+
+</div>
+</body>
+
+</html>

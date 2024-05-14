@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Detailed Pediatric Medications</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="img/TitleLogo.png" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="style/Select.css">
+  <style>
+    body {
+      background-color: #f9f0cf;
+    }
+
+    select {
+      background-color: #DBDBDB;
+    }
+    
+    textarea {
+      background-color: #e8e8c9;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header-container"></div>
+  <header class="page-header">Detailed Pediatric Medications</header>
+  <div class="container">
+    <select id="selectHM"></select>
+    <textarea id="textareaHM"></textarea>
+  </div>
+  <script src="/js/header.js"></script>
+  <script src="/js/Select.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadDataAndPopulateSelectAndTextarea('ref/PDC.json', 'MedicName', 'Dose', 'selectHM', 'textareaHM');
+    });
+  </script>
+</body>
+
+</html>

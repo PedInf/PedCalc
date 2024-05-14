@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Laboratory Reference Values and Units Conversion</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="img/TitleLogo.png" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="style/Select.css">
+</head>
+
+<body>
+  <div id="header-container"></div>
+  <div class="container">
+    
+      <header class="page-header">Laboratory Reference Values</header>
+      <select id="selectLabTest"></select>
+      <textarea id="taTestRV"></textarea>
+
+      <header class="conv-header">Laboratory Units Conversion</header>
+      <select class="SelectConv"id="selectConv"></select>
+      <textarea class="textarea-Conv" id="textareaConv"></textarea>
+
+  </div>
+  <script src="/js/header.js"></script>
+  <script src="/js/Select.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadDataAndPopulateSelectAndTextarea('ref/lab.json', 'test', 'result', 'selectLabTest', 'taTestRV');
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      loadDataAndPopulateSelectAndTextarea('ref/convertor.json', 'Material', 'ConversionFactor', 'selectConv', 'textareaConv');
+    });
+  </script>
+</body>
+
+</html>

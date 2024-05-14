@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Common Medications</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="img/TitleLogo.png" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="style/Select.css">
+
+  <style>
+    body {
+      background-color: #bcebeb;
+    }
+
+    select {
+      background-color: #d0ffd0;
+    }
+
+    textarea {
+      background-color: #c6c4c4;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header-container"></div>
+  <header class="page-header">Common Pediatric Medications</header>
+  <div class="container">
+    <select id="selectCM"></select>
+    <textarea id="textareaCM"></textarea>
+  </div>
+  <script src="/js/header.js"></script>
+  <script src="/js/Select.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadDataAndPopulateSelectAndTextarea('ref/CM.json', 'Medication', 'Dose', 'selectCM', 'textareaCM');
+    });
+  </script>
+</body>
+
+</html>
