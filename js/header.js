@@ -17,11 +17,15 @@
       });
   }
   
-  function isPageInSubfolder() {
-    const currentPath = window.location.pathname.split('/');
-    currentPath.pop(); // Remove the current HTML file from the path
-    return currentPath.length > 2; // Check if there are any remaining path segments
-  }
+function isPageInSubfolder() {
+    // Get the root URL of the website
+    const rootUrl = new URL('https://pedinf.github.io/PedCalc/');
+    // Get the current URL
+    const currentUrl = new URL(window.location.href);
+    // Check if the pathname of the current URL starts with the pathname of the root URL
+    return currentUrl.pathname.startsWith(rootUrl.pathname) && currentUrl.pathname !== rootUrl.pathname;
+}
+
 
 // handles the home button toggles in windows screens and mobile devices
 ////////////////////////////////////////////////////////////////////////
