@@ -2,17 +2,11 @@
  //////////////////////////////////////////////////////////////////////////////////////////////////////
   document.addEventListener("DOMContentLoaded", loadHeaderContainer);
 
-  function loadHeaderContainer() {
+function loadHeaderContainer() {
     var headerContainer = document.getElementById("header-container");
 
-    // Determine the relative path to the header.html based on the current location
-    var headerPath = '';
-    const currentPath = window.location.pathname;
-    if (currentPath.includes('/cpg/')) {
-        headerPath = '../../header.html'; // If the current page is in the 'cpg' subfolder
-    } else {
-        headerPath = '../header.html'; // If the current page is in the main folder or any other subfolder
-    }
+    // Construct the absolute path to the header.html based on the root URL of the GitHub Pages site
+    var headerPath = 'https://pedinf.github.io/PedCalc/header.html';
 
     fetch(headerPath)
         .then(response => response.text())
