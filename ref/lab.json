@@ -1,0 +1,290 @@
+[
+ {
+  "test": "Alanine Aminotransferase (ALT)",
+  "result": "0 to <1 year                          5–33 U\/L \n1 to <13 years                      9–25 U\/L \n13–19 years (male)             9–24 U\/L \n13 to <19 years (female)   8–22 U\/L "
+ },
+ {
+  "test": "Albumin",
+  "result": "0–14 days                                         3.3–4.5 g\/dL               33–45 g\/L\n15 days to <1 year                          2.8–4.7 g\/dL               28–47 g\/L\n1 to <8 years                                    3.8–4.7 g\/dL               38–47 g\/L\n8 to <15 years                                  4.1–4.8 g\/dL               41–48 g\/L\n15 to <19 years (male)                   4.1–5.1 g\/dL               41–51 g\/L\n15 to <19 years (female)               4.0–4.9 g\/dL               40–49 g\/L"
+ },
+ {
+  "test": "Albumin (Urine)",
+  "result": "Random <30 mg urine albumin\/g creatinine (on first morning urine)\n\n24-hr collection\n4–16 years (male)              3.35–13.15 mg\/1.73 m2\/day\n4–16 years (female)          3.75–18.34 mg\/1.73 m2\/day\n"
+ },
+ {
+  "test": "Alkaline Phosphatase (ALP)",
+  "result": "0–14 days                               90–273 U\/L\n15 days to <1 year               134–518 U\/L\n1 to <10 years                      156–369 U\/L \n10 to <13 years                    141–460 U\/L \n13 to <15 years (male)       127–517 U\/L \n13 to <15 years (female)   62–280 U\/L \n15 to <17 years (male)       89–365 U\/L \n15 to <17 years (female)   54–128 U\/L \n17 to <19 years (male)       59–164 U\/L \n17 to <19 years (female)   48–95 U\/L "
+ },
+ {
+  "test": "Ammonia",
+  "result": "0–14 days                         35.8–161.8 mCg\/dL              21–95 mcmol\/L\n15 days to 6 years           27.2–115.8 mCg\/dL             16–68 mcmol\/L\n>6 years                            30.7–122.6 mCg\/dL             18–72 mcmol\/L"
+ },
+ {
+  "test": "Amylase",
+  "result": "0–14 days                                    3–10 U\/L\n15 days to <13 weeks               2–22 U\/L \n13 weeks to <1 year                 3–50 U\/L \n1 year to <19 years                  25–101 U\/L "
+ },
+ {
+  "test": "Antistreptolysin O titer (ASOT)",
+  "result": "0 to <6 months               0 IU\/mL\n6 months to <1 year      0–30 IU\/mL\n1 to <6 years                   0–104 IU\/mL\n6 to <19 years                 0–331 IU\/mL"
+ },
+ {
+  "test": "Aspartate Aminotransferase (AST)",
+  "result": "0–14 days                                      32–162 U\/L \n15 days to <1 year                       20–67 U\/L\n1 to <7 years                                 21–44 U\/L\n7 to <12 years                               18–36 U\/L\n12 to <19 years (male)                 14–35 U\/L\n12 to <19 years (female)             13–26 U\/L"
+ },
+ {
+  "test": "Bicarbonate",
+  "result": "0–14 days                                     5–20 mEq\/L             5–20 mmol\/L\n15 days to <1 year                      10–24 mEq\/L          10–24 mmol\/L\n1 to <5 years                                14–24 mEq\/L          14–24 mmol\/L\n5 to <15 years                              17–26 mEq\/L          17–26 mmol\/L\nMale 15 to <19 years                  18–28 mEq\/L         18–28 mmol\/L\nFemale 15 to <19 years              17–26 mEq\/L         17–26 mmol\/L"
+ },
+ {
+  "test": "Bilirubin (Conjugated)",
+  "result": "0–14 days                                  0.33–0.71 mg\/dL               5.64–12.14 mcmol\/L\n15 days to <1 year                   0.05–0.30 mg\/dL               0.86–5.13 mcmol\/L\n1 to <9 years                             0.05–0.20 mg\/dL               0.86–3.42 mcmol\/L\n9 to <13 years                           0.05–0.29 mg\/dL               0.86–4.96 mcmol\/L\n13 to <19 years (female)         0.10–0.39 mg\/dL              1.71–6.67 mcmol\/L\n13 to <19 years (male)             0.11–0.42 mg\/dL              1.88–7.18 mcmol\/L"
+ },
+ {
+  "test": "Bilirubin (Total)",
+  "result": "0–14 days                   0.19–16.60 mg\/dL         3.25–283.92 mcmol\/L\n15 days to <1 year    0.05–0.68 mg\/dL           0.86–11.63 mcmol\/L\n1 to <9 years              0.05–0.40 mg\/dL           0.86–6.84 mcmol\/L\n9 to <12 years            0.05–0.55 mg\/dL           0.86–9.41 mcmol\/L\n12 to <15 years          0.10–0.70 mg\/dL           1.71–11.97 mcmol\/L\n15 to <19 years          0.10–0.84 mg\/dL           1.71–14.37 mcmol\/L"
+ },
+ {
+  "test": "Blood gas (areterial, Breathing room air)",
+  "result": "                                           pH                       PaO2 (mmHg)       PaCO2 (mmHg)      HCO3− (mEq\/L)\nCord blood                 7.28 ± 0.05            18.0 ± 6.2                49.2 ± 8.4               14–22\nNewborn (birth)        7.11–7.36               8–24                        27–40                      13–22\n5–10 min                    7.09–7.30               33–75                      27–40                      13–22\n30 min                         7.21–7.38               31–85                     27–40                       13–22\n60 min                         7.26–7.49               55–80                     27–40                       13–22\n1 day                            7.29–7.45               54–95                     27–40                      13–22\nChild\/adult                  7.35–7.45               83–108                  32–48                       20–28\n\nNOTE: Venous blood gases can be used to assess acid-base status, not oxygenation. \nPvCO2 averages 6–8 mmHg higher than PaCO2, and pH is slightly lower. \nPeripheral venous samples are strongly affected by the local circulatory and metabolic environment. \nCapillary blood gases correlate best with arterial pH and moderately well with PaCO2."
+ },
+ {
+  "test": "Calcium (ionized)",
+  "result": "0–1 month         3.9–6.0 mg\/dL         1.0–1.5 mmol\/L\n1–6 months       3.7–5.9 mg\/dL         0.95–1.5 mmol\/L\n1–19 years         4.9–5.5 mg\/dL         1.22–1.37 mmol\/L"
+ },
+ {
+  "test": "Calcium (Total)",
+  "result": "0 to <1 year                      8.5–11.0 mg\/dL           2.1–2.7 mmol\/L\n1 year to <19 years         9.2–10.5 mg\/dL           2.3–2.6 mmol\/L"
+ },
+ {
+  "test": "Calcium (Urine)",
+  "result": "Random\n0–6 months                <0.8 mg\/mg creatinine\n7–12 months              <0.6 mg\/mg creatinine\n≥2 years                    <0.21 mg\/mg creatinine\n\n24-hr collection        <4 mg\/kg\/day"
+ },
+ {
+  "test": "Carbon monoxide (HbCO%)",
+  "result": "Nonsmoker         0–2% of total hemoglobin\nSmoker                0–9% of total hemoglobin"
+ },
+ {
+  "test": "Cerebrospinal Fluid (CSF)",
+  "result": "WBC\n------------------------------------------------------------------------------------------\nAge                            Count\/mcL (median)                      95th Percentile\n0–28 days                 0–12                                                  16\n29–60 days              0–8                                                     11\nChild                          0–7\n------------------------------------------------------------------------------------------\nGlucose \nAge                            Median                                              5th Percentile\n0–28 days                 45 mg\/dL                                          35 mg\/dL\n29–60 days               47 mg\/dL                                          37 mg\/Dl\nInfant, child             60–80 mg\/dL(3.3–4.4 mmol\/L)\nAdult                         40–70 mg\/dL(2.2–3.9 mmol\/L)\n-----------------------------------------------------------------------------------------\nProtein\nAge                                 Median                                            95th Percentile\n0–28 days                     66 mg\/dL                                         118 mg\/dL\n29–60 days                   49 mg\/dL                                          91 mg\/dL\n6 months to 2 years   6–25 mg\/dL( 60–250 mg\/L)\n2–6 years                     5–25 mg\/dL( 50–250 mg\/L)\n6–12 years                   5–28 mg\/dL( 50–280 mg\/L)\n12–18 years                 6–34 mg\/dL( 60–340 mg\/L)\n-------------------------------------------------------------------------------------------\nOpening Pressure (Lateral Recumbent Position)\nNewborn                            8–11 cm H2O\n1–18 years                         11.5–28 cm H2Oa\nRespiratory variations     0.5–1 cm H2O"
+ },
+ {
+  "test": "Chloride (Serum)",
+  "result": "3–5 years                           100–107 mEq\/L             100–107 mmol\/L\n6–11 year                           101–107 mEq\/L             101–107 mmol\/L\n12–29 years (male)           101–106 mEq\/L             101–106 mmol\/L\n12–29 years (female)       100–107 mEq\/L             100–107 mmol\/L"
+ },
+ {
+  "test": "Chloride (Urine)",
+  "result": "Random\nMale              25–253 mEq\/g creatinine\nFemale          39–348 mEq\/g creatinine\n\n\n24-hr collection\nInfant                                      2–10 mEq\/day\nChild <6 years                       15–40 mEq\/day\n6–10 years (male)                36–110 mEq\/day\n6–10 years (female)            18–74 mEq\/day\n10–14 years (male)              64–176 mEq\/day\n10–14 years (female)          36–173 mEq\/day\nAdult                                      110–250 mEq\/day\n\n\n"
+ },
+ {
+  "test": "Choloestrol",
+  "result": "See lipids"
+ },
+ {
+  "test": "Copper",
+  "result": "6 months to 2 years        72–178 mCg\/dL                    11.3–28.0 mcmol\/L\n3–4 years                           80–160 mCg\/dL                   12.6–25.2 mcmol\/L\n5–6 years                           76–167 mCg\/dL                   12.0–26.3 mcmol\/L\n7–8 years                           79–147 mCg\/dL                   12.4–23.1 mcmol\/L\n9–10 years                         84–154 mCg\/dL                   13.2–24.2 mcmol\/L\n11–12 years                       73–149 mCg\/dL                  11.5–23.4 mcmol\/L\n13–14 years                       66–137 mCg\/dL                  10.4–21.6 mcmol\/L\n15–16 years                       60–132 mCg\/dL                  9.4–20.8 mcmol\/L\n17–18 years                       59–146 mCg\/dL                  9.3–23.0 mcmol\/L"
+ },
+ {
+  "test": "C-Reactive Protein (CRP)",
+  "result": "0–14 days                       0.3–6.1 mg\/L \n15 days to <15 years    0.1–1.0 mg\/L \n15 to <19 years             0.1–1.7 mg\/L "
+ },
+ {
+  "test": "Creatine Kinase (CK)",
+  "result": "6 months to 2 years (male)                    50–292 U\/L \n6 months to 2 years (female)                38–260 U\/L\n3–5 years (male)                                      59–296 U\/L \n3–5 years (female)                                  42–227 U\/L \n6–8 years (male)                                      54–275 U\/L \n6–8 years (female)                                   50–231 U\/L \n9–11 years (male)                                    55–324 U\/L \n9–11 years (female)                                52–256 U\/L \n12–14 years (male)                                 63–407 U\/L \n12–14 years (female)                             45–257 U\/L \n15–17 years (male)                                 68–914 U\/L \n15–17 years (female)                             45–458 U\/L "
+ },
+ {
+  "test": "Creatinine (serum Enzymatic)",
+  "result": "0–14 days                                     0.32–0.92 mg\/dL          28.29–81.33 mcmol\/L\n15 days to <2 years                    0.10–0.36 mg\/dL          8.84–31.82 mcmol\/L\n2 to <5 years                                0.20–0.43 mg\/dL         17.68–38.01 mcmol\/L\n5 to <12 years                              0.31–0.61 mg\/dL         27.40–53.93 mcmol\/L\n12 to <15 years                            0.45–0.81 mg\/dL         39.78–71.61 mcmol\/L\n15 to <19 years (male)               0.62–1.08 mg\/dL          54.81–95.47 mcmol\/L\n15 to <19 years (female)           0.49–0.84 mg\/dL          43.32–74.26 mcmol\/L"
+ },
+ {
+  "test": "Creatinine (Urine)",
+  "result": "Random\nMale <40 years                24–392 mg\/dL\nFemale <40 years            16–327 mg\/dL\n\n24-hr collection\nInfant                                 8–20 mg\/kg\/day\nChild                                   8–22 mg\/kg\/day\nAdolescent                        8–30 mg\/kg\/day\nAdult (male)                     14–26 mg\/kg\/day\nAdult (female)                 11–20 mg\/kg\/day\n\n\n\n\n"
+ },
+ {
+  "test": "Erythrocyte Sedimentation Rate (ESR)",
+  "result": "Child                       0–10 mm\/hr\nAdult male            0–15 mm\/hr\nAdult female        0–20 mm\/hr"
+ },
+ {
+  "test": "Ferritin ",
+  "result": "4 to <15 days                               100–717 ng\/mL         224–1611 pmol\/L\n15 days to <6 months                14–647 ng\/mL           31–1454 pmol\/L\n6 months to <1 year                   8–182 ng\/mL             19–409 pmol\/L\n1 to <5 years                                5–100 ng\/mL             12–224 pmol\/L\n5 to <14 years                              14–79 ng\/mL             31–177 pmol\/L\n14 to <19 years (female)            6–67 ng\/mL               12–152 pmol\/L\n14 to <16 years (male)               13–83 ng\/mL             28–186 pmol\/L\n16 to <19 years (male)               11–172 ng\/mL           25–386 pmol\/L"
+ },
+ {
+  "test": "Folate (RBC)",
+  "result": "Deficient                ≤3.9 ng\/mL         ≤8.7 nmol\/L\nIndeterminate      4.0–5.8 ng\/mL     9.1–13.1 nmol\/L\nNormal                  ≥5.9 ng\/mL         ≥13.4 nmol\/L"
+ },
+ {
+  "test": "Folate (Serum)",
+  "result": "≥366 ng\/mL              ≥831 nmol\/L"
+ },
+ {
+  "test": "Gamma-Glutamyl Transferase (GGT)",
+  "result": "0–14 days                     23–219 U\/L     23–219 U\/L\n15 days to <1 year      8–127 U\/L       8–127 U\/L\n1 to <11 years             6–16 U\/L          6–16 U\/L\n11 to <19 years           7–21 U\/L          7–21 U\/L"
+ },
+ {
+  "test": "Glucose (plasma)",
+  "result": "Fasting                                    < 126 mg\/dL\n2-hour post-meal                 < 200 mg\/dL"
+ },
+ {
+  "test": "Haptoglobin",
+  "result": "0–14 days                       0–10 mg\/dL              0–0.10 g\/L\n15 days to <1 year        7–221 mg\/dL            0.07–2.21 g\/L\n1 to <12 years               7–163 mg\/dL             0.07–1.63 g\/L\n12 to <19 years             7–179 mg\/dL             0.07–1.79 g\/L"
+ },
+ {
+  "test": "HDL",
+  "result": "See lipids"
+ },
+ {
+  "test": "Hemoglobin A1C",
+  "result": "<6.5%"
+ },
+ {
+  "test": "Hemoglobin F (% from Total Hb)",
+  "result": "0–1 month                 45.8–91.7\n2 months                    32.7–85.2\n3 months                    14.5–73.7\n4 months                     4.2–56.9\n5 months                     1.0–38.1\n6–8 months                 0.9–19.4\n9–12 months               0.6–11.6\n13–23 months             0.0–8.5\n2 years and older        0.0–2.1"
+ },
+ {
+  "test": "Iron",
+  "result": "0 to <14 years                      16–128 mCg\/dL        2.8–22.9 mcmol\/L\n14–19 years (male)             31–168 mCg\/dL         5.5–40.0 mcmol\/L\n14–19 years (female)          20–162 mCg\/dL        3.5–29.0 mcmol\/L"
+ },
+ {
+  "test": "Lactate",
+  "result": "0–90 days            9–32 mg\/dL          1.0–3.5 mmol\/L\n3–24 months       9–30 mg\/dL          1.0–3.3 mmol\/L\n2–18 years           9–22 mg\/dL          1.0–2.4 mmol\/L"
+ },
+ {
+  "test": "Lactate Dehydrogenase (LDH)",
+  "result": "0–14 days                             309–1222 U\/L       309–1222 U\/L\n15 days to <1 year               163–452 U\/L        163–452 U\/L\n1 to <10 years                       192–321 U\/L        192–321 U\/L\n10 to <15 years (male)        170–283 U\/L        170–283 U\/L\n10 to <15 years (female)    157–272 U\/L        157–272 U\/L\n15 to <19 years                    130–250 U\/L         130–250 U\/L"
+ },
+ {
+  "test": "LDL",
+  "result": "See lipids"
+ },
+ {
+  "test": "Lead",
+  "result": "<5 mCg\/dL "
+ },
+ {
+  "test": "Lipase",
+  "result": "0 to <19 years                4.0–39.0 U\/L           4.0–39.0 U\/L"
+ },
+ {
+  "test": "Lipids",
+  "result": "                                                   Desirable                                  Borderline                                               High\nTotal cholesterol                    <170 mg\/dL (4.4 mmol\/L)     170–199 mg\/dL (4.4–5.2 mmol\/L)      ≥200 mg\/dL (5.2 mmol\/L)\nLDL                                            <110 mg\/dL (2.8 mmol\/L)      110–129 mg\/dL (2.8–3.3 mmol\/L)     ≥130 mg\/dL (3.4 mmol\/L)\nNon-HDL                                  <120 mg\/dL (3.1 mmol\/L)      120–144 mg\/dL (3.1–3.7 mmol\/L)     ≥145 mg\/dL (3.8 mmol\/L)\nHDL                                           >45 mg\/dL (1.2 mmol\/L)         40–45 mg\/dL (1.0–1.2 mmol\/L)         ≤40 mg\/dL (1.0 mmol\/L)\nTriglycerides (0–9 years)       <75 mg\/dL (0.8 mmol\/L)        75–99 mg\/dL (0.8–1.1 mmol\/L)          ≥100 mg\/dL (1.1 mmol\/L)\nTriglycerides (10–19 years)   <90 mg\/dL (1.0 mmol\/L)        90–129 mg\/dL (1.0–1.5 mmol\/L)       ≥130 mg\/dL (1.5 mmol\/L)"
+ },
+ {
+  "test": "Magnesium(Mg)",
+  "result": "0–14 days                     1.99–3.94 mg\/dL           0.82–1.62 mmol\/L\n15 days to <1 year      1.97–3.09 mg\/dL           0.81–1.27 mmol\/L\n1 to <19 years              2.09–2.84 mg\/dL          0.86–1.17 mmol\/L"
+ },
+ {
+  "test": "Osmolality",
+  "result": "0–16 years                       271–296 mOsm\/kg               271–296 mmol\/kg\n17 years and older         280–303 mOsm\/kg               280–303 mmol\/kg"
+ },
+ {
+  "test": "Osmolality (Urine)",
+  "result": "Random                                                 50–1,200 mOsm\/kg H2O, depending on fluid intake\nOn average fluid intake                      300–900 mOsm\/kg H2O\nAfter 12 hr fluid restriction               >850 mOsm\/kg H2O\n\n24-hr collection                                  ∼300–900 mOsm\/kg H2O"
+ },
+ {
+  "test": "Phosphorus",
+  "result": "0–14 days                                        5.6–10.5 mg\/dL         1.8–3.4 mmol\/L\n15 days to <1 year                         4.8–8.4 mg\/dL           1.5–2.7 mmol\/L\n1 to <5 years                                   4.3–6.8 mg\/dL           1.4–2.2 mmol\/L\n5 to <13 years                                 4.1–5.9 mg\/dL           1.3–1.9 mmol\/L\n13 to <16 years (male)                  3.5–6.2 mg\/dL           1.1–2.0 mmol\/L\n13 to <16 years (female)              3.2–5.5 mg\/dL           1.0–1.8 mmol\/L\n16 to <19 years                              2.9–5.0 mg\/dL           0.9–1.6 mmol\/L"
+ },
+ {
+  "test": "Pleural, Pericardial, or Peritoneal Fluid",
+  "result": "Measurement                        Transudate                    Exudate\nProtein (g\/dL)                           <3.0                                 >3.0\nFluid\/serum protein ratio      <0.5                                 ≥0.5\nLDH (IU\/L)                                <200                                ≥200\nFluid\/serum LDH ratio           <0.6                                  ≥0.6\nWBCs (mm3)                            <10,000 (PMN)               >10,000 (PMN)\nRBCs (mm3)                              <5,000                              >5,000\nGlucose (mg\/dL)                       >40                                   <40\npH                                                >7.2                                  <7.2\n\nAlways obtain serum for glucose, LDH, protein, amylase, etc. for comparison.\nAll of the following criteria do not have to be met for consideration as an exudate.\nIn peritoneal fluid, WBC count >800\/mcL suggests peritonitis.\nCollect anaerobically in a heparinized syringe for pH.\nAmylase >5000 U\/mL or pleural fluid\/serum ratio >1 suggests pancreatitis.\nLDH, Lactate dehydrogenase; RBCs, red blood cells; WBCs, white blood cells"
+ },
+ {
+  "test": "Porcelain",
+  "result": "Male             5.28–20.15 mg\/dL              6.15–20.13 mmol\/L\nFemale         7.20–19.21 mg\/dL              7.01–20.15 mmol\/L"
+ },
+ {
+  "test": "Potassium ",
+  "result": "Preterm               3.0–6.0 mEq\/L             3.0–6.0 mmol\/L\nNewborn             3.7–5.9 mEq\/L             3.7–5.9 mmol\/L\nInfant                   4.1–5.3 mEq\/L             4.1–5.3 mmol\/L\nChild                     3.4–4.7 mEq\/L             3.4–4.7 mmol\/L\nThereafter          3.5–5.1 mEq\/L              3.5–5.1 mmol\/L"
+ },
+ {
+  "test": "Potassium (Urine)",
+  "result": "Random\nMale                                          13–116 mEq\/g creatinine\nFemale                                      8–129 mEq\/g creatinine\n\n24-hr collection                      \n6–10 years (male)                  17–54 mEq\/day\n6–10 years (female)              8–37 mEq\/day\n10–14 years (male)                22–57 mEq\/day\n10–14 years (female)            18–58 mEq\/day\nAdult                                         25–125 mEq\/day\n\n\n\n\n"
+ },
+ {
+  "test": "PreAlbumin",
+  "result": "0–14 days                                    2–12 mg\/dL            0.02–0.12 g\/L\n15 days to <1 year                     5–24 mg\/dL            0.05–0.24 g\/L\n1 to <5 years                              12–23 mg\/dL           0.12–0.23 g\/L\n5 to <13 years                           14–26 mg\/dL            0.14–0.26 g\/L\n13 to <16 years                         18–31 mg\/dL            0.18–0.31 g\/L\n16 to <19 years (male)             20–35 mg\/dL            0.20–0.35 g\/L\n16 to <19 years (female)         17–33 mg\/dL            0.17–0.33 g\/L"
+ },
+ {
+  "test": "Protein (Total)",
+  "result": "0–14 days                    5.3–8.3 g\/dL        53–83 g\/L\n15 days to <1 year     4.4–7.1 g\/dL        44–71 g\/L\n1 to <6 years               6.1–7.5 g\/dL        61–75 g\/L\n6 to <9 years               6.4–7.7 g\/dL        64–77 g\/L\n9 to <19 years             6.5–8.1 g\/dL        65–81 g\/L"
+ },
+ {
+  "test": "Protein (Urine)",
+  "result": "Random\n6 months to 24 months                 <0.5 mg protein\/mg creatinine\n>2 years                                            <0.2 mg protein\/mg creatinine\n\n24-hr collection\nAt rest                                              50–80 mg\/day\nAfter intense exercise                  <250 mg\/day\n\n"
+ },
+ {
+  "test": "Rheumatoid Factor",
+  "result": "0–14 days                                9.0–17.1 IU\/mL           9.0–17.1 IU\/mL\n15 days to <19 years             0–9.0 IU\/mL                 0–9.0 IU\/mL"
+ },
+ {
+  "test": "Sodium",
+  "result": "3–5 years                                 135–142 mEq\/L          135–142 mmol\/L\n6–15 years                               136–143 mEq\/L          136–143 mmol\/L\n16–49 years (male)                137–143 mEq\/L          137–143 mmol\/L\n16–49 years (female)            137–142 mEq\/L          137–142 mmol\/L"
+ },
+ {
+  "test": "Sodium (Urine)",
+  "result": "Random\nMale                                              23–229 mEq\/g creatinine\nFemale                                          26–297 mEq\/g creatinine\n\n24-hr collection\nFull-term, 7–14 days                ∼20% that of adults\n6–10 years (male)                     41–115 mEq\/day\n6–10 years (female)                 20–69 mEq\/day\n10–14 years (male)                  63–177 mEq\/day\n10–14 years (female)              48–168 mEq\/day\nAdult                                           40–220 mEq\/day\n\n\n\n\n\n"
+ },
+ {
+  "test": "Synovial Fluid",
+  "result": "Group                 Condition           Synovial          Color\/Clarity      Viscosity   Mucin Clot   WBC Count  PMN (%)   Others \n                                                         Complement\nNon-                    Normal               N                    Yellow\/Clear       ↑↑           G                    <200               <25\ninflammatory    Traumatic          N                    Xanthochromic   ↑              F–G               <2,000            <25             Debris\n                              arthritis                                     \/Turbid\n                             Osteoarthritis    N                   Yellow\/Clear        ↑              F–G                1,000             <25\nInflammatory    SLE                      ↓                  Yellow\/Clear          N              N                    5,000             10               Lupus \n                                                                                                                                                                                                    cells\n                             Rheumatic          N–↑            Yellow\/Cloudy      ↓              F                      5,000           10–50\n                               fever\n                             JRA                       N–↓            Yellow\/Cloudy      ↓             Poor                15,000–          75\n                                                                                                                                                           20,000\n                             Reactive            ↑                   Yellow\/Opaque     ↓             Poor                20,000             80\n                              arthritis\nPyogenic             Tuberculous    N–↑              Yellow-white         ↓             Poor                25,000             50–60      Acid-fast \n                               arthritis                                  \/Cloudy                                                                                                        bacteria\n                             Septic              ↑                     Serosanguineous  ↓             Poor               50,000              >75          Low glucose\n                               arthritis                                   \/Turbid                                                            –300,000                          ,bacteria\n\nF: Fair; G: good; H: high; N: normal; PMN: polymorphonuclear leukocyte; WBC: white blood cell; ↓: decreased; ↑: increased\nSLE:Systemic lupus erythematosus, JRA:Juvenile rheumatoid arthritis"
+ },
+ {
+  "test": "Total Iron Binding Capacity (TIBC)",
+  "result": "0–2 months                         59–175 mCg\/dL          11–31 mcmol\/L\n3 months to 17 years        250–400 mCg\/dL        45–72 mcmol\/L\n18 years and older             240–450 mCg\/dL        43–81 mcmol\/L"
+ },
+ {
+  "test": "Transferrin",
+  "result": "0 to <9 weeks               104–224 mg\/dL         1.04–2.24 g\/L\n9 weeks <1 year           107–324 mg\/dL         1.07–3.24 g\/L\n1 to <19 years               220–337 mg\/dL         2.2–3.37 g\/L"
+ },
+ {
+  "test": "Triglycerides",
+  "result": "See lipids"
+ },
+ {
+  "test": "Urea Nitrogen ",
+  "result": "0 to <14 days                             2.8–23.0 mg\/dL      1.0–8.2 mmol\/L\n15 days to <1 year                    3.4–16.8 mg\/dL      1.2–6.0 mmol\/L\n1 to <10 years                           9.0–22.1 mg\/dL      3.2–7.9 mmol\/L\nMale 10 to <19 years              7.3–21 mg\/dL          2.6–7.5 mmol\/L\nFemale 10 to <19 years          7.3–19 mg\/dL          2.6–6.8 mmol\/L"
+ },
+ {
+  "test": "Urea Nitrogen (Urine)",
+  "result": "Random\nMale                            2,864–9,851 mg\/g creatinine\nFemale                        3,129–11,639 mg\/g creatinine\n\n24-hr collection        12–20 g\/day"
+ },
+ {
+  "test": "Uric Acid",
+  "result": "0–14 days                                 2.8–12.7 mg\/dL        0.2–0.8 mmol\/L\n15 days to <1 year                  1.6–6.3 mg\/dL          0.1–0.4 mmol\/L\n1 to <12 years                         1.8–4.9 mg\/dL          0.1–0.3 mmol\/L\nMale 12 to <19 years            2.6–7.6 mg\/dL           0.2–0.5 mmol\/L\nFemale 12 to <19 years        2.6–5.9 mg\/dL           0.2–0.4 mmol\/L"
+ },
+ {
+  "test": "Vitamin A (Retinol)",
+  "result": "0 to <1 year                 8.0–53.6 mg\/dL             0–2 mcmol\/L\n1 to <11 years             27.5–44.4 mg\/dL           1–2 mcmol\/L\n11 to <16 years           24.9–55.0 mg\/dL           1–2 mcmol\/L\n16 to <19 years           28.7–75.1 mg\/dL           1–3 mcmol\/L"
+ },
+ {
+  "test": "Vitamin B1 (Thiamine) RBC",
+  "result": "4.5–10.3 mCg\/dL                 106–242 nmol\/L"
+ },
+ {
+  "test": "Vitamin B12 (Cobalamin)",
+  "result": "5 days to <1 year      259–1576 pg\/mL      191–1163 pmol\/L\n1 to <9 years             283–1613 pg\/mL      209–1190 pmol\/L\n9 to <14 years          252–1125 pg\/mL       186–830 pmol\/L\n14 to <17 years        244–888 pg\/mL         180–655 pmol\/L\n17 to <19 years        203–811 pg\/mL         150–599 pmol\/L"
+ },
+ {
+  "test": "Vitamin B2 (Riboflavin)",
+  "result": "4–24 mCg\/dL                106–638 nmol\/L"
+ },
+ {
+  "test": "Vitamin C",
+  "result": "0.4–2.0 mg\/dL                23–114 mcmol\/L"
+ },
+ {
+  "test": "Vitamin D (1,25-dihydroxy-vitamin D)",
+  "result": "0 to <1 year               32.1–196.2 pg\/mL        77–471 pmol\/L\n1 to <3 years             47.1–151.2 pg\/mL        113–363 pmol\/L\n3 to <19 years          45.0–102.5 pg\/mL         108–246 pmol\/L"
+ },
+ {
+  "test": "Vitamin D (25-Hydroxy-Vitamin D)",
+  "result": "Deficient                 <12 ng\/mL                 <30 nmol\/L\nInsufficient             12–20 ng\/mL            30–50 nmol\/L\nSufficient               ≥20 ng\/mL                ≥50 nmol\/L\nExcess                    >50–60 ng\/mL            >125–150 nmol\/L\n\nSome experts recommend a level ≥30 ng\/mL as sufficient"
+ },
+ {
+  "test": "Vitamin E (α-Tocopherol)",
+  "result": "0 to <1 year           0.2–2.1 mg\/dL           5.0–50.0 mcmol\/L\n1 to <19 years       0.6–1.4 mg\/dL           14.5–33.0 mcmol\/L"
+ },
+ {
+  "test": "Zinc",
+  "result": "6 months to 2 years         56–125 mCg\/dL             8.6–19.1 mcmol\/L\n3–4 years                           60–120 mCg\/dL              9.2–18.4 mcmol\/L\n5–6 years                           64–117 mCg\/dL              9.8–17.9 mcmol\/L\n7–8 years                           65–125 mCg\/dL              9.9–19.1 mcmol\/L\n9–10 years                        66–125 mCg\/dL              10.1–19.1 mcmol\/L\n11–12 years                     66–127 mCg\/dL               10.1–19.4 mcmol\/L\n13–14 years                    69–124 mCg\/dL                10.6–19.0 mcmol\/L\n15–16 years                   62–123 mCg\/dL                 9.5–18.8 mcmol\/L\n17–18 years                   62–133 mCg\/dL                 9.5–20.3 mcmol\/L"
+ }
+]

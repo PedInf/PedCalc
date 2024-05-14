@@ -1,0 +1,694 @@
+[
+ {
+   "Material": "11-Deoxycorticosterone (DOC)",
+   "ConversionFactor": "pg/mL X 3.03 = pmol/L"
+ },
+ {
+   "Material": "11-Deoxycortisol",
+   "ConversionFactor": "ng/dL X 0.02886 = nmol/L"
+ },
+ {
+   "Material": "17-Hydroxyprogesterone ",
+   "ConversionFactor": "ng/dL X 0.03 = nmol/L"
+ },
+ {
+   "Material": "5-Hydroxyindoleacetic acid (5-HIAA, urine)",
+   "ConversionFactor": "mg/24 hours X 5.23 = mcmol/ 24 hours"
+ },
+ {
+   "Material": "5'-Nucleotidase",
+   "ConversionFactor": "U/L X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "Acetone",
+   "ConversionFactor": "mmol/L    X  1000       = mcmol/L\nmg/dL      X  172.18  = mcmol/L\nmg/L        X 17.218   = mcmol/L"
+ },
+ {
+   "Material": "Adrenocorticotropic hormone (ACTH)",
+   "ConversionFactor": "pg/mL X 0.2202 = pmol/L"
+ },
+ {
+   "Material": "Alanine amino-transferase (ALT SGPT)",
+   "ConversionFactor": "U/L  X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "Albumin",
+   "ConversionFactor": "g/dL X 10 = g/L"
+ },
+ {
+   "Material": "Aldolase",
+   "ConversionFactor": "U/L X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "Aldosterone (24 hr)",
+   "ConversionFactor": "mcg X 2.774/24 Hours = nmol/24 Hours"
+ },
+ {
+   "Material": "Aldosterone ng/dL",
+   "ConversionFactor": "ng/dL X 27.7 = pmol/L"
+ },
+ {
+   "Material": "Alkaline phosphatase",
+   "ConversionFactor": "U/L X 0.01667= mcKat/L"
+ },
+ {
+   "Material": "Alpha-1 antitrypsin ",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "Alpha-fetoprotein (AFP)",
+   "ConversionFactor": "g/L        X 1000000  = mcg/L\nmg/L     X 1000        = mcg/L\nng/L      X  0.001      = mcg/L\nmcg/L   X 10            = mcg/L\nmg/dL   X 10000      = mcg/L\nng/dL    X 0.01         = mcg/L\nng/mL   X 1              = mcg/L"
+ },
+ {
+   "Material": "Ammonia",
+   "ConversionFactor": "mcg/dLX 0.714 = mcmol/L"
+ },
+ {
+   "Material": "Ammonia (NH3) ",
+   "ConversionFactor": "mcg/dL X 0.5872 = mcmol/L"
+ },
+ {
+   "Material": "Amylase",
+   "ConversionFactor": "U/L X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "ANCA, cytoplasmic (C-ANCA) ",
+   "ConversionFactor": "U/mL X 1 = kU/L"
+ },
+ {
+   "Material": "ANCA, perinuclear (P-ANCA)",
+   "ConversionFactor": "U/mL X 1 = kU/L"
+ },
+ {
+   "Material": "Androstenedione",
+   "ConversionFactor": "ng/dL=0.0349 = nmol/L"
+ },
+ {
+   "Material": "Angiotensin converting enzyme (ACE) ",
+   "ConversionFactor": "mcKat/L   X 1000    = nKat/L\nU/L           X 16.67 = nKat/L"
+ },
+ {
+   "Material": "Angiotensin I",
+   "ConversionFactor": "pg/mL X 0.7713 = pmol/L"
+ },
+ {
+   "Material": "Angiotensin II",
+   "ConversionFactor": "pg/mL X 0.956 = pmol/L"
+ },
+ {
+   "Material": "Antidiuretic hormone (ADH)",
+   "ConversionFactor": "pg/mL X 0.922 = pmol/L"
+ },
+ {
+   "Material": "Anti-GBM antibodies ",
+   "ConversionFactor": "U/mL X 1 = kU/L"
+ },
+ {
+   "Material": "Antithyroid antibody ",
+   "ConversionFactor": "IU/mL X 1 = kIU/L"
+ },
+ {
+   "Material": "Apolipoprotein A1",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "Apolipoprotein B",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "Aspartate amino-transferase (AST SGOT)",
+   "ConversionFactor": "U/L  X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "Bence Jones protein (quantitative) ",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "Bicarbonate ",
+   "ConversionFactor": "mEq/L X 1 = mmol/L"
+ },
+ {
+   "Material": "Bilirubin ",
+   "ConversionFactor": "mg/dL X 17.104 = mcmol/L"
+ },
+ {
+   "Material": "BUN (blood urea nitrogen) ",
+   "ConversionFactor": "mg/dL X 0.357 = mmol/L"
+ },
+ {
+   "Material": "C peptide ",
+   "ConversionFactor": "ng/mL X 0.33 =nmol/L"
+ },
+ {
+   "Material": "C1-esterase-inhibitor protein",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "C3",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "C4",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "Calcitonin ",
+   "ConversionFactor": "pg/mL X 0.292 = pmol/L"
+ },
+ {
+   "Material": "Calcium ",
+   "ConversionFactor": "mg/dL X 0.25 = mmol/L"
+ },
+ {
+   "Material": "Calcium ionized ",
+   "ConversionFactor": "mg/dL X 0.25 = mmol/L"
+ },
+ {
+   "Material": "Carbon dioxide partial pressure pCO2 ",
+   "ConversionFactor": "mmHg  X 0.133 = kPa"
+ },
+ {
+   "Material": "Carbon dioxide total ",
+   "ConversionFactor": "mEq/L X 1= mmol/L"
+ },
+ {
+   "Material": "Carcinoembryonic antigen (CEA)",
+   "ConversionFactor": "mg/L          X 1000 = mcg/L\nmcg/mL     X 1000 = mcg/L\nng/mL        X 1        = mcg/L\n"
+ },
+ {
+   "Material": "Carotene ",
+   "ConversionFactor": "mcg/dL X 0.0186 = mcmol/L"
+ },
+ {
+   "Material": "Catecholamines fractionated - epinephrine ",
+   "ConversionFactor": "pg/mL X 5.459 = pmol/L"
+ },
+ {
+   "Material": "Catecholamines fractionated - norepinephrine ",
+   "ConversionFactor": "pg/mL X 5.911 = pmol/L"
+ },
+ {
+   "Material": "Ceruloplasmin ",
+   "ConversionFactor": "mg/dL X 10 = mg/L"
+ },
+ {
+   "Material": "Chloride ",
+   "ConversionFactor": "mEq/L X 1 = mmol/L"
+ },
+ {
+   "Material": "Cholesterol ",
+   "ConversionFactor": "mg/dL X 0.02586 = mmol/L"
+ },
+ {
+   "Material": "Chromium ",
+   "ConversionFactor": "mcg/L X 19.232 = nmol/L"
+ },
+ {
+   "Material": "Cobalt ",
+   "ConversionFactor": "mcg/L X 16.968 = nmol/L"
+ },
+ {
+   "Material": "Copper ",
+   "ConversionFactor": "mcg/dL X 0.157= mcmol/L"
+ },
+ {
+   "Material": "Coproporphyrins (urine) ",
+   "ConversionFactor": "mcg/24 hours X 1.527= nmol/24 hours"
+ },
+ {
+   "Material": "Cortisol ",
+   "ConversionFactor": "mcg/dL X 27.59 = nmol/L\nng/mL   X 2.759 = nmol/L"
+ },
+ {
+   "Material": "Cortisol (urine) ",
+   "ConversionFactor": "mcg/24 hours X 2.759 = nmol/24 hours"
+ },
+ {
+   "Material": "Creatine ",
+   "ConversionFactor": "mg/dL X 76.3 = mcmol/L"
+ },
+ {
+   "Material": "Creatine kinase",
+   "ConversionFactor": "U/L X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "Creatine kinase isoenzyme MB ",
+   "ConversionFactor": "ng/mL X 1 = mcg/L"
+ },
+ {
+   "Material": "Creatinine ",
+   "ConversionFactor": "mg/dL X 88.4 = mcmol/L"
+ },
+ {
+   "Material": "Cyclic adenosine monophosphate (cAMP) ",
+   "ConversionFactor": "nmol/dL X 10 = nmol/L"
+ },
+ {
+   "Material": "Dehydroepiandrosterone (DHEA) ",
+   "ConversionFactor": "ng/mL X 3.467 = nmol/L"
+ },
+ {
+   "Material": "Dehydroepiandrosterone sulfate (DHEA-S) ",
+   "ConversionFactor": "mcg/dL X 0.0271 = mcmol/L"
+ },
+ {
+   "Material": "Delta-aminolevulinic acid ",
+   "ConversionFactor": "mg/dL X 76.26 = mcmol/L"
+ },
+ {
+   "Material": "Deoxycorticosterone ",
+   "ConversionFactor": "ng/dL X 0.0303 = nmol/L"
+ },
+ {
+   "Material": "Dopamine (plasma) ",
+   "ConversionFactor": "pg/mL X 6.528 = pmol/L"
+ },
+ {
+   "Material": "Dopamine (urine) ",
+   "ConversionFactor": "mcg/24 hours X 6.528 = nmol/24 hours"
+ },
+ {
+   "Material": "Epinephrine (plasma) ",
+   "ConversionFactor": "pg/mL X 5.459 = pmol/L"
+ },
+ {
+   "Material": "Epinephrine (urine) ",
+   "ConversionFactor": "mcg/24 hours X 5.459 = nmol/24 hours"
+ },
+ {
+   "Material": "Estradiol (E2)",
+   "ConversionFactor": "pg/mL X 3.671= pmol/L"
+ },
+ {
+   "Material": "Estriol (E3) ",
+   "ConversionFactor": "ng/mL X 3.467 = nmol/L"
+ },
+ {
+   "Material": "Ethanol (ethyl alcohol) ",
+   "ConversionFactor": "mg/dL X 0.217 = mmol/L"
+ },
+ {
+   "Material": "Ethylene glycol ",
+   "ConversionFactor": "mg/dL X 0.1611 = mmol/L\nmg/L X 0.01611= mmol/L"
+ },
+ {
+   "Material": "Factor B ",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "Ferritin ",
+   "ConversionFactor": "ng/mL X 2.247 = pmol/L"
+ },
+ {
+   "Material": "Fibrinogen ",
+   "ConversionFactor": "mg/dL X 0.0294 = mcmol/L"
+ },
+ {
+   "Material": "Folate ",
+   "ConversionFactor": "ng/mL X 2.266 = nmol/L"
+ },
+ {
+   "Material": "Galactose",
+   "ConversionFactor": "mg/dL X 0.05551 = mmol/L"
+ },
+ {
+   "Material": "Gamma glutamyl transferease (GGT) ",
+   "ConversionFactor": "U/L X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "Gastrin ",
+   "ConversionFactor": "pg/mL X 0.481 = pmol/L"
+ },
+ {
+   "Material": "Glucose ",
+   "ConversionFactor": "mg/dL X 0.05551= mmol/L"
+ },
+ {
+   "Material": "Glutathione ",
+   "ConversionFactor": "mg/dL X 0.0325 = mmol/L"
+ },
+ {
+   "Material": "Growth hormone ",
+   "ConversionFactor": "ng/mL X 1 = mcg/L"
+ },
+ {
+   "Material": "Haptoglobin ",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "HDL-cholesterol ",
+   "ConversionFactor": "mg/dL X 0.02586 = mmol/L"
+ },
+ {
+   "Material": "HgbA1c",
+   "ConversionFactor": " % X 10.93 = mmol/mol"
+ },
+ {
+   "Material": "Histamine ",
+   "ConversionFactor": "mcg/L X 8.997 = nmol/L"
+ },
+ {
+   "Material": "Human chorionic gonadotropin (HCG) beta ",
+   "ConversionFactor": "mU/mL X 1 = IU/L"
+ },
+ {
+   "Material": "IgA ",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "IgE ",
+   "ConversionFactor": "IU/mL X 2.4 = mcg/L"
+ },
+ {
+   "Material": "IgG ",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "IgM ",
+   "ConversionFactor": "mg/dL X 0.01 = g/L"
+ },
+ {
+   "Material": "Insulin ",
+   "ConversionFactor": "mcIU/mL X 6.945 = pmol/L"
+ },
+ {
+   "Material": "Insulin-like growth factor (somatomedin C) ",
+   "ConversionFactor": "ng/mL X 0.131 = nmol/L"
+ },
+ {
+   "Material": "Iron ",
+   "ConversionFactor": "mcg/dL X 0.179 = mcmol/L"
+ },
+ {
+   "Material": "Iron binding capacity ",
+   "ConversionFactor": "mcg/dL X 0.179 = mcmol/L"
+ },
+ {
+   "Material": "Iron saturation ",
+   "ConversionFactor": "% X 0.01 =  Iron saturation fraction"
+ },
+ {
+   "Material": "Isocitrate dehydrogenase (ICD) ",
+   "ConversionFactor": "U/L X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "Lactate ",
+   "ConversionFactor": "mg/dL X 0.111 = mmol/L"
+ },
+ {
+   "Material": "Lactate dehydrogenase (LD)",
+   "ConversionFactor": "U/L X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "LDL-cholesterol ",
+   "ConversionFactor": "mg/dL X 0.02586 = mmol/L"
+ },
+ {
+   "Material": "Lead ",
+   "ConversionFactor": "mcg/dL X 0.0483 = mcmol/L"
+ },
+ {
+   "Material": "Leucine aminopeptidase (LAP) ",
+   "ConversionFactor": "U/L X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "Lipase",
+   "ConversionFactor": "U/L X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "Lipoprotein(a) cholesterol ",
+   "ConversionFactor": "mg/dL X 0.02586 = mcmol/L"
+ },
+ {
+   "Material": "Luteinizing hormone (LH) ",
+   "ConversionFactor": "mIU/mL X 1 = IU/L"
+ },
+ {
+   "Material": "Magnesium ",
+   "ConversionFactor": "mEq/L X 0.5 = mmol/L"
+ },
+ {
+   "Material": "Magnesium ",
+   "ConversionFactor": "mg/dL X 0.411 = mmol/L"
+ },
+ {
+   "Material": "Malic dehydrogenase ",
+   "ConversionFactor": "U/L X 0.01667 = mcKat/L"
+ },
+ {
+   "Material": "Metanephrines (total plasma) ",
+   "ConversionFactor": "pg/mL X 5.26 = mcKat/L"
+ },
+ {
+   "Material": "Metanephrines (total urine) ",
+   "ConversionFactor": "mcg/24 hours X 5.26 = nmol/24 hours"
+ },
+ {
+   "Material": "Methanol (methyl alcohol) ",
+   "ConversionFactor": "mcg/mL X 0.0312 = mmol/L"
+ },
+ {
+   "Material": "Methanol (methyl alcohol) ",
+   "ConversionFactor": "mg/L X 0.0312 = mmol/L"
+ },
+ {
+   "Material": "Methemoglobin ",
+   "ConversionFactor": "g/dL X 155 = mcmol/L"
+ },
+ {
+   "Material": "Muramidase (lysozyme) ",
+   "ConversionFactor": "mcg/mL X 1 = mg/L"
+ },
+ {
+   "Material": "Myoglobin (serum) ",
+   "ConversionFactor": "mcg/L X 0.05868 = nmol/L"
+ },
+ {
+   "Material": "Norepinephrine (plasma)",
+   "ConversionFactor": "pg/mL X 5.911 = pmol/L"
+ },
+ {
+   "Material": "Norepinephrine (urine) ",
+   "ConversionFactor": "mcg/24 hours X 5.911 = nmol/24 hours"
+ },
+ {
+   "Material": "Normetanephrine (plasma) ",
+   "ConversionFactor": "pg/mL X 5.46 = pmol/L"
+ },
+ {
+   "Material": "Normetanephrine (urine) ",
+   "ConversionFactor": "mcg/24 hours X 5.46 = nmol/24 hours"
+ },
+ {
+   "Material": "Osteocalcin ",
+   "ConversionFactor": "ng/mL X 1 = mcg/L"
+ },
+ {
+   "Material": "Oxygen partial pressure (pO2) ",
+   "ConversionFactor": "mmHg X 0.133 = kPa"
+ },
+ {
+   "Material": "Parathyroid hormone (PTH) ",
+   "ConversionFactor": "pg/mL X 1 = ng/L"
+ },
+ {
+   "Material": "Parathyroid hormone-intact (intact-PTH) ",
+   "ConversionFactor": "pg/mL X 0.1061 = pmol/L"
+ },
+ {
+   "Material": "Phenylalanine ",
+   "ConversionFactor": "mg/dL X 60.54 = mcmol/L"
+ },
+ {
+   "Material": "Phosphate (serum inorganic phosphorus) ",
+   "ConversionFactor": "mg/dL X 0.323 = mmol/L"
+ },
+ {
+   "Material": "Phosphate (urine inorganic phosphorus) ",
+   "ConversionFactor": "g/24 hours X 32.29 = mmol/24 hours"
+ },
+ {
+   "Material": "Plasminogen (plasma) ",
+   "ConversionFactor": "mg/dL X 0.113 = mcmol/L"
+ },
+ {
+   "Material": "Porphobilinogen ",
+   "ConversionFactor": "mg/dL X 44.2 = mcmol/L"
+ },
+ {
+   "Material": "Potassium ",
+   "ConversionFactor": "mEq/L X 1 = mmol/L"
+ },
+ {
+   "Material": "Progesterone ",
+   "ConversionFactor": "ng/mL X 3.18 = nmol/L"
+ },
+ {
+   "Material": "Prolactin ",
+   "ConversionFactor": "mcg/L X 43.478 = pmol/L"
+ },
+ {
+   "Material": "Protein total ",
+   "ConversionFactor": "g/dLX 10 = g/L"
+ },
+ {
+   "Material": "Protoporphyrin ",
+   "ConversionFactor": "mcg/dL X 0.0178 = mcmol/L"
+ },
+ {
+   "Material": "Pyruvate ",
+   "ConversionFactor": "mg/dL X 113.6 = mcmol/L"
+ },
+ {
+   "Material": "Renin (plasma renin activity PRA) ",
+   "ConversionFactor": "ng/mL/hr X 1 = mcg/L/hr"
+ },
+ {
+   "Material": "Renin (plasma renin concentration) ",
+   "ConversionFactor": "pg/mL X 0.02261 = pmol/L"
+ },
+ {
+   "Material": "Reverse T3 (rT3) ",
+   "ConversionFactor": "ng/dL X 0.0154 = nmol/L"
+ },
+ {
+   "Material": "Serotonin ",
+   "ConversionFactor": "ng/mL X 0.0057 = mcmol/L"
+ },
+ {
+   "Material": "Sodium ",
+   "ConversionFactor": "mEq/L X 1 = mmol/L"
+ },
+ {
+   "Material": "Somatomedin C (insulin-like growth factor) ",
+   "ConversionFactor": "ng/mL X 0.131 = nmol/L"
+ },
+ {
+   "Material": "Somatostatin ",
+   "ConversionFactor": "pg/mL X 0.611 = pmol/L"
+ },
+ {
+   "Material": "Testosterone (total) ",
+   "ConversionFactor": "ng/dL X 0.0347 = nmol/L"
+ },
+ {
+   "Material": "Testosterone (unbound) ",
+   "ConversionFactor": "pg/mL X 3.47 = pmol/L"
+ },
+ {
+   "Material": "Thyroglobulin ",
+   "ConversionFactor": "ng/mL X 1 = mcg/L"
+ },
+ {
+   "Material": "Thyroid stimulating hormone (TSH) ",
+   "ConversionFactor": "mcIU/mL X 1 = mIU/L"
+ },
+ {
+   "Material": "Thyrotropin releasing hormone (TRH) ",
+   "ConversionFactor": "pg/mL X 2.759 = pmol/L"
+ },
+ {
+   "Material": "Thyroxine (T4) total ",
+   "ConversionFactor": "mcg/dL X 12.87 = nmol/L"
+ },
+ {
+   "Material": "Thyroxine binding globulin (TBG) ",
+   "ConversionFactor": "mcg/mL X 17.094 = nmol/L"
+ },
+ {
+   "Material": "Thyroxine free (free T4) ",
+   "ConversionFactor": "ng/dL X 12.871 = pmol/L"
+ },
+ {
+   "Material": "Total complement ",
+   "ConversionFactor": "U/mL X 1 = kU/L"
+ },
+ {
+   "Material": "Transferrin (TIBC) ",
+   "ConversionFactor": "mg/dL X 0.1299 = mcmol/L"
+ },
+ {
+   "Material": "Triglycerides ",
+   "ConversionFactor": "mg/dL X 0.0113 = mmol/L"
+ },
+ {
+   "Material": "Triiodothyronine (T3) total (total T3) ",
+   "ConversionFactor": "pmol/L X 0.001 = nmol/L\nng/dL  X 0.0154 = nmol/L\npg/dL  X 0.0000154 = nmol/L"
+ },
+ {
+   "Material": "Triiodothyronine free (free T3) ",
+   "ConversionFactor": "pmol/L X 0.001  = nmol/L\nng/dL   X 0.0154 = nmol/L\npg/dL   X 0.0000154 = nmol/L"
+ },
+ {
+   "Material": "Troponin I (cardiac) ",
+   "ConversionFactor": "ng/mL X 1 = mcg/L"
+ },
+ {
+   "Material": "Urea nitrogen (BUN) ",
+   "ConversionFactor": "mg/dL X 0.357 = mmol/L"
+ },
+ {
+   "Material": "Uric acid ",
+   "ConversionFactor": "mg/dL X 59.5 = mcmol/L"
+ },
+ {
+   "Material": "Vanillylmandelic acid (VMA urine) ",
+   "ConversionFactor": "mg/24 hours X 5.046 = mcmol/24 hours"
+ },
+ {
+   "Material": "Vasoactive intestinal polypeptide (VIP) ",
+   "ConversionFactor": "pg/mL X 0.301 = pmol/L"
+ },
+ {
+   "Material": "Vitamin A1 (retinol) ",
+   "ConversionFactor": "mcg/dL X 0.0349 = mcmol/L"
+ },
+ {
+   "Material": "Vitamin B1 (thiamine pyrophosphate) ",
+   "ConversionFactor": "mcg/dL X 23.51 = nmol/L"
+ },
+ {
+   "Material": "Vitamin B12 (cyanocobalamin) ",
+   "ConversionFactor": "pg/mL X 0.7373 = pmol/L"
+ },
+ {
+   "Material": "Vitamin B12 unsaturated binding capacity ",
+   "ConversionFactor": "pg/mL X 0.7373 = pmol/L"
+ },
+ {
+   "Material": "Vitamin B6 (pyridoxine as pyridoxal-5 phosphate) ",
+   "ConversionFactor": "ng/mL X 4.05 =  nmol/L"
+ },
+ {
+   "Material": "Vitamin C (ascorbic acid) ",
+   "ConversionFactor": "mg/dL X 56.78 = mcmol/L"
+ },
+ {
+   "Material": "Vitamin D 1,25-Dihydroxyvitamin D (calciferol 1,25)",
+   "ConversionFactor": "pg/ml X 2.6 = pmol/L"
+ },
+ {
+   "Material": "Vitamin D 25-Hydroxyvitamin D (calciferol 25) ",
+   "ConversionFactor": "ng/mL X 2.496 = nmol/L"
+ },
+ {
+   "Material": "Vitamin E (tocopherol) ",
+   "ConversionFactor": "mcg/mL X 2.32 = mcmol/L"
+ },
+ {
+   "Material": "Vitamin K ",
+   "ConversionFactor": "ng/mL X 2.22 = nmol/L"
+ },
+ {
+   "Material": "Xylose (from absorption) ",
+   "ConversionFactor": "mg/dL X 0.06661 = mmol/L"
+ },
+ {
+   "Material": "Zinc ",
+   "ConversionFactor": "mcg/dL X 0.153 = mcmol/L"
+ },
+ {
+   "Material": "                       ",
+   "ConversionFactor": "end"
+ }
+]
