@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", loadHeaderContainer);
 
 function loadHeaderContainer() {
   var headerContainer = document.getElementById("header-container");
-  const inSubfolder = isPageInSubfolder(); // calling the function that detect if the HTML file in subfolder
-  const headerPath = constructHeaderPath(inSubfolder); // Construct the correct path to the header file
+  const inSubfolder = isPageInSubfolder(); // calling the function that detects if the HTML file is in a subfolder
+  const basePath = constructBasePath(); // Get the base path of the project
+  const headerPath = constructHeaderPath(inSubfolder, basePath); // Construct the correct path to the header file
 
   fetch(headerPath) // Fetch the header file using the constructed path
     .then(response => response.text())
@@ -22,14 +23,20 @@ function isPageInSubfolder() {
   return currentPath.length > 1; // Check if there are any remaining path segments
 }
 
-function constructHeaderPath(inSubfolder) {
-  // Check if the environment is GitHub Pages
+function constructBasePath() {
+  let basePath = window.location.pathname;
+  // If the code is hosted on GitHub Pages, adjust basePath
   if (window.location.hostname === 'github.com') {
-    return "/PedCalc/header.html";
+    basePath = "/PedCalc/";
   } else {
-    // Construct the path based on whether the page is in a subfolder
-    return (inSubfolder ? '../' : '') + 'header.html';
+    basePath = basePath.substring(0, basePath.lastIndexOf('/') + 1);
   }
+  return basePath;
+}
+
+function constructHeaderPath(inSubfolder, basePath) {
+  // Construct the path based on whether the page is in a subfolder and the base path
+  return (inSubfolder ? '../' : '') + basePath + 'header.html';
 }
 
 // handles the home button toggles in windows screens and mobile devices
