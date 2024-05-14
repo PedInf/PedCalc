@@ -1,0 +1,250 @@
+  body {
+      background-color: #fef3f3;
+  }
+
+  .page-header {
+      font-size: 4vw;
+      font-weight: bold;
+      text-align: center;
+      color: rgba(3, 16, 85, 0.978);
+      margin-top: 44px;
+  }
+
+  .container {
+      max-width: 1500px;
+      margin: 0 auto;
+  }
+
+  .MainCont {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: auto;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffecff;
+      border-radius: 15px;
+  }
+
+  .DataCalc {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      background-color: #ffdaff;
+      border-radius: 10px;
+      margin-right: 20px;
+      margin-left: 20px;
+  }
+
+  .PatData {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffc7ff;
+      margin: 10px;
+      border-radius: 10px;
+      padding: 5px;
+  }
+
+  .ptdataLabel {
+      font-size: clamp(20px, 40%, 32px);
+      text-align: center;
+      font-weight: bold;
+      background-color: rgb(255, 215, 255);
+      margin-bottom: 5px;
+      border-radius: 3px;
+  }
+
+  .indices-cont {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+  }
+
+  .indices-cont label {
+      width: 110px;
+      margin-right: 10px;
+      font-size: clamp(18px, 40%, 32px);
+      font-weight: bold;
+  }
+
+  .indices-cont input {
+      width: 75px;
+      margin-right: 10px;
+      border-radius: 10px;
+      border: none;
+      height: 35px;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Times New Roman';
+      font-size: clamp(16px, 1.5vw, 24px);
+  }
+
+  .IdaThalCalc-btn {
+      background: #1b1341;
+      border-radius: 12px;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      outline-offset: 4px;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+
+  .IdaThalCalc-btn-label {
+      display: block;
+      padding: 12px 42px;
+      border-radius: 12px;
+      font-size: 1.25rem;
+      background: hsl(246, 100%, 50%);
+      color: white;
+      transform: translateY(-6px);
+  }
+
+  .IdaThalCalc-btn:active .IdaThalCalc-btn-label {
+      transform: translateY(-2px);
+  }
+
+  .DisProb {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      padding: 5px;
+      background-color: #e4b4ff;
+      border-radius: 10px;
+  }
+
+  .prob-cont {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      border-radius: 10px;
+  }
+
+  .prob-cont label {
+      width: 170px;
+      margin-right: 10px;
+      font-size: clamp(16px, 40%, 32px);
+      font-weight: bold;
+  }
+
+  .prob-cont input {
+      width: 200px;
+      margin-right: 10px;
+      border-radius: 10px;
+      border: none;
+      height: 35px;
+      font-weight: bold;
+      text-align: center;
+      font-size: clamp(12px, 1.2vw, 22px);
+      outline: none;
+  }
+
+  .IdaThalCalc {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .indOutCont {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      background-color: #ffc9ff;
+      border-radius: 20px;
+  }
+
+  .IndicesTitle {
+      width: auto;
+      font-size: clamp(20px, 40%, 32px);
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      background-color: #d3bdff;
+      color: rgb(0, 0, 0);
+      border-radius: 20px;
+  }
+
+  .hovermsg {
+      width: auto;
+      font-size: clamp(14px, 40%, 32px);
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+      padding: 3px;
+      color: #4361ee;
+  }
+
+  .AllIndices {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 5px;
+      border-radius: 5px;
+  }
+
+  .LtIndices,
+  .RtIndices {
+      background-color: #ffc9ff;
+      padding: 1px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      border-radius: 10px;
+  }
+
+  .CalculatedIndices input {
+      width: 140px;
+      border-radius: 10px;
+      height: 20px;
+      text-align: center;
+  }
+
+  .CalculatedIndices label {
+      display: inline-block;
+      min-width: 210px;
+      margin-right: 10px;
+      padding: 3px;
+      font-size: clamp(20px, 40%, 32px);
+      font-weight: bold;
+      text-align: left;
+  }
+
+  /* Media query for large screens */
+  @media (min-width: 800px) {
+      .MainCont {
+          flex-direction: row;
+      }
+  }
+
+
+  @media only screen and (max-width: 768px) {
+      .page-header {
+          font-size: 4vw;
+      }
+
+      .AllIndices {
+          flex-direction: column;
+      }
+
+      .LtIndices,
+      .RtIndices,
+      .LtIndices label,
+      .RtIndices label {
+          text-align: center;
+      }
+  }
+
+
+
+  @media only screen and (max-width: 420px) {
+
+      .prob-cont label {
+          width: 120px;
+      }
+
+      .prob-cont input {
+          width: 120px;
+      }
+  }

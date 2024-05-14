@@ -1,0 +1,119 @@
+body {
+  background: #cde6d0;
+
+}
+
+/* Formatting the grid  */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  margin-top: 75px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.grid-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px #ccc;
+  width: 100%;
+  height: 180px;
+  font-size: clamp(24px, 8vw, 48px);
+
+}
+
+.grid-container a:hover {
+  background-color: #00afff;
+  color: white;
+  box-shadow: none;
+}
+
+/*design color for age click area*/
+.grid-container .pals {
+  background-color: #fe9cfe;
+  color: #7b2cbf;
+}
+
+.grid-container .poisoning {
+  background-color: #fdb5fd;
+  color: #7b2cbf;
+}
+
+.grid-container .pediatric-guidelines {
+  background-color: #fdf8e1;
+  color: #76520e;
+}
+
+.grid-container .pediatric-medications {
+  background-color: #92edff;
+  color: #613dc1;
+}
+
+.grid-container .common-medications {
+  background-color: #bffffe;
+  color: #613dc1;
+}
+
+.grid-container .rbc-indices {
+  background-color: #ede0d4;
+  color: #7f5539;
+}
+
+
+.grid-container .fluid-calculators {
+  background-color: #a0ffaa;
+  color: #229c28;
+}
+
+.grid-container .growth-vital-signs {
+  background-color: #c4ffca;
+  color: #229c28;
+}
+
+.grid-container .convertors {
+  background-color: #ebccb0;
+  color: #7f5539;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+  }
+
+  .grid a {
+    width: 100%;
+  }
+
+  .grid-container .pediatric-medications,
+  .grid-container .common-medications,
+  .grid-container .fluid-calculators,
+  .grid-container .growth-vital-signs,
+  .grid-container .convertors,
+  .grid-container .rbc-indices,
+  .grid-container .poisoning,
+  .grid-container .pediatric-guidelines,
+  .grid-container .pals {
+    line-height: 1;
+    font-size: clamp(14px, 8vw, 36px);
+    height: 5rem;
+  }
+
+
+}
+@media screen and (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+}
+

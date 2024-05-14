@@ -1,0 +1,238 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0; 
+}
+
+.page-header {
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+  color: #031055f9;
+  margin-top: 44px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 20px; 
+  padding-right: 15px; 
+  overflow-x: auto;  
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.palsHeaders {
+  font-size: 2rem;
+  text-align: center;
+  align-self: center;
+  color: #690069;
+  background-color: #ffcef8;
+  border-radius: 5px;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.AlgorithmContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.click-list {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.click-list div {
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+}
+
+.click-list a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: inherit;
+  background-color: #52e6fa;
+  border-radius: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.click-list a:hover {
+  background-color: #0015ff;
+  color: #ffffff;
+}
+
+.image-container {
+  display: none;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tables */
+table {
+  font-family: arial, sans-serif;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.Btape {
+  max-width: 100%; 
+  padding-right: 5px;
+}
+
+.impmed {
+  background-color: #e8ff81;
+}
+
+th {
+  font-size: clamp(14px, 2vw, 22px);
+  background-color: #fffbaa;
+  text-align: center;
+}
+
+td {
+  font-size: clamp(12px, 2vw, 20px);
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 0;
+}
+
+ul,
+ol {
+  font-size: clamp(10px, 2vw, 16px);
+}
+
+/* Column 1 */
+#bTable td:nth-child(12n+1) {
+  background-color: #b8b8b8;
+}
+
+/* Column 2 */
+#bTable td:nth-child(12n+2) {
+  background-color: lightgrey;
+  text-align: center;
+}
+
+/* Column 3 */
+#bTable td:nth-child(12n+3) {
+  background-color: lightgrey;
+  text-align: center;
+}
+
+/* Column 4 */
+#bTable td:nth-child(12n+4) {
+  background-color: lightgrey;
+  text-align: center;
+}
+
+/* Column 5 */
+#bTable td:nth-child(12n+5) {
+  background-color: #ffcef8;
+  text-align: center;
+}
+
+/* Column 6 */
+#bTable td:nth-child(12n+6) {
+  background-color: #fd9a9a;
+  text-align: center;
+}
+
+/* Column 7 */
+#bTable td:nth-child(12n+7) {
+  background-color: #e7b3e7;
+  text-align: center;
+}
+
+/* Column 8 */
+#bTable td:nth-child(12n+8) {
+  background-color: #ffffb7;
+  text-align: center;
+}
+
+/* Column 9 */
+#bTable td:nth-child(12n+9) {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* Column 10 */
+#bTable td:nth-child(12n+10) {
+  background-color: #babaff;
+  text-align: center;
+}
+
+/* Column 11 */
+#bTable td:nth-child(12n+11) {
+  background-color: #ffe0a7;
+  text-align: center;
+}
+
+/* Column 12 */
+#bTable td:nth-child(12n+12) {
+  background-color: #c0fac0;
+  text-align: center;
+}
+
+.palsdrugs {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.ROSCtable {
+  background-color: #ffe0a7;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-header {
+    font-size: 10vw;
+  }
+
+  .palsHeaders {
+    font-size: 1.2rem;
+  }
+
+  .click-list {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .container a {
+    font-size: 1rem;
+  }
+
+  #bTable {
+    font-size: 12px;
+  }
+
+  #bTable th {
+    padding: 0;
+  }
+
+  #bTable td:nth-child(12n+1) {
+    font-size: 10px;
+  }
+  .click-list div {
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;    
+  }
+}

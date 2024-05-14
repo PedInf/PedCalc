@@ -1,0 +1,325 @@
+body {
+  background: #c1d3fe;
+}
+
+.page-header {
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(3, 16, 85, 0.978);
+  margin-top: 44px;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  height: 80vh;
+}
+
+.Bwcontainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.bwframe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #edf2fb;
+}
+
+.bwframe label {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.bwframe input {
+  margin-bottom: 1px;
+  font-size: 1.5rem;
+  padding: 5px;
+  width: 75%;
+  font-weight: bold;
+  border-radius: 5px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.IVDKAframe {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.IVFluframe {
+  width: 70%;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e2eafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.MainIVframe {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #b8b8ff;
+  align-self: center;
+}
+
+.DehIVframe {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #ccdbfd;
+  margin-bottom: 5px;
+  align-self: center;
+}
+
+.DehIVframe > div {
+  display: flex;
+  width: 100%;
+}
+
+.input-container label {
+  width: 150px; /* fixed number to show all boxes aligned vertically */
+  margin-left: 10px;
+  min-width: 80px;
+  text-align: center;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.MainIVframe input,
+.DehIVframe input {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 10px;
+  width: 50%;
+  border: 0.2px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fdfdc1;
+  outline: none;
+}
+
+.MainIVframe label,
+.DehIVframe label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.IVFluframe label {
+  padding: 0px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  justify-content: center;
+}
+
+/* Frame for all related to DKA calculations*/
+.DKAfr {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #c5eeea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.DKAfr label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  gap: 3px;
+}
+
+/* Frame for DKA-user-inputs and DKA-management */
+.DKAcont {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+/* Frame for DKA-user-iputs*/
+.DKAuser {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #edfafa;
+}
+
+.DKAuserLabel label {
+  background-color: #91ffd3;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.DKAuserInputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* align the DKA-user-inputs*/
+.DKAuserInputs input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px; 
+}
+
+.DKAuserInputs label {
+  width: 250px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.DKAuserInputs input,
+.DKAuserInputs select {
+  width: 130px;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: none;
+  height: 45px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(189, 239, 255);
+}
+
+.DKAman {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ddfeff;
+  padding-left: 10px;
+  margin-right: 10px;
+  height: 100%;
+}
+
+.DKAmanRes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 100%;
+}
+
+/* align the DKA-user-inputs*/
+.DKAmanRes input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 150px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: none;
+  height: 45px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fdfdc1;
+  outline: none;
+}
+
+.DKAmanRes label {
+  width: 190px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+#KCorrec {
+  height: 60px;
+  resize: none;
+  white-space: pre-wrap;
+  overflow: auto;
+  background-color: #fdfdc1;
+  font-size: 1.2rem;
+  font-family: "Times New Roman";
+  text-align: left;
+  outline: none;
+}
+#KCorrec::placeholder {
+  color:black
+}
+
+.Pertext {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1067px) {
+  .page-header {
+    font-size: 4vw;
+  }
+  .IVDKAframe,
+  .IVFluframe,
+  .DKAcont {
+    flex-direction: column;
+  }
+  .DKAfr,
+  .DKAuser,
+  .DKAman {
+    width: 90%;
+  }
+  .DKAmanRes input {
+    width: 50%;
+  }
+  .DKAuserInputs input {
+    width: 50%;
+  }
+  p {
+    font-size: 4vw;
+  }
+}
