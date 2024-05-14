@@ -20,7 +20,7 @@
   function isPageInSubfolder() {
     const currentPath = window.location.pathname.split('/');
     currentPath.pop(); // Remove the current HTML file from the path
-    return currentPath.length > 1; // Check if there are any remaining path segments
+    return currentPath.length > 2; // Check if there are any remaining path segments
   }
 
 // handles the home button toggles in windows screens and mobile devices
