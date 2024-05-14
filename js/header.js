@@ -26,7 +26,7 @@ function isPageInSubfolder() {
 function constructBasePath() {
   let basePath = window.location.pathname;
   // If the code is hosted on GitHub Pages, adjust basePath
-  if (window.location.hostname === 'github.com') {
+  if (window.location.hostname === 'pedinf.github.io/') {
     basePath = "/PedCalc/";
   } else {
     basePath = basePath.substring(0, basePath.lastIndexOf('/') + 1);
