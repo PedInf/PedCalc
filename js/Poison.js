@@ -16,15 +16,16 @@ function initializePoisonScript() {
         if (!response.ok) {
           throw new Error("Error: Unable to load the data.");
         }
-        return response.json(); // Parse JSON data
+        return response.json(); 
       })
       .then((data) => {
+        // Get the poisons for all selected symptoms
         const selectedSubstances = selectedPoisons.map((poison) => data[poison]);
+        // Find the intersection of poisons for all selected symptoms
         const filteredSubstances = selectedSubstances.reduce((acc, substances) => {
-          if (!acc.length) return substances;
-          return acc.filter((substance) => substances.includes(substance));
+          return acc.length === 0 ? substances : acc.filter((substance) => substances.includes(substance));
         }, []);
-
+      
         if (filteredSubstances.length === 0) {
           // Handle case when no matching data is found
           resultTextarea.value = "";
@@ -32,6 +33,7 @@ function initializePoisonScript() {
           resultTextarea.value = filteredSubstances.join("\r\n");
         }
       })
+      
       .catch((error) => {
         resultTextarea.value = error.message;
       });
