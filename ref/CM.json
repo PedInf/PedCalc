@@ -1,98 +1,98 @@
 [
- {
-   "Medication": "Paracetamol - Oral/Rectal",
-   "Dose": "10-15mg/kg/dose  (QID, Q4hr), Max 90mg/kg/24 hour\n\nInitial Rectal loading dose 40-45 mg/kg/dose "
- },
- {
-   "Medication": "Ibuprofen",
-   "Dose": "5–10 mg/kg/dose Q6–8 hr PO\n\nmax. dose: 40 mg/kg/24 hr."
- },
- {
-   "Medication": "Diclofenac sodium suppositories",
-   "Dose": "0.3-1.0 mg/kg /dose 2-3 times per day \nNot to be used  below 6 months "
- },
- {
-   "Medication": "Aspirin",
-   "Dose": "Analgesic/antipyretic: 10–15 mg/kg/dose PO/PR Q6 hr\n\nAnti-inflammatory: 15–25 mg/kg/dose  PO Q6–8 hr"
- },
- {
-   "Medication": "Amoxicillin",
-   "Dose": "10–25 mg/kg/dose \n\nHigh dose (resistant S. Pneumoniae): 40-45 mg/kg/dose BID PO"
- },
- {
-   "Medication": "Amoxicillin-Clavulanate (Augmentin)",
-   "Dose": "10–25 mg/kg/dose BID PO\nHigh dose (e.g otitis media) 40-45  mg/kg/doe  BID PO\n\n     Avoid Clavulanate dose of > 10-15 mg /kg/day, \n     Amoxicillin/Clavulanate 250/125 not used below 40 kg"
- },
- {
-   "Medication": "Azithromycin",
-   "Dose": "10-12 mg/kg/day  once daily for 5 days (max. dose: 500 mg)"
- },
- {
-   "Medication": "Clarithromycin",
-   "Dose": "15 mg/kg/24 hr PO ÷ Q12 hr; max. dose: 1 g/24 hr"
- },
- {
-   "Medication": "Cefixime",
-   "Dose": "8 mg/kg/24 hr OD, BID Max. dose: 400 mg/24 hr\n\n1st day UTI 16 mg/kg/24 hr ÷ Q12 hr"
- },
- {
-   "Medication": "Cefdinir",
-   "Dose": "14 mg/kg/24 hr PO ÷ Q12–24 hr\nmax. dose: 600 mg/24 hr"
- },
- {
-   "Medication": "Cefuroxime Axetil (PO)",
-   "Dose": "10-15 mg/kg/dose BID Max. dose: 500 mg/24 hr"
- },
- {
-   "Medication": "Clindamycin",
-   "Dose": "2.5–7.5 mg/kg/dose QID or TID Max. dose: 1.8 g/24 hr"
- },
- {
-   "Medication": "Sulfamethoxazole and Trimethoprim",
-   "Dose": "Dose based on Trimethoprim\n    Mild infection        4-6 mg/kg/Dose     BID\n    Severe infection    7 mg/kg/Dose        TID \n\nProphylaxis                2–4 mg/kg/24 hr PO, OD"
- },
- {
-   "Medication": "Oseltamivir",
-   "Dose": "Weight (kg)     Dosage for 5 Days                 \n≤15                       30 mg PO BID                                \n>15–23               45 mg PO BID                                  \n>23–40               60 mg PO BID                                    \n>40                      75 mg PO BID"
- },
- {
-   "Medication": "Acyclovir",
-   "Dose": "Mucocutaneous HSV:      \n   40–80 mg/kg/dose Q8 hr ×\n   Max.dose : 335 mg/dose \n\nVaricella:                            \n    20 mg/kg/dose QID \n    Max. dose:800 mg/dose "
- },
- {
-   "Medication": "Mebendazole",
-   "Dose": "Pinworms: 400 mg PO × 1, repeat in 2 wk "
- },
- {
-   "Medication": "Albendazole",
-   "Dose": "Pinworms: 100 mg PO × 1, repeat in 2 wk if not cured"
- },
- {
-   "Medication": "Prednisolone - ORAL",
-   "Dose": "0.5-2 mg/kg/day can be OD, BID TID or QID"
- },
- {
-   "Medication": "Salbutamol nebulizer",
-   "Dose": "<2 yr:0.5 mg in 2.5 ml NS Q4–6 hr PRN.\n\n2–9 yr:1 mg in 2.5 ml NS Q4–6 hr PRN\n\n>9 yr:1.5–2.5 mg in 2.5 ml NS Q4–6 hr PRN."
- },
- {
-   "Medication": "Ipratropium Bromide nebulizer",
-   "Dose": "<12 yr:250 mcg/dose Q20 min ×3, then Q2–4 hr PRN\n\n≥12 yr:500 mcg/dose Q30 min ×3, then Q2–4 hr PRN"
- },
- {
-   "Medication": "Budesonide",
-   "Dose": "Child 0–4 yr:    \n   Low dose:0.25–0.5 mg/24 hr  \n   Medium dose: >0.5–1 mg/24 hr    \n   High dose: >1 mg/24 hr\n\nChild 5–11 yr:  \n   Low dose:0.5 mg/24 hr             \n   Medium dose:1 mg/24 hr               \n   High dose:2 mg/24 h"
- },
- {
-   "Medication": "Chlorpheniramine Maleate",
-   "Dose": "2–5 yr:               1 mg/dose PO Q4–6 hr; max. dose: 6 mg/24 hr\n\n6–11 yr:             2 mg/dose PO Q4–6 hr; max. dose: 12 mg/24 hr\n\n≥12 yr–adult:   4 mg/dose Q4–6 hr PO; max. dose: 24 mg/24 hr"
- },
- {
-   "Medication": "Diphenhydramine",
-   "Dose": "1–2 mg/kg/dose QID Max 50 mg/dose (300mg /24 hours)"
- },
- {
-   "Medication": "Iron",
-   "Dose": "2-6 mg/kg/dose PO OD Max dose:  children adult 240 mg /day \n\nPremature or full term Max dose 15 mg/day"
- }
+  {
+    "Medication": "Paracetamol - Oral/Rectal",
+    "Dose": "10-15mg/kg/dose  (QID, Q4hr), Max 90mg/kg/24 hour\r\n\r\nInitial Rectal loading dose 40-45 mg/kg/dose \r\n=======================================\r\nRenal failure: Needs Adjustment\r\nPregnancy:      Category C \r\nBreast Milk:    Compatible\r\nLiver:                 Affect the liver in high doses "
+  },
+  {
+    "Medication": "Ibuprofen",
+    "Dose": "5–10 mg/kg/dose Q6–8 hr PO\r\nmax. dose: 40 mg/kg/24 hr.\r\n\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:          Category C/D\r\nBreast Milk:        Compatible      \r\nLiver:                     Affect the liver               "
+  },
+  {
+    "Medication": "Diclofenac sodium suppositories",
+    "Dose": "0.3-1.0 mg/kg /dose 2-3 times per day \r\nNot to be used  below 6 months \r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:          Category D/X\r\nBreast Milk:        Use with caution\r\nLiver:                     Affect the liver        "
+  },
+  {
+    "Medication": "Aspirin",
+    "Dose": "Analgesic/antipyretic: 10–15 mg/kg/dose PO/PR Q6 hr\r\n\r\nAnti-inflammatory: 15–25 mg/kg/dose  PO Q6–8 hr\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category D\r\nBreast Milk:         Use With caution\r\nLiver:                      Affect the liver   "
+  },
+  {
+    "Medication": "Amoxicillin",
+    "Dose": "10–25 mg/kg/dose \r\n\r\nHigh dose (resistant S. Pneumoniae): 40-45 mg/kg/dose BID PO\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category B\r\nBreast Milk:          Compatible \r\nLiver:                       No effect"
+  },
+  {
+    "Medication": "Amoxicillin-Clavulanate (Augmentin)",
+    "Dose": "10–25 mg/kg/dose BID PO\r\nHigh dose (e.g otitis media) 40-45  mg/kg/doe  BID PO\r\n     Avoid Clavulanate dose of > 10-15 mg /kg/day, \r\n     Amoxicillin/Clavulanate 250/125 not used below 40 kg\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category B\r\nBreast Milk:          Compatible \r\nLiver:                       No effect         "
+  },
+  {
+    "Medication": "Azithromycin",
+    "Dose": "10-12 mg/kg/day  once daily for 5 days (max. dose: 500 mg)\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category B\r\nBreast Milk:          Use with caution \r\nLiver:                       Affect the liver         "
+  },
+  {
+    "Medication": "Clarithromycin",
+    "Dose": "15 mg/kg/24 hr PO ÷ Q12 hr; max. dose: 1 g/24 hr\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category C\r\nBreast Milk:          Use with caution \r\nLiver:                       Affect the liver "
+  },
+  {
+    "Medication": "Cefixime",
+    "Dose": "8 mg/kg/24 hr OD, BID Max. dose: 400 mg/24 hr\r\n\r\n1st day UTI 16 mg/kg/24 hr ÷ Q12 hr\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category B\r\nBreast Milk:          Compatible \r\nLiver:                       Affect the liver       "
+  },
+  {
+    "Medication": "Cefdinir",
+    "Dose": "14 mg/kg/24 hr PO ÷ Q12–24 hr\r\nmax. dose: 600 mg/24 hr\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category B\r\nBreast Milk:          Compatible \r\nLiver:                       Affect the liver       "
+  },
+  {
+    "Medication": "Cefuroxime Axetil (PO)",
+    "Dose": "10-15 mg/kg/dose BID Max. dose: 500 mg/24 hr\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category B\r\nBreast Milk:          Compatible \r\nLiver:                       Affect the liver "
+  },
+  {
+    "Medication": "Clindamycin",
+    "Dose": "2.5–7.5 mg/kg/dose QID or TID Max. dose: 1.8 g/24 hr\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category B\r\nBreast Milk:           Use With caution \r\nLiver:                       Affect the liver "
+  },
+  {
+    "Medication": "Sulfamethoxazole and Trimethoprim",
+    "Dose": "Dose based on Trimethoprim\r\n    Mild infection        4-6 mg/kg/Dose     BID\r\n    Severe infection    7 mg/kg/Dose        TID \r\n\r\nProphylaxis                2–4 mg/kg/24 hr PO, OD\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category D\r\nBreast Milk:          Use With caution \r\nLiver:                       Affect the liver             "
+  },
+  {
+    "Medication": "Oseltamivir",
+    "Dose": "Weight (kg)     Dosage for 5 Days                 \r\n≤5                       30 mg PO BID                                \r\n>15–23               45 mg PO BID                                  \r\n>23–40               60 mg PO BID                                    \r\n>40                      75 mg PO BID\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category B\r\nBreast Milk:          Use With caution \r\nLiver:                       Affect the liver   "
+  },
+  {
+    "Medication": "Acyclovir",
+    "Dose": "Mucocutaneous HSV:      \r\n   40–80 mg/kg/dose Q8 hr ×\r\n   Max.dose : 335 mg/dose \r\n\r\nVaricella:                            \r\n    20 mg/kg/dose QID \r\n    Max. dose:800 mg/dose \r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category B\r\nBreast Milk:          Use With caution \r\nLiver:                       No effect  "
+  },
+  {
+    "Medication": "Mebendazole",
+    "Dose": "Pinworms: 400 mg PO × 1, repeat in 2 wk \r\n=======================================\r\nRenal failure:     No effect\r\nPregnancy:           Category C\r\nBreast Milk:          Compatible \r\nLiver:                       Affect the liver   "
+  },
+  {
+    "Medication": "Albendazole",
+    "Dose": "Pinworms: 100 mg PO × 1, repeat in 2 wk if not cured\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category C\r\nBreast Milk:          Use with Caution \r\nLiver:                       Affect the liver   "
+  },
+  {
+    "Medication": "Prednisolone - ORAL",
+    "Dose": "0.5-2 mg/kg/day can be OD, BID TID or QID\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category  C/D\r\nBreast Milk:        Use With caution\r\nLiver:                      Affects the liver    "
+  },
+  {
+    "Medication": "Salbutamol nebulizer",
+    "Dose": "<2 yr:0.5 mg in 2.5 ml NS Q4–6 hr PRN.\r\n2–9 yr:1 mg in 2.5 ml NS Q4–6 hr PRN\r\n>9 yr:1.5–2.5 mg in 2.5 ml NS Q4–6 hr PRN.\r\n\r\n=======================================\r\nRenal failure:     No effect\r\nPregnancy:           Category C\r\nBreast Milk:         Compatible   \r\nLiver:                      Affects the liver      "
+  },
+  {
+    "Medication": "Ipratropium Bromide nebulizer",
+    "Dose": "<12 yr:250 mcg/dose Q20 min ×3, then Q2–4 hr PRN\r\n\r\n≥12 yr:500 mcg/dose Q30 min ×3, then Q2–4 hr PRN\r\n=======================================\r\nRenal failure:     No effect \r\nPregnancy:           Category  B/C\r\nBreast Milk:        Compatible \r\nLiver:                     No effect"
+  },
+  {
+    "Medication": "Budesonide",
+    "Dose": "Child 0–4 yr:    \r\n   Low dose:0.25–0.5 mg/24 hr  \r\n   Medium dose: >0.5–1 mg/24 hr    \r\n   High dose: >1 mg/24 hr\r\n\r\nChild 5–11 yr:  \r\n   Low dose:0.5 mg/24 hr             \r\n   Medium dose:1 mg/24 hr               \r\n   High dose:2 mg/24 h\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category  B/C\r\nBreast Milk:         Use with caution\r\nLiver:                      Affects the liver "
+  },
+  {
+    "Medication": "Chlorpheniramine Maleate",
+    "Dose": "2–5 yr: 1 mg/dose PO Q4–6 hr; max. dose: 6 mg/24 hr\r\n\r\n6–11 yr: 2 mg/dose PO Q4–6 hr; max. dose: 12 mg/24 hr\r\n\r\n≥12 yr–adult:  4 mg/dose Q4–6 hr PO; max. dose: 24 mg/24 hr\r\n=======================================\r\nRenal failure:     No effect\r\nPregnancy:           Category  C\r\nBreast Milk:         Unknown with concerns\r\nLiver:                      No effect"
+  },
+  {
+    "Medication": "Diphenhydramine",
+    "Dose": "1–2 mg/kg/dose QID Max 50 mg/dose (300mg /24 hours)\r\n=======================================\r\nRenal failure:     Needs Adjustment\r\nPregnancy:           Category  B\r\nBreast Milk:         Unknown with concerns\r\nLiver:                       No Effect"
+  },
+  {
+    "Medication": "Iron",
+    "Dose": "2-6 mg/kg/dose PO OD Max dose:  children adult 240 mg /day \r\n\r\nPremature or full term Max dose 15 mg/day\r\n=======================================\r\nRenal failure:     No effect\r\nPregnancy:           Category \r\nBreast Milk:        Use with Caution\r\nLiver:                    No effect"
+  }
 ]
